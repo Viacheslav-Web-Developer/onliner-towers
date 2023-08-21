@@ -5,7 +5,7 @@ import MainScreen from "@/components/MainScreen/MainScreen";
 const Home = () => {
     return (
         <div className={s.home}>
-            <MainScreen/>
+            <MainScreen viewMode={{'page': 'tower', 'component': 'main_screen'}}/>
         </div>
     )
 }
