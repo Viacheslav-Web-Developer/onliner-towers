@@ -3,8 +3,10 @@ import s from './Header.module.scss';
 import Image from "next/image";
 import logo from '@/public/Header/logo.svg';
 
-const Header = (props) => {
-    const linksData = {
+import {IHeaderLinks, IHeaderLinksData, IHeaderProps} from "@/types/types";
+
+const Header = (props: {viewMode: IHeaderProps}) => {
+    const linksData: IHeaderLinksData = {
         'tower': [
             {
                 url: '#',
@@ -95,7 +97,7 @@ const Header = (props) => {
         ]
     }
 
-    const linksRender = (linksData) => {
+    const linksRender = (linksData: IHeaderLinks[]) => {
         return linksData.map(el => <li className={s.links_item}><a href={el.url}>{el.text}</a></li>)
     }
 

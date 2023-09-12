@@ -1,9 +1,10 @@
 .main_screen {
   width: 100%;
-  height: 110vh;
+  height: 106vh;
   background-image: url('~@/assets/images/MainScreen/image.png');
   background-size: cover;
   background-repeat: no-repeat;
+  margin-bottom: 100px;
 
   .content {
     height: 100vh;

@@ -1,11 +1,14 @@
 import React from 'react';
-import s from './MainScreen.module.scss'
+import s from './MainScreen.module.scss';
+
 import Header from "@/components/Header/Header";
 import TopBar from "@/components/TopBar/TopBar";
 import NavLinks from "@/components/NavLinks/NavLinks";
 
-const MainScreen = (props) => {
-    const contentData = {
+import {IMainScreenProps, IMainScreenTitlesData} from "@/types/types";
+
+const MainScreen = (props: {viewMode: IMainScreenProps}) => {
+    const titlesData: IMainScreenTitlesData = {
         'tower': {
             'title': 'Аренда строительной вышки туры в Минске',
         },
@@ -28,7 +31,7 @@ const MainScreen = (props) => {
                     <TopBar/>
                 </div>
                 <div className={s.middle_section + ' container'}>
-                    <h1 className={s.title}>{contentData[props.viewMode.page].title}</h1>
+                    <h1 className={s.title}>{titlesData[props.viewMode.page].title}</h1>
                     <p className={s.text}>Качественное оборудование и приятные цены!</p>
                     <button className={s.button}>Заказать звонок</button>
                 </div>
