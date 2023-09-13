@@ -84,3 +84,11 @@ export interface IPricesCardButtonProps {
     currentItem: number,
     itemsNumber: number
 }
+
+
+
+export interface IBenefitsCardProps {
+    image: StaticImageData,
+    title: string,
+    text: string
+}

@@ -26,9 +26,9 @@ const PricesCard = (props: { cardData: IPricesCardProps }) => {
             </div>
 
             <div className={s.prices}>
-                <div className={s.prices_titles}>
-                    <div className={s.layout} style={{transform: `translateX(${priceState * -100}%)`}}>
-                        {props.cardData.prices.map((el, id) => <h3 className={s.title} key={id}>{el.title}</h3>)}
+                <div className={s.titles_carousel}>
+                    <div className={s.carousel_layout} style={{transform: `translateX(${priceState * -100}%)`}}>
+                        {props.cardData.prices.map((el, id) => <h3 className={s.carousel_item_title} key={id}>{el.title}</h3>)}
                     </div>
                 </div>
                 <div className={s.buttons}>

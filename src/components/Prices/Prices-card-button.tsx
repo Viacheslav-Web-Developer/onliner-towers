@@ -19,11 +19,13 @@ const PricesCardButton = (props: IPricesCardButtonProps) => {
 
     return (
         <button className={buttonClassName} onClick={props.onClickFunc} disabled={disableButton()}>
-            <div className={s.arrow}>
-                <Image src={imgButton} alt={'Предыдущий'}/>
-            </div>
-            <div className={s.arrow_hover}>
-                <Image src={imgButtonHover} alt={'Предыдущий'}/>
+            <div className={s.arrow_image}>
+                <div className={s.arrow}>
+                    <Image src={imgButton} alt={'Предыдущий'}/>
+                </div>
+                <div className={s.arrow_hover}>
+                    <Image src={imgButtonHover} alt={'Предыдущий'}/>
+                </div>
             </div>
         </button>
     );

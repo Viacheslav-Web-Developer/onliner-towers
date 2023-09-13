@@ -1,89 +1,107 @@
 .prices_button {
-  background-color: transparent;
-  border: none;
-  position: relative;
-  display: flex;
-  cursor: pointer;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 0;
 
-  img {
-     display: block;
-     margin: 0;
-     padding: 0;
-     transition: 0.3s;
-   }
+    .arrow_image {
+        position: relative;
 
+        img {
+            display: block;
+            margin: 0;
+            padding: 0;
+            transition: 0.3s;
+        }
 
-  .arrow {
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
+        .arrow {
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+        }
+
+        .arrow_hover {
+            img {
+            }
+        }
     }
-  }
 
-  .arrow_hover {
-    img {
-    }
-  }
 }
 
 .prices_button:hover {
-  .arrow {
-    img {
-      opacity: 0;
-    }
-  }
+    .arrow_image {
+        .arrow {
+            img {
+                opacity: 0;
+            }
+        }
 
-  .arrow_hover {
-    img {
+        .arrow_hover {
+            img {
 
+            }
+        }
     }
-  }
 }
 
 .prices_button.prev_button {
-  .arrow_hover {
-    img {
-      transform: rotateY(180deg);
+    .arrow_image {
+        .arrow_hover {
+            img {
+                transform: rotateY(180deg);
+            }
+        }
     }
-  }
 }
 
 .prices_button.next_button {
-  .arrow {
-    img {
-      transform: rotateY(180deg);
+    .arrow_image {
+        .arrow {
+            img {
+                transform: rotateY(180deg);
+            }
+        }
     }
-  }
 }
 
 .prices_button.prev_button.disable {
+    .arrow_image {
 
+    }
 }
 
 .prices_button.disable {
-  cursor: auto;
-  .arrow {
-    img {
-      opacity: 0.5;
+    cursor: auto;
+
+    .arrow_image {
+        .arrow {
+            img {
+                opacity: 0.5;
+            }
+        }
+
+        .arrow_hover {
+            img {
+                opacity: 0;
+            }
+        }
+
+        &:hover {
+            .arrow {
+                img {
+                    opacity: 0.5;
+                }
+            }
+
+            .arrow_hover {
+                img {
+                    opacity: 0;
+                }
+            }
+        }
     }
-  }
-  .arrow_hover {
-    img {
-      opacity: 0;
-    }
-  }
-  &:hover{
-    .arrow {
-      img {
-        opacity: 0.5;
-      }
-    }
-    .arrow_hover {
-      img {
-        opacity: 0;
-      }
-    }
-  }
 }
