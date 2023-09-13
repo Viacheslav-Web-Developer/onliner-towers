@@ -28,8 +28,10 @@
     margin-bottom: 24px;
   }
 
-  img {
-    margin-bottom: 24px;
+  .card_img {
+    img {
+      margin-bottom: 24px;
+    }
   }
 
   .prices {
@@ -64,15 +66,7 @@
       align-items: center;
       margin-bottom: 20px;
 
-      .prices_button {
 
-      }
-
-      .prices_button.prev_button {
-      }
-
-      .prices_button.next_button {
-      }
     }
 
     .prices_value {
@@ -83,7 +77,7 @@
         display: flex;
         transition: 0.3s;
 
-        .prices_block{
+        .prices_block {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
@@ -91,12 +85,20 @@
           padding: 0 20px;
 
           .price_value {
-            color: #282828;
-            font-family: Montserrat, sans-serif;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 27px;
+            p {
+              color: #282828;
+              font-family: Montserrat, sans-serif;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 27px;
+
+              span {
+                color: #EE9A38;
+                font-size: 20px;
+                font-weight: 600;
+              }
+            }
           }
         }
 
@@ -104,4 +106,5 @@
       }
     }
   }
+
 }

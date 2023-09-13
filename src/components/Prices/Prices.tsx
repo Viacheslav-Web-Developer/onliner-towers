@@ -24,15 +24,16 @@ const Prices = (props) => {
             prices: [
                 {
                     title: 'До 7,6 м',
-                    pricesValue: ['8 рублей / 1 сутки', '25 рублей / 7 дней', '50 рублей / 30 дней']
+                    pricesValue: [<p><span>8</span> рублей / 1 сутки</p>, <p><span>25</span> рублей / 7 дней</p>, <p><span>50</span> рублей / 30 дней</p>]
                 },
                 {
                     title: 'До 7,7 м',
-                    pricesValue: ['8 рублей / 1 сутки', '25 рублей / 7 дней', '50 рублей / 30 дней']
+                    pricesValue: [<p><span>8</span> рублей / 1 сутки</p>, <p><span>25</span> рублей / 7 дней</p>, <p><span>50</span> рублей / 30 дней</p>]
+
                 },
                 {
                     title: 'До 7,8 м',
-                    pricesValue: ['8 рублей / 1 сутки', '25 рублей / 7 дней', '50 рублей / 30 дней']
+                    pricesValue: [<p><span>8</span> рублей / 1 сутки</p>, <p><span>25</span> рублей / 7 дней</p>, <p><span>50</span> рублей / 30 дней</p>]
                 },
 
             ],
@@ -45,7 +46,7 @@ const Prices = (props) => {
             prices: [
                 {
                     title: 'До 7,6 м',
-                    pricesValue: ['8 рублей / 1 сутки', '25 рублей / 7 дней', '50 рублей / 30 дней']
+                    pricesValue: [<p><span>8</span> рублей / 1 сутки</p>, <p><span>25</span> рублей / 7 дней</p>, <p><span>50</span> рублей / 30 дней</p>]
                 },
             ],
             clickFunc: setModalWindowIsOpen
@@ -57,7 +58,7 @@ const Prices = (props) => {
             prices: [
                 {
                     title: 'До 7,6 м',
-                    pricesValue: ['8 рублей / 1 сутки', '25 рублей / 7 дней', '50 рублей / 30 дней']
+                    pricesValue: [<p><span>8</span> рублей / 1 сутки</p>, <p><span>25</span> рублей / 7 дней</p>, <p><span>50</span> рублей / 30 дней</p>]
                 },
             ],
             clickFunc: setModalWindowIsOpen

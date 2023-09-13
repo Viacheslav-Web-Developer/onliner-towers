@@ -73,7 +73,14 @@ export interface IPricesCardProps {
     clickFunc: Dispatch<SetStateAction<boolean>>
 }
 
-interface IPricesCardPricesData {
+export interface IPricesCardPricesData {
     title: string,
-    pricesValue: string[],
+    pricesValue: JSX.Element[],
+}
+
+export interface IPricesCardButtonProps {
+    buttonClassName: string,
+    onClickFunc: () => void,
+    currentItem: number,
+    itemsNumber: number
 }

@@ -3,12 +3,10 @@ import Image from "next/image";
 import s from './Prices-card.module.scss';
 
 import {IPricesCardProps} from "@/types/types";
-import classNames from "classnames";
 
-const PricesCard = (props: {cardData: IPricesCardProps}) => {
-    const prevButtonClassName = classNames([s.prices_button as string], [s.prev_button as string]);
-    const nextButtonClassName = classNames([s.prices_button as string], [s.next_button as string]);
+import PricesCardButton from "@/components/Prices/Prices-card-button";
 
+const PricesCard = (props: { cardData: IPricesCardProps }) => {
     const [priceState, setPriceState] = useState(0);
 
     const nextState = () => {
@@ -23,7 +21,9 @@ const PricesCard = (props: {cardData: IPricesCardProps}) => {
         <div className={s.card}>
             <h2 className={s.title}>{props.cardData.title}</h2>
             <p className={s.description}>{props.cardData.description}</p>
-            <Image src={props.cardData.image} alt={'Фото вышки'}/>
+            <div className={s.card_img}>
+                <Image src={props.cardData.image} alt={'Фото вышки'}/>
+            </div>
 
             <div className={s.prices}>
                 <div className={s.prices_titles}>
@@ -32,14 +32,15 @@ const PricesCard = (props: {cardData: IPricesCardProps}) => {
                     </div>
                 </div>
                 <div className={s.buttons}>
-                    <button className={prevButtonClassName} onClick={prevState}>prev</button>
-                    <button className={nextButtonClassName} onClick={nextState}>next</button>
+                    <PricesCardButton buttonClassName={'prev_button'} onClickFunc={prevState} currentItem={priceState} itemsNumber={props.cardData.prices.length}/>
+                    <PricesCardButton buttonClassName={'next_button'} onClickFunc={nextState} currentItem={priceState} itemsNumber={props.cardData.prices.length}/>
                 </div>
                 <div className={s.prices_value}>
                     <div className={s.layout} style={{transform: `translateX(${priceState * -100}%)`}}>
                         {props.cardData.prices.map((el, id) =>
                             <div className={s.prices_block}>
-                                {el.pricesValue.map((price, priceId) => <p className={s.price_value} key={priceId}>{price}</p>)}
+                                {el.pricesValue.map((price, priceId) => <div className={s.price_value}
+                                                                             key={priceId}>{price}</div>)}
                             </div>
                         )}
                     </div>
