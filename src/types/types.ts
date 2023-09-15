@@ -92,3 +92,13 @@ export interface IBenefitsCardProps {
     title: string,
     text: string
 }
+
+
+
+export type ITableHeadData = string[];
+export type ITableBodyData = string[][];
+
+export interface ITableData {
+    thead: ITableHeadData,
+    tbody: ITableBodyData
+}
