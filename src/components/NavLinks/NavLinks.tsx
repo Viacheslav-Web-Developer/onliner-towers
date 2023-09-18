@@ -16,25 +16,25 @@ const NavLinks = (props: {viewMode: INavLinksProps}) => {
             page: EPages.tower,
             title: 'Аренда вышек',
             image: towerImage,
-            linkHref: '#'
+            linkHref: '/towers'
         },
         {
             page: EPages.scaffold,
             title: 'Аренда помостов',
             image: scaffoldImage,
-            linkHref: '#'
+            linkHref: '/scaffolds'
         },
         {
             page: EPages.scaffolding,
             title: 'Аренда лесов',
             image: scaffoldingImage,
-            linkHref: '#'
+            linkHref: '/scaffoldings'
         },
         {
             page: EPages.stairs,
             title: 'Аренда лестниц',
             image: stairsImage,
-            linkHref: '#'
+            linkHref: '/stairs'
         }
     ]
 
