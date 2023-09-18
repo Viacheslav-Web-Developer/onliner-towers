@@ -1,0 +1,72 @@
+.card {
+    .question {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        .text {
+            color: #303030;
+            font-family: Montserrat, sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+            padding: 20px 0;
+
+        }
+
+        .button {
+            width: 20px;
+            height: 20px;
+            position: relative;
+
+            div {
+                position: absolute;
+                top: 0;
+                left: calc(50% - 1px);
+                width: 2px;
+                height: 100%;
+                background-color: #000;
+                transition: 0.3s;
+            }
+
+            .hor_line {
+                transform: rotateZ(90deg);
+            }
+
+
+        }
+
+        .button.active {
+            .ver_line {
+                transform: rotateZ(90deg);
+            }
+        }
+    }
+
+    .answer {
+        padding: 0 20px;
+        display: none;
+
+        .text {
+            border-radius: 10px 0 10px 10px;
+            background: #002543;
+            padding: 25px 50px;
+            color: #FFF;
+            font-family: Montserrat, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    .answer.open {
+        display: block;
+    }
+}

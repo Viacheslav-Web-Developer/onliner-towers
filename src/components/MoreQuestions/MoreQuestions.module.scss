@@ -1,0 +1,123 @@
+.layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 150px;
+
+    .content {
+        width: 680px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+        background: #FFF;
+        box-shadow: 0 0 30px 0 rgba(134, 134, 134, 0.05);
+        padding: 50px 80px;
+
+        .title {
+            color: #2A4B7B;
+            font-family: Montserrat, sans-serif;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            margin-bottom: 25px;
+        }
+
+        .text {
+            color: #000;
+            text-align: center;
+            font-family: Montserrat, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 25px;
+        }
+
+        .form {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .input {
+                width: 100%;
+                border-radius: 50px;
+                background: #ECEBE8;
+                border: none;
+                outline: none;
+                padding: 10px 0;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                color: #000;
+                font-family: Montserrat, sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            .button {
+                width: 100%;
+                padding: 10px 0;
+                border-radius: 50px;
+                background: linear-gradient(90deg, #F6D365 0%, #EE9A38 100%);
+                box-shadow: 0 4px 4px 0 rgba(123, 123, 123, 0.10);
+                color: #000;
+                font-family: Montserrat, sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                border: none;
+                cursor: pointer;
+            }
+        }
+
+        .hor_line {
+            width: 75%;
+            border: none;
+            background-color: #898989;
+            height: 1px;
+            margin: 15px 0;
+        }
+
+        .call_button {
+            width: 100%;
+            border-radius: 50px;
+            background: linear-gradient(90deg, #243949 0%, #517FA4 100%);
+            border: none;
+            padding: 10px 0;
+            color: #FFF;
+            font-family: Montserrat, sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            gap: 10px;
+
+            &:before {
+                //content: url("~@/public/MoreQuestions/phone.svg");
+                //margin: 0;
+                //display: flex;
+                //align-items: center;
+                //justify-content: center;
+                content: '';
+                width: 20px;
+                height: 20px;
+                background-image: url("~@/public/MoreQuestions/phone.svg");
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    }
+}

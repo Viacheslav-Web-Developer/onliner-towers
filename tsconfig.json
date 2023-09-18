@@ -24,6 +24,7 @@
       "@/assets/*": ["./src/assets/*"],
       "@/types/*": ["./src/types/*"],
       "@/public/*": ["./public/*"],
+      "@/app/*": ["./src/app/*"]
 
     }
   },

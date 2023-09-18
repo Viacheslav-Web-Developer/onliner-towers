@@ -1,0 +1,20 @@
+.content {
+    margin-bottom: 150px;
+
+    .title {
+        color: #000;
+        font-family: Montserrat, sans-serif;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 30px;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: 100%;
+    }
+}

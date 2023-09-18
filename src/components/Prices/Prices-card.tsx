@@ -38,9 +38,8 @@ const PricesCard = (props: { cardData: IPricesCardProps }) => {
                 <div className={s.prices_value}>
                     <div className={s.layout} style={{transform: `translateX(${priceState * -100}%)`}}>
                         {props.cardData.prices.map((el, id) =>
-                            <div className={s.prices_block}>
-                                {el.pricesValue.map((price, priceId) => <div className={s.price_value}
-                                                                             key={priceId}>{price}</div>)}
+                            <div className={s.prices_block} key={id}>
+                                {el.pricesValue.map((price, priceId) => <div className={s.price_value} key={priceId}>{price}</div>)}
                             </div>
                         )}
                     </div>

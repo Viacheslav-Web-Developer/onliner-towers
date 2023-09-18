@@ -1,0 +1,50 @@
+.card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 60px;
+
+    .number_part {
+        position: relative;
+
+        span {
+            font-family: Open Sans, sans-serif;
+            font-size: 120px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .text {
+            color: #2A4B7B;
+        }
+
+        .bcg_text {
+            transform: translateX(-8px) translateY(-2px);
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #FBFBFB;
+            -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .text_part {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+
+        p {
+            color: #000;
+            font-family: Montserrat, sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            letter-spacing: 0.5px;
+        }
+    }
+}

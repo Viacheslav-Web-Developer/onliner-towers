@@ -1,0 +1,22 @@
+.content {
+    margin: 150px auto;
+
+    .title {
+        color: #000;
+        font-family: Montserrat, sans-serif;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 40px;
+    }
+
+    .cards {
+        padding: 30px;
+        margin-left: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        border-left: 1px solid #303030;;
+    }
+}

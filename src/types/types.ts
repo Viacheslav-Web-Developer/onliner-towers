@@ -102,3 +102,25 @@ export interface ITableData {
     thead: ITableHeadData,
     tbody: ITableBodyData
 }
+
+
+
+export interface IFaqCadsData {
+    answer: string,
+    question: string
+}
+
+
+
+export interface IInstructionsData {
+    text: string,
+    image: StaticImageData,
+    textAfterImage?: string
+}
+
+
+
+export interface IVideoProps {
+    title: string,
+    video: string
+}

@@ -66,7 +66,7 @@ const Prices = (props) => {
     ]
 
     const cardsRender = (cardsData: IPricesCardProps[]) => {
-        return cardsData.map(el => <PricesCard cardData={el}/>)
+        return cardsData.map((el, id) => <PricesCard cardData={el} key={id}/>)
     }
 
     return (

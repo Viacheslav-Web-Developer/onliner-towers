@@ -1,5 +1,5 @@
 import React from "react";
-import s from './page.module.scss';
+import s from '@/app/page.module.scss';
 
 import MainScreen from "@/components/MainScreen/MainScreen";
 import Prices from "@/components/Prices/Prices";
@@ -14,7 +14,7 @@ import MoreQuestions from "@/components/MoreQuestions/MoreQuestions";
 
 import {EPages, IInstructionsData, ITableData, IVideoProps} from "@/types/types";
 
-const Home = () => {
+const Tower = () => {
     const firstTableData: ITableData = {
         thead: ['Комплектация', 'Рабочая высота (м)', 'Общая высота (м)', 'Высота до настила (м)', 'Вес (ВСР-1), кг', 'Вес (ВСР-4), кг', 'Вес (ВСР-7), кг'],
         tbody: [
@@ -111,4 +111,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default Tower;
