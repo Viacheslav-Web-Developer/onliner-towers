@@ -1,12 +1,12 @@
 import React from 'react';
 import s from './page.module.scss';
 
-import StairsPage from "@/pages/StairsPage/StairsPage";
+import ScaffoldingPage from "@/pages/ScaffoldingPage/ScaffoldingPage";
 
 const Page = () => {
     return (
         <div className={s.content}>
-            <StairsPage/>
+            <ScaffoldingPage/>
         </div>
     );
 };

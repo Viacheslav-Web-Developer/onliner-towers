@@ -1,12 +1,12 @@
 import React from 'react';
 import s from './page.module.scss';
 
-import Tower from "../../pages/Tower/Tower";
+import TowerPage from "@/pages/TowerPage/TowerPage";
 
 const Page = () => {
     return (
         <div className={s.content}>
-            <Tower/>
+            <TowerPage/>
         </div>
     );
 };

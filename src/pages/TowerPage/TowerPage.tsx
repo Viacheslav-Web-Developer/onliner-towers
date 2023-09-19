@@ -15,7 +15,7 @@ import MoreQuestions from "@/components/MoreQuestions/MoreQuestions";
 import {EPages, IFaqCardsData, IHeaderLinksData, IInstructionsData, ITableData, IVideoProps} from "@/types/types";
 import Footer from "@/components/Footer/Footer";
 
-const Tower = () => {
+const TowerPage = () => {
     const headerLinksData: IHeaderLinksData = {
         'tower': [
             {
@@ -222,4 +222,4 @@ const Tower = () => {
     )
 }
 
-export default Tower;
+export default TowerPage;
