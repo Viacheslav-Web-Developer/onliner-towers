@@ -105,7 +105,7 @@ export interface ITableData {
 
 
 
-export interface IFaqCadsData {
+export interface IFaqCardsData {
     answer: string,
     question: string
 }
@@ -124,3 +124,7 @@ export interface IVideoProps {
     title: string,
     video: string
 }
+
+
+
+export interface IFooterProps extends IViewModeProps{}

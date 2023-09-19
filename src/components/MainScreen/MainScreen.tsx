@@ -5,9 +5,9 @@ import Header from "@/components/Header/Header";
 import TopBar from "@/components/TopBar/TopBar";
 import NavLinks from "@/components/NavLinks/NavLinks";
 
-import {IMainScreenProps, IMainScreenTitlesData} from "@/types/types";
+import {IHeaderLinksData, IMainScreenProps, IMainScreenTitlesData} from "@/types/types";
 
-const MainScreen = (props: {viewMode: IMainScreenProps}) => {
+const MainScreen = (props: {viewMode: IMainScreenProps, headerData: IHeaderLinksData}) => {
     const titlesData: IMainScreenTitlesData = {
         'tower': {
             'title': 'Аренда строительной вышки туры в Минске',
@@ -27,7 +27,7 @@ const MainScreen = (props: {viewMode: IMainScreenProps}) => {
         <div className={s.main_screen}>
             <div className={s.content}>
                 <div className={s.top_section}>
-                    <Header viewMode={props.viewMode}/>
+                    <Header viewMode={props.viewMode} linksData={props.headerData}/>
                     <TopBar/>
                 </div>
                 <div className={s.middle_section + ' container'}>

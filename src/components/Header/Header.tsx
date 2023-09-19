@@ -5,100 +5,9 @@ import logo from '@/public/Header/logo.svg';
 
 import {IHeaderLinks, IHeaderLinksData, IHeaderProps} from "@/types/types";
 
-const Header = (props: {viewMode: IHeaderProps}) => {
-    const linksData: IHeaderLinksData = {
-        'tower': [
-            {
-                url: '#',
-                text: 'Стоимость'
-            },
-            {
-                url: '#',
-                text: 'Характеристики'
-            },
-            {
-                url: '#',
-                text: 'Инструкция по сборке'
-            },
-            {
-                url: '#',
-                text: 'Вопросы'
-            },
-            {
-                url: '#',
-                text: 'Контакты'
-            },
-        ],
-        'scaffold': [
-            {
-                url: '#',
-                text: 'Стоимость'
-            },
-            {
-                url: '#',
-                text: 'Характеристики'
-            },
-            {
-                url: '#',
-                text: 'Инструкция по сборке'
-            },
-            {
-                url: '#',
-                text: 'Вопросы'
-            },
-            {
-                url: '#',
-                text: 'Контакты'
-            },
-        ],
-        'scaffolding': [
-            {
-                url: '#',
-                text: 'Стоимость'
-            },
-            {
-                url: '#',
-                text: 'Характеристики'
-            },
-            {
-                url: '#',
-                text: 'Инструкция по сборке'
-            },
-            {
-                url: '#',
-                text: 'Вопросы'
-            },
-            {
-                url: '#',
-                text: 'Контакты'
-            },
-        ],
-        'stairs': [
-            {
-                url: '#',
-                text: 'Стоимость'
-            },
-            {
-                url: '#',
-                text: 'Характеристики'
-            },
-            {
-                url: '#',
-                text: 'Инструкция по сборке'
-            },
-            {
-                url: '#',
-                text: 'Вопросы'
-            },
-            {
-                url: '#',
-                text: 'Контакты'
-            },
-        ]
-    }
-
+const Header = (props: {viewMode: IHeaderProps, linksData: IHeaderLinksData}) => {
     const linksRender = (linksData: IHeaderLinks[]) => {
-        return linksData.map(el => <li className={s.links_item}><a href={el.url}>{el.text}</a></li>)
+        return linksData.map((el, id) => <li className={s.links_item} key={id}><a href={el.url}>{el.text}</a></li>)
     }
 
     return (
@@ -108,7 +17,7 @@ const Header = (props: {viewMode: IHeaderProps}) => {
                     <Image src={logo} alt={'Logo'}/>
                 </div>
                 <ul className={s.links}>
-                    {linksRender(linksData[props.viewMode.page])}
+                    {linksRender(props.linksData[props.viewMode.page])}
                 </ul>
             </div>
         </div>

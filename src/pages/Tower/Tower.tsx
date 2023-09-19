@@ -12,9 +12,101 @@ import Instructions from "@/components/Instructions/Instructions";
 import Video from "@/components/Video/Video";
 import MoreQuestions from "@/components/MoreQuestions/MoreQuestions";
 
-import {EPages, IInstructionsData, ITableData, IVideoProps} from "@/types/types";
+import {EPages, IFaqCardsData, IHeaderLinksData, IInstructionsData, ITableData, IVideoProps} from "@/types/types";
+import Footer from "@/components/Footer/Footer";
 
 const Tower = () => {
+    const headerLinksData: IHeaderLinksData = {
+        'tower': [
+            {
+                url: '#',
+                text: 'Стоимость'
+            },
+            {
+                url: '#',
+                text: 'Характеристики'
+            },
+            {
+                url: '#',
+                text: 'Инструкция по сборке'
+            },
+            {
+                url: '#',
+                text: 'Вопросы'
+            },
+            {
+                url: '#',
+                text: 'Контакты'
+            },
+        ],
+        'scaffold': [
+            {
+                url: '#',
+                text: 'Стоимость'
+            },
+            {
+                url: '#',
+                text: 'Характеристики'
+            },
+            {
+                url: '#',
+                text: 'Инструкция по сборке'
+            },
+            {
+                url: '#',
+                text: 'Вопросы'
+            },
+            {
+                url: '#',
+                text: 'Контакты'
+            },
+        ],
+        'scaffolding': [
+            {
+                url: '#',
+                text: 'Стоимость'
+            },
+            {
+                url: '#',
+                text: 'Характеристики'
+            },
+            {
+                url: '#',
+                text: 'Инструкция по сборке'
+            },
+            {
+                url: '#',
+                text: 'Вопросы'
+            },
+            {
+                url: '#',
+                text: 'Контакты'
+            },
+        ],
+        'stairs': [
+            {
+                url: '#',
+                text: 'Стоимость'
+            },
+            {
+                url: '#',
+                text: 'Характеристики'
+            },
+            {
+                url: '#',
+                text: 'Инструкция по сборке'
+            },
+            {
+                url: '#',
+                text: 'Вопросы'
+            },
+            {
+                url: '#',
+                text: 'Контакты'
+            },
+        ]
+    }
+
     const firstTableData: ITableData = {
         thead: ['Комплектация', 'Рабочая высота (м)', 'Общая высота (м)', 'Высота до настила (м)', 'Вес (ВСР-1), кг', 'Вес (ВСР-4), кг', 'Вес (ВСР-7), кг'],
         tbody: [
@@ -83,11 +175,29 @@ const Tower = () => {
         video: ''
     }
 
-
+    const faqCardsData: IFaqCardsData[] = [
+        {
+            answer: 'Почему именно вышка тура?',
+            question: 'Большое разнообразие ремонтных, строительных работ проводится на высоте. Для этого создаются специальные устройства, обеспечивающие удобный доступ к отдельным участкам. Активно задействуется вышка тура передвижная, отличающиеся относительной простотой конструкции. Визуально они напоминают строительные леса, однако выгодно отличаются от последних гораздо большей мобильностью и простотой сборки. Если надо, то удастся собрать вышку в течение часа без привлечения большого количества работников, спецсредств.'
+        },
+        {
+            answer: 'Какие преимущества аренды вышек тур?',
+            question: 'Есть выбор разных размеров и высоты. Организована подача непосредственно на строительную площадку, к любому месту, где будут проводиться манипуляции. Иногда пользователи затрудняются назвать точно, какая модель им подходит в зависимости от функционала. Например, в узких пространствах целесообразно выбирать сборно-разборные аналоги, а монолитные не всегда могут вместиться в них. Целесообразно обращаться к специалистам прежде чем остановить выбор на аренде какого-то определённого вида.'
+        },
+        {
+            answer: 'На сколько безопасны вышки?',
+            question: 'Эти устройства являются максимально безопасными, поэтому учитывается структура поверхности, возможность зафиксировать стойки на требуемой высоте.\n' +
+                'Есть не менее популярные вышки-туры ВСР, имеющие небольшие колёса. Они способны поворачиваться вправо-влево либо под определённым углом, в некоторых случаях до 360. Это важное конструктивное решение, позволяющее обрабатывать конфигурацию пространства с многочисленными углами, выступами. Поворачивая вышку под нужным углом в разные стороны, удастся получить доступ к труднодоступным местам. Как видно, технические возможности действительно впечатляют, поэтому можно взять вышку туру напрокат для исполнения проектов разной сложности, срочности.'
+        },
+        {
+            answer: 'Что мне надо иметь при себе, чтобы взять в аренду вышку?',
+            question: 'Чтобы взять в аренду вышку туру, при себе необходимо иметь ПАСПОРТ для заключения договора'
+        }
+    ]
 
     return (
         <div className={s.home}>
-            <MainScreen viewMode={{'page': EPages.tower, 'component': 'main_screen'}}/>
+            <MainScreen viewMode={{'page': EPages.tower, 'component': 'main_screen'}} headerData={headerLinksData}/>
             <Prices viewMode={{'page': EPages.tower, 'component': 'main_screen'}}/>
             <Benefits/>
             <Order/>
@@ -100,13 +210,14 @@ const Tower = () => {
                 <Table tableData={secondTableData}/>
             </div>
             <NavLinks viewMode={{'page': EPages.tower, 'component': 'none'}}/>
-            <Faq/>
+            <Faq cardsData={faqCardsData}/>
             <Instructions instructionsData={instructionsData}/>
             <div className={s.videos_section}>
                 <Video videoData={firstVideoData}/>
                 <Video videoData={secondVideoData}/>
             </div>
             <MoreQuestions/>
+            <Footer viewMode={{'page': EPages.stairs, 'component': 'footer'}} linksData={headerLinksData}/>
         </div>
     )
 }
