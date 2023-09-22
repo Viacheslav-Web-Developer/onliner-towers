@@ -1,126 +1,134 @@
 .layout {
-    width: 100%;
-    background: #575757;
-    padding: 50px 0;
+  width: 100%;
+  background: #575757;
+  padding: 50px 0;
 
-    .content {
-        display: grid;
-        grid-template-columns: 2fr 1fr 2fr;
-        gap: 70px;
+  .content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 70px;
 
-        .part {
-            width: 100%;
-        }
-
-        .contacts_part {
-
-            .title {
-                color: #FFF;
-                font-family: Montserrat, sans-serif;
-                font-size: 20px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
-                margin-bottom: 30px;
-            }
-
-            .information_section {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-
-                .item {
-                    .item_content {
-                        display: flex;
-                        gap: 15px;
-                        align-items: flex-start;
-                        justify-content: flex-start;
-
-                        img {
-
-                        }
-
-                        .title_part {
-                            display: flex;
-                            align-items: center;
-                            gap: 15px;
-
-                            .item_title {
-                                color: #CECECE;
-                                font-family: Montserrat, sans-serif;
-                                font-size: 14px;
-                                font-style: normal;
-                                font-weight: 400;
-                                line-height: normal;
-                            }
-                        }
-
-                        .text {
-                            color: #FFF;
-                            font-family: Montserrat, sans-serif;
-                            font-size: 14px;
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: normal;
-                            text-decoration: none;
-                            margin-top: 3px;
-                        }
-                    }
-
-                    .ps {
-                        color: #E99F10;
-                        font-family: Montserrat, sans-serif;
-                        font-size: 16px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: normal;
-                        margin-top: 10px;
-                    }
-                }
-            }
-        }
-
-        .links_part {
-            .links_list {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-
-                .links_item {
-                    list-style: none;
-
-                    a {
-                        color: #FFF;
-                        font-family: Montserrat, sans-serif;
-                        font-size: 16px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: normal;
-                        text-decoration: none;
-                    }
-                }
-            }
-
-        }
-
-        .button_part {
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-start;
-            .button {
-                padding: 18px 0;
-                width: 50%;
-                border-radius: 50px;
-                border: none;
-                background: #FFB31E;
-                box-shadow: 0 4px 30px 0 rgba(61, 61, 61, 0.10);
-                color: #001728;
-                font-family: Montserrat, sans-serif;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
-            }
-        }
+    .part {
+      width: 100%;
     }
+
+    .contacts_part {
+
+      .title {
+        color: #FFF;
+        font-family: Montserrat, sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 30px;
+      }
+
+      .information_section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .item {
+          .item_content {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            img {
+
+            }
+
+            .title_part {
+              display: flex;
+              align-items: center;
+              gap: 15px;
+
+              .item_title {
+                color: #CECECE;
+                font-family: Montserrat, sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+              }
+            }
+
+            .text {
+              color: #FFF;
+              font-family: Montserrat, sans-serif;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              text-decoration: none;
+              margin-top: 3px;
+            }
+          }
+
+          .ps {
+            color: #E99F10;
+            font-family: Montserrat, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+
+    .links_part {
+      .links_list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .links_item {
+          list-style: none;
+
+          a {
+            color: #FFF;
+            font-family: Montserrat, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            text-decoration: none;
+          }
+        }
+      }
+
+    }
+
+    .button_part {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+
+      .button {
+        padding: 18px 0;
+        width: 50%;
+        border-radius: 50px;
+        border: 2px solid #FFB31E;
+        background: #FFB31E;
+        box-shadow: 0 4px 30px 0 rgba(61, 61, 61, 0.10);
+        color: #001728;
+        font-family: Montserrat, sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: transparent;
+          color: #FFB31E;
+        }
+      }
+    }
+  }
 }

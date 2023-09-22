@@ -2,14 +2,13 @@ import React from 'react';
 import s from './Footer.module.scss';
 import Image from "next/image";
 
-import {IFooterProps, IHeaderLinks, IHeaderLinksData} from "@/types/types";
+import {IFooterProps, IHeaderLinks} from "@/types/types";
 
 import phone from '@/public/Footer/phone.svg';
 import mail from '@/public/Footer/mail.svg';
 import map from '@/public/Footer/map.svg';
 
-
-const Footer = (props: {viewMode: IFooterProps, linksData: IHeaderLinksData}) => {
+const Footer = (props: IFooterProps) => {
 
     const linksRender = (linksData: IHeaderLinks[]) => {
         return linksData.map((el, id) => <li className={s.links_item} key={id}><a href={el.url}>{el.text}</a></li>)
@@ -58,7 +57,7 @@ const Footer = (props: {viewMode: IFooterProps, linksData: IHeaderLinksData}) =>
                         </ul>
                     </div>
                     <div className={s.button_part + ' ' + s.part}>
-                        <button className={s.button}>Заказать звонок</button>
+                        <button className={s.button} onClick={() => props.setModalOpen(true)}>Заказать звонок</button>
                     </div>
                 </div>
             </div>

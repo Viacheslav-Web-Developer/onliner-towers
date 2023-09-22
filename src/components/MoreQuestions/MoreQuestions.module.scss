@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 150px;
+
 
     .content {
         width: 680px;
@@ -120,4 +120,12 @@
             }
         }
     }
+}
+
+.layout.main{
+    margin-bottom: 150px;
+}
+
+.layout.modal{
+
 }

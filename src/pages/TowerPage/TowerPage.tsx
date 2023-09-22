@@ -1,4 +1,5 @@
-import React from "react";
+'use client'
+import React, {useEffect, useState} from "react";
 import s from '@/app/page.module.scss';
 
 import MainScreen from "@/components/MainScreen/MainScreen";
@@ -11,11 +12,32 @@ import Faq from "@/components/Faq/Faq";
 import Instructions from "@/components/Instructions/Instructions";
 import Video from "@/components/Video/Video";
 import MoreQuestions from "@/components/MoreQuestions/MoreQuestions";
-
-import {EPages, IFaqCardsData, IHeaderLinksData, IInstructionsData, ITableData, IVideoProps} from "@/types/types";
 import Footer from "@/components/Footer/Footer";
+import Modal from "@/components/Modal/Modal";
+
+import {
+    EPages,
+    IFaqCardsData,
+    IHeaderLinksData,
+    IInstructionsData,
+    IPricesCardProps,
+    ITableData,
+    IVideoProps
+} from "@/types/types";
+
+import pricesImg1 from "@/public/Prices/tower/img1.png";
+import pricesImg2 from "@/public/Prices/tower/img2.png";
+import pricesImg3 from "@/public/Prices/tower/img3.png";
+
+import instImage1 from '@/public/Instructions/towers/image1.png';
+import instImage2 from '@/public/Instructions/towers/image2.png';
+import instImage3 from '@/public/Instructions/towers/image3.png';
+import instImage4 from '@/public/Instructions/towers/image4.png';
+import instImage5 from '@/public/Instructions/towers/image5.png';
 
 const TowerPage = () => {
+    const [modalIsOpen, setModalOpen] = useState(false)
+
     const headerLinksData: IHeaderLinksData = {
         'tower': [
             {
@@ -107,6 +129,52 @@ const TowerPage = () => {
         ]
     }
 
+    const pricesCardsData: IPricesCardProps[] = [
+        {
+            title: 'Вышка тура ВСР-1',
+            description: '(рабочая площадка 0,7 на 1,6 метра)',
+            image: pricesImg1,
+            prices: [
+                {
+                    title: 'До 7,6 м',
+                    pricesValue: [<p><span>8</span> рублей / 1 сутки</p>, <p><span>25</span> рублей / 7 дней</p>, <p><span>50</span> рублей / 30 дней</p>]
+                },
+                {
+                    title: 'До 7,7 м',
+                    pricesValue: [<p><span>8</span> рублей / 1 сутки</p>, <p><span>25</span> рублей / 7 дней</p>, <p><span>50</span> рублей / 30 дней</p>]
+
+                },
+                {
+                    title: 'До 7,8 м',
+                    pricesValue: [<p><span>8</span> рублей / 1 сутки</p>, <p><span>25</span> рублей / 7 дней</p>, <p><span>50</span> рублей / 30 дней</p>]
+                },
+
+            ],
+        },
+        {
+            title: 'Вышка тура ВСР-1',
+            description: '(рабочая площадка 0,7 на 1,6 метра)',
+            image: pricesImg2,
+            prices: [
+                {
+                    title: 'До 7,6 м',
+                    pricesValue: [<p><span>8</span> рублей / 1 сутки</p>, <p><span>25</span> рублей / 7 дней</p>, <p><span>50</span> рублей / 30 дней</p>]
+                },
+            ],
+        },
+        {
+            title: 'Вышка тура ВСР-1',
+            description: '(рабочая площадка 0,7 на 1,6 метра)',
+            image: pricesImg3,
+            prices: [
+                {
+                    title: 'До 7,6 м',
+                    pricesValue: [<p><span>8</span> рублей / 1 сутки</p>, <p><span>25</span> рублей / 7 дней</p>, <p><span>50</span> рублей / 30 дней</p>]
+                },
+            ],
+        }
+    ]
+
     const firstTableData: ITableData = {
         thead: ['Комплектация', 'Рабочая высота (м)', 'Общая высота (м)', 'Высота до настила (м)', 'Вес (ВСР-1), кг', 'Вес (ВСР-4), кг', 'Вес (ВСР-7), кг'],
         tbody: [
@@ -144,24 +212,24 @@ const TowerPage = () => {
     const instructionsData: IInstructionsData[] = [
         {
             text: 'Монтаж вышки туры начинается с установки двухколесных балок. Вывернутые винтовые опоры ставим балки на ровную поверхность с замками внутрь параллельно друг другу. Сверху на стаканы базы прикладываем длинную объемную диагональ синего цвета. Обратите внимание на то, что эта деталь не вставляется в колесную базу, а именно прикладывается сверху.',
-            image: 'image'
+            image: instImage1
         },
         {
             text: 'Далее вставляем лестницы секции через объемную диагональ длинными концами вниз, тем самым скрепляя предыдущие детали. Берем 4 стяжки желтого цвета, которые соединяют между собой лестницы и основание. Соединяем их между собой с помощью флажков замков последовательно по часовой стрелке. Теперь на лестнице основания надеваем гантели синего цвета и также закрепляем их между собой в той же последовательности с помощью желтых стяжек.',
-            image: 'image',
+            image: instImage2,
             textAfterImage: 'После того как мы собрали полностью первую секцию, необходимо слегка встряхнуть получившуюся конструкцию и такую манипуляцию нужно будет проделать каждой последующей секции, чтобы убедиться, что все соединения плотно сели на свои места.'
         },
         {
             text: 'Теперь можно приступить к выравниванию туры по уровню с четырех сторон с помощью винтовых опор. На этом сборка первой части завершена. Теперь мы по такому же принципу можем продолжить монтаж последующих секций. На гантели синего цвета надеваем желтый рамы, крепим конструкции четырьмя стяжками, на этом моменте можно установить настил. Далее сверху снова установленных гантели и еще 4 стяжки. Когда все промежуточные секции готовы, у нас остаются детали красного цвета. Это секция ограждения. Берем лестницы ограждения и вставляем в гантели последней секции, также друг напротив друга. Далее берем 4 стяжки и закрепляем ими лестницы к гантелям предыдущий секции.\n',
-            image: 'image'
+            image: instImage3
         },
         {
             text: 'На поперечные лестницы ограждения устанавливаем настил с люком и перекладину ограждения с помощью тех же флажковых соединений, к которым крепились стяжки. Устанавливаем гантели ограждения. Теперь осталось закрепить гантели. Для этого берем оставшийся 4 стяжки и соединяем ими гантели с лестницами. За счет расстояния между ступенями мы можем регулировать высоту установки настила каждые 40 сантиметров.\n',
-            image: 'image'
+            image: instImage4
         },
         {
             text: 'Для обеспечения дополнительной устойчивости предусмотрена установка двух стабилизатора, которые рекомендуют устанавливать при высоте вышки более 6 метров. Cтабилизаторы крепится хомутами к основной конструкции вышки.\n',
-            image: 'image'
+            image: instImage5
         },
     ]
 
@@ -197,8 +265,8 @@ const TowerPage = () => {
 
     return (
         <div className={s.home}>
-            <MainScreen viewMode={{'page': EPages.tower, 'component': 'main_screen'}} headerData={headerLinksData}/>
-            <Prices viewMode={{'page': EPages.tower, 'component': 'main_screen'}}/>
+            <MainScreen viewMode={{'page': EPages.tower, 'component': 'main_screen'}} headerData={headerLinksData} setModalOpen={setModalOpen}/>
+            <Prices viewMode={{'page': EPages.tower, 'component': 'main_screen'}} cardsData={pricesCardsData} setModalOpen={setModalOpen}/>
             <Benefits/>
             <Order/>
             <div className={'container'}>
@@ -216,8 +284,9 @@ const TowerPage = () => {
                 <Video videoData={firstVideoData}/>
                 <Video videoData={secondVideoData}/>
             </div>
-            <MoreQuestions/>
-            <Footer viewMode={{'page': EPages.stairs, 'component': 'footer'}} linksData={headerLinksData}/>
+            <MoreQuestions title={'Остались вопросы?'} component={'main'}/>
+            <Footer viewMode={{'page': EPages.stairs, 'component': 'footer'}} linksData={headerLinksData} setModalOpen={setModalOpen}/>
+            <Modal modalIsOpen={modalIsOpen} setModalOpen={setModalOpen}/>
         </div>
     )
 }

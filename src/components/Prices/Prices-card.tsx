@@ -1,3 +1,4 @@
+'use client'
 import React, {useState} from 'react';
 import Image from "next/image";
 import s from './Prices-card.module.scss';
@@ -6,7 +7,7 @@ import {IPricesCardProps} from "@/types/types";
 
 import PricesCardButton from "@/components/Prices/Prices-card-button";
 
-const PricesCard = (props: { cardData: IPricesCardProps }) => {
+const PricesCard = (props: { cardData: IPricesCardProps, setModalOpen: () => void }) => {
     const [priceState, setPriceState] = useState(0);
 
     const nextState = () => {
@@ -24,7 +25,6 @@ const PricesCard = (props: { cardData: IPricesCardProps }) => {
             <div className={s.card_img}>
                 <Image src={props.cardData.image} alt={'Фото вышки'}/>
             </div>
-
             <div className={s.prices}>
                 <div className={s.titles_carousel}>
                     <div className={s.carousel_layout} style={{transform: `translateX(${priceState * -100}%)`}}>
@@ -45,6 +45,7 @@ const PricesCard = (props: { cardData: IPricesCardProps }) => {
                     </div>
                 </div>
             </div>
+            <button onClick={() => props.setModalOpen()} className={s.order_button}>Заказать аренду</button>
         </div>
     );
 };

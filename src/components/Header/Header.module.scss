@@ -19,6 +19,7 @@
 
       .links_item {
         list-style: none;
+        position: relative;
 
         a {
           color: #fff;
@@ -28,6 +29,30 @@
           font-style: normal;
           font-weight: 600;
           line-height: normal;
+          transition: 0.3s;
+
+          &:active{
+            color: #F3A242;
+          }
+        }
+
+        .underline {
+          width: 75%;
+          height: 2px;
+          background-color: #F3A242;
+          position: absolute;
+          top: 110%;
+          left: 0;
+          transform: scale(0);
+          transition: 0.3s;
+          transform-origin: left;
+
+        }
+
+        &:hover {
+          .underline {
+            transform: scale(1);
+          }
         }
       }
     }

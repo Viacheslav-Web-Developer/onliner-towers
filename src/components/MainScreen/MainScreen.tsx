@@ -5,9 +5,9 @@ import Header from "@/components/Header/Header";
 import TopBar from "@/components/TopBar/TopBar";
 import NavLinks from "@/components/NavLinks/NavLinks";
 
-import {IHeaderLinksData, IMainScreenProps, IMainScreenTitlesData} from "@/types/types";
+import { IMainScreenProps, IMainScreenTitlesData } from "@/types/types";
 
-const MainScreen = (props: {viewMode: IMainScreenProps, headerData: IHeaderLinksData}) => {
+const MainScreen = (props: IMainScreenProps) => {
     const titlesData: IMainScreenTitlesData = {
         'tower': {
             'title': 'Аренда строительной вышки туры в Минске',
@@ -33,7 +33,7 @@ const MainScreen = (props: {viewMode: IMainScreenProps, headerData: IHeaderLinks
                 <div className={s.middle_section + ' container'}>
                     <h1 className={s.title}>{titlesData[props.viewMode.page].title}</h1>
                     <p className={s.text}>Качественное оборудование и приятные цены!</p>
-                    <button className={s.button}>Заказать звонок</button>
+                    <button className={s.button} onClick={() => props.setModalOpen(true)}>Заказать звонок</button>
                 </div>
                 <div className={s.bottom_section}>
                     <NavLinks viewMode={props.viewMode}/>

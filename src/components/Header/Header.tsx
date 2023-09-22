@@ -7,7 +7,7 @@ import {IHeaderLinks, IHeaderLinksData, IHeaderProps} from "@/types/types";
 
 const Header = (props: {viewMode: IHeaderProps, linksData: IHeaderLinksData}) => {
     const linksRender = (linksData: IHeaderLinks[]) => {
-        return linksData.map((el, id) => <li className={s.links_item} key={id}><a href={el.url}>{el.text}</a></li>)
+        return linksData.map((el, id) => <li className={s.links_item} key={id}><a href={el.url}>{el.text}</a><div className={s.underline}/></li>)
     }
 
     return (

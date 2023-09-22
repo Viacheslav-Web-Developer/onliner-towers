@@ -2,6 +2,7 @@ import React from 'react';
 import s from './Instructions-card.module.scss';
 
 import {IInstructionsData} from "@/types/types";
+import Image from "next/image";
 
 const InstructionsCard = (props: {cardData: IInstructionsData, number: number}) => {
     return (
@@ -12,7 +13,7 @@ const InstructionsCard = (props: {cardData: IInstructionsData, number: number}) 
             </div>
             <div className={s.text_part}>
                 <p>{props.cardData.text}</p>
-                <p>Image</p>
+                <Image src={props.cardData.image} alt={'Фото этапа сборки'}/>
                 {props.cardData.textAfterImage && <p>{props.cardData.textAfterImage}</p>}
             </div>
 

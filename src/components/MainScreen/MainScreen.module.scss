@@ -53,6 +53,11 @@
         font-weight: 500;
         line-height: normal;
         cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          box-shadow:none;
+        }
       }
     }
 

@@ -9,16 +9,16 @@ export const enum EPages {
 }
 
 
-
 export interface IViewModeProps {
     page: string,
     component: string
 }
 
 
-
-export interface IMainScreenProps extends IViewModeProps{
-
+export interface IMainScreenProps {
+    viewMode: IViewModeProps,
+    headerData: IHeaderLinksData,
+    setModalOpen: Dispatch<SetStateAction<boolean>>
 }
 
 export interface IMainScreenTitlesData {
@@ -33,8 +33,7 @@ export interface IMainScreenTitles {
 }
 
 
-
-export interface IHeaderProps extends IViewModeProps{
+export interface IHeaderProps extends IViewModeProps {
 
 }
 
@@ -51,8 +50,7 @@ export interface IHeaderLinks {
 }
 
 
-
-export interface INavLinksProps extends IViewModeProps{
+export interface INavLinksProps extends IViewModeProps {
 
 }
 
@@ -64,13 +62,17 @@ export interface INavLinksCardProps {
 }
 
 
+export interface IPricesProps {
+    viewMode: IViewModeProps,
+    cardsData: IPricesCardProps[],
+    setModalOpen: Dispatch<SetStateAction<boolean>>
+}
 
 export interface IPricesCardProps {
     title: string,
     description: string,
     image: StaticImageData,
     prices: IPricesCardPricesData[],
-    clickFunc: Dispatch<SetStateAction<boolean>>
 }
 
 export interface IPricesCardPricesData {
@@ -86,13 +88,11 @@ export interface IPricesCardButtonProps {
 }
 
 
-
 export interface IBenefitsCardProps {
     image: StaticImageData,
     title: string,
     text: string
 }
-
 
 
 export type ITableHeadData = string[];
@@ -104,12 +104,10 @@ export interface ITableData {
 }
 
 
-
 export interface IFaqCardsData {
     answer: string,
     question: string
 }
-
 
 
 export interface IInstructionsData {
@@ -119,12 +117,20 @@ export interface IInstructionsData {
 }
 
 
-
 export interface IVideoProps {
     title: string,
     video: string
 }
 
 
+export interface IFooterProps {
+    viewMode: IViewModeProps,
+    linksData: IHeaderLinksData,
+    setModalOpen: Dispatch<SetStateAction<boolean>>
+}
 
-export interface IFooterProps extends IViewModeProps{}
+
+export interface IModalProps {
+    modalIsOpen: boolean,
+    setModalOpen: Dispatch<SetStateAction<boolean>>
+}

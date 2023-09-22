@@ -1,11 +1,11 @@
 import React from 'react';
 import s from './MoreQuestions.module.scss'
 
-const MoreQuestions = () => {
+const MoreQuestions = (props: {title: string, component: string}) => {
     return (
-        <div className={s.layout}>
+        <div className={s.layout + ' ' + s[props.component]}>
             <div className={s.content}>
-                <h2 className={s.title}>Остались вопросы?</h2>
+                <h2 className={s.title}>{props.title}</h2>
                 <p className={s.text}>Оставьте заявку, мы перезвоним и с удовольствием ответим на все интересующие вопросы.</p>
                 <div className={s.form}>
                     <input type="tel" className={s.input} placeholder={'+375 (_ _) _ _ _- _ _- _ _'}/>

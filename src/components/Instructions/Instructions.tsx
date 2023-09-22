@@ -5,11 +5,6 @@ import {IInstructionsData} from "@/types/types";
 import InstructionsCard from "@/components/Instructions/Instructions-card";
 
 const Instructions = (props: {instructionsData: IInstructionsData[]}) => {
-
-    useEffect(() => {
-        console.log(props)
-    })
-
     const cardsRender = (cardsData: IInstructionsData[]) => {
         return cardsData.map((el, id) => <InstructionsCard cardData={el} number={id} key={id}/>)
     }
