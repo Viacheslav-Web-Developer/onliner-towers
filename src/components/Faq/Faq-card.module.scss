@@ -51,9 +51,12 @@
 
     .answer {
         padding: 0 20px;
-        display: none;
+        overflow: hidden;
+        transition: 0.3s;
+        width: 100%;
 
         .text {
+            width: 100%;
             border-radius: 10px 0 10px 10px;
             background: #002543;
             padding: 25px 50px;
@@ -67,6 +70,6 @@
     }
 
     .answer.open {
-        display: block;
+
     }
 }

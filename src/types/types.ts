@@ -33,6 +33,7 @@ export interface IMainScreenTitles {
 }
 
 
+
 export interface IHeaderProps extends IViewModeProps {
 
 }
@@ -50,6 +51,7 @@ export interface IHeaderLinks {
 }
 
 
+
 export interface INavLinksProps extends IViewModeProps {
 
 }
@@ -60,6 +62,7 @@ export interface INavLinksCardProps {
     image: StaticImageData,
     linkHref: string
 }
+
 
 
 export interface IPricesProps {
@@ -88,11 +91,13 @@ export interface IPricesCardButtonProps {
 }
 
 
+
 export interface IBenefitsCardProps {
     image: StaticImageData,
     title: string,
     text: string
 }
+
 
 
 export type ITableHeadData = string[];
@@ -104,10 +109,12 @@ export interface ITableData {
 }
 
 
+
 export interface IFaqCardsData {
     answer: string,
     question: string
 }
+
 
 
 export interface IInstructionsData {
@@ -117,10 +124,12 @@ export interface IInstructionsData {
 }
 
 
+
 export interface IVideoProps {
     title: string,
     video: string
 }
+
 
 
 export interface IFooterProps {
@@ -128,6 +137,7 @@ export interface IFooterProps {
     linksData: IHeaderLinksData,
     setModalOpen: Dispatch<SetStateAction<boolean>>
 }
+
 
 
 export interface IModalProps {

@@ -1,32 +1,35 @@
 'use client'
-import React, {useState} from 'react';
+import React, {createRef, useEffect, useState} from 'react';
 import s from './Faq-card.module.scss'
 import classNames from "classnames";
-import {IFaqCadsData} from "@/types/types";
+import {IFaqCardsData} from "@/types/types";
 
-const FaqCard = (props: {cardData: IFaqCadsData}) => {
+const FaqCard = (props: {cardData: IFaqCardsData}) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
-    const answerClassName = classNames({
-        [s.answer as string]: true,
-        [s.open as string]: isOpen
-    })
-
-    const buttonClassName = classNames([s.button as string], {
+    const buttonPlusClassName = classNames([s.button as string], {
         [s.active as string]: isOpen
     })
+
+    const answerRef = createRef();
+
+    const [answerHeight, setAnswerHeight] = useState<null | number>(null)
+
+    useEffect(() => {
+        setAnswerHeight(answerRef.current.clientHeight)
+    }, [null])
 
     return (
         <div className={s.card}>
             <button className={s.question} onClick={() => setIsOpen(!isOpen)}>
-                <p className={s.text}>{props.cardData.answer}</p>
-                <div className={buttonClassName}>
+                <p className={s.text}>{props.cardData.question}</p>
+                <div className={buttonPlusClassName}>
                     <div className={s.hor_line}></div>
                     <div className={s.ver_line}></div>
                 </div>
             </button>
-            <div className={answerClassName}>
-                <p className={s.text}>{props.cardData.question}</p>
+            <div className={s.answer} style={isOpen ? {height: `${answerHeight}px`} : {height: '0'}}>
+                <p className={s.text} ref={answerRef}>{props.cardData.answer}</p>
             </div>
         </div>
     );
