@@ -42,23 +42,23 @@ const TowerPage = () => {
     const headerLinksData: IHeaderLinksData = {
         'tower': [
             {
-                url: '#',
+                url: '#prices',
                 text: 'Стоимость'
             },
             {
-                url: '#',
+                url: '#specifications',
                 text: 'Характеристики'
             },
             {
-                url: '#',
-                text: 'Инструкция по сборке'
-            },
-            {
-                url: '#',
+                url: '#faq',
                 text: 'Вопросы'
             },
             {
-                url: '#',
+                url: '#manual',
+                text: 'Инструкция по сборке'
+            },
+            {
+                url: '#contacts',
                 text: 'Контакты'
             },
         ],
@@ -273,10 +273,12 @@ const TowerPage = () => {
         <div className={s.home}>
             <MainScreen viewMode={{'page': EPages.tower, 'component': 'main_screen'}} headerData={headerLinksData}
                         setModalOpen={setModalOpen}/>
+            <div className={'anchor_link'} id={'prices'}/>
             <Prices viewMode={{'page': EPages.tower, 'component': 'main_screen'}} cardsData={pricesCardsData}
                     setModalOpen={setModalOpen}/>
             <Benefits/>
             <Order/>
+            <div className={'anchor_link'} id={'specifications'}/>
             <div className={'container'}>
                 <h2 className={s.table_title}>Технические характеристики вышки туры передвижной</h2>
                 <Table tableData={firstTableData}/>
@@ -286,7 +288,9 @@ const TowerPage = () => {
                 <Table tableData={secondTableData}/>
             </div>
             <NavLinks viewMode={{'page': EPages.tower, 'component': 'none'}}/>
+            <div className={'anchor_link'} id={'faq'}/>
             <Faq cardsData={faqCardsData}/>
+            <div className={'anchor_link'} id={'manual'}/>
             <Instructions instructionsData={instructionsData}/>
             <div className={s.videos_section}>
                 <Video videoData={firstVideoData}/>
