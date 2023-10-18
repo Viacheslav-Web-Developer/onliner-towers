@@ -1,15 +1,21 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     scroll-behavior: smooth;
-  background-color: #FBFBFB;
+    background-color: #FBFBFB;
 }
 
 .container {
-  margin: 0 auto;
-  width: 1170px;
+    margin: 0 auto;
+    width: 1170px;
+}
+
+.anchor_link{
+    margin-top: -100px;
+    padding-bottom: 100px;
 }
