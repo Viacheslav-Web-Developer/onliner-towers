@@ -3,6 +3,7 @@ import s from './NavLinks-card.module.scss'
 import Image from "next/image";
 import classNames from "classnames";
 import {INavLinksCardProps, IViewModeProps} from "@/types/types";
+import Link from "next/link";
 
 const NavLinksCard = (props: {linkData: INavLinksCardProps, viewMode: IViewModeProps}) => {
     const imgClassName = classNames([s.image as string], [s[props.viewMode.component as string]])
@@ -13,7 +14,7 @@ const NavLinksCard = (props: {linkData: INavLinksCardProps, viewMode: IViewModeP
             <div className={imgClassName}>
                 <Image src={props.linkData.image} alt={'Image'}/>
             </div>
-            <a href={props.linkData.linkHref} className={s.button}>Подробнее</a>
+            <Link href={props.linkData.linkHref} className={s.button}>Подробнее</Link>
         </div>
     );
 };
