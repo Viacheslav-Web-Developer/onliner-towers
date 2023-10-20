@@ -9,9 +9,8 @@ import mail from '@/public/Footer/mail.svg';
 import map from '@/public/Footer/map.svg';
 
 const Footer = (props: IFooterProps) => {
-
     const linksRender = (linksData: IHeaderLinks[]) => {
-        return linksData.map((el, id) => <li className={s.links_item} key={id}><a href={el.url}>{el.text}</a></li>)
+        return linksData.map((el, id) => <li className={s.links_item} key={id}><a href={el.url}>{el.text}</a><div className={s.underline}/></li>)
     }
 
     return (

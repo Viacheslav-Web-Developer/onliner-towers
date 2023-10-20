@@ -15,6 +15,7 @@ import MoreQuestions from "@/components/MoreQuestions/MoreQuestions";
 import Footer from "@/components/Footer/Footer";
 import Modal from "@/components/Modal/Modal";
 import YandexMap from "@/components/YandexMap/YandexMap";
+import ButtonUp from "../../common_components/ButtonUp/ButtonUp";
 
 import {
     EPages,
@@ -273,11 +274,13 @@ const TowerPage = () => {
         <div className={s.home}>
             <MainScreen viewMode={{'page': EPages.tower, 'component': 'main_screen'}} headerData={headerLinksData}
                         setModalOpen={setModalOpen}/>
+            {/*Якорь цены*/}
             <div className={'anchor_link'} id={'prices'}/>
             <Prices viewMode={{'page': EPages.tower, 'component': 'main_screen'}} cardsData={pricesCardsData}
                     setModalOpen={setModalOpen}/>
-            <Benefits/>
-            <Order/>
+            <Benefits viewMode={{'page': EPages.tower, 'component': 'benefits'}}/>
+            <Order viewMode={{'page': EPages.tower, 'component': 'order'}}/>
+            {/*Якорь характеристики*/}
             <div className={'anchor_link'} id={'specifications'}/>
             <div className={'container'}>
                 <h2 className={s.table_title}>Технические характеристики вышки туры передвижной</h2>
@@ -288,8 +291,10 @@ const TowerPage = () => {
                 <Table tableData={secondTableData}/>
             </div>
             <NavLinks viewMode={{'page': EPages.tower, 'component': 'none'}}/>
+            {/*Якорь вопрос/ответ*/}
             <div className={'anchor_link'} id={'faq'}/>
             <Faq cardsData={faqCardsData}/>
+            {/*Якорь инструкция*/}
             <div className={'anchor_link'} id={'manual'}/>
             <Instructions instructionsData={instructionsData}/>
             <div className={s.videos_section}>
@@ -297,10 +302,13 @@ const TowerPage = () => {
                 <Video videoData={secondVideoData}/>
             </div>
             <MoreQuestions title={'Остались вопросы?'} component={'main'}/>
-            <Footer viewMode={{'page': EPages.stairs, 'component': 'footer'}} linksData={headerLinksData}
+            {/*Якорь контакты*/}
+            <div className={'anchor_link'} id={'contacts'}/>
+            <Footer viewMode={{'page': EPages.tower, 'component': 'footer'}} linksData={headerLinksData}
                     setModalOpen={setModalOpen}/>
             <YandexMap/>
             <Modal modalIsOpen={modalIsOpen} setModalOpen={setModalOpen}/>
+            <ButtonUp/>
         </div>
     )
 }

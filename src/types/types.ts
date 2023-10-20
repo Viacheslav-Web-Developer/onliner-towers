@@ -92,10 +92,20 @@ export interface IPricesCardButtonProps {
 
 
 
+export interface IBenefitsProps {
+    viewMode: IViewModeProps,
+}
+
 export interface IBenefitsCardProps {
     image: StaticImageData,
     title: string,
     text: string
+}
+
+
+
+export interface IOrderProps {
+    viewMode: IViewModeProps,
 }
 
 

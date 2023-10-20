@@ -1,22 +1,38 @@
 .content {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 150px;
 
-    .cards {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 30px;
-    }
+  .cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+  }
 
-    .text {
-        color: #2A4B7B;
-        font-family: Montserrat, sans-serif;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 130%;
-    }
+  .text {
+    color: #2A4B7B;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+  }
+
+  .text.tower {
+    color: #2A4B7B;
+  }
+
+  .text.stairs {
+    color: #636872;
+  }
+
+  .text.scaffolding {
+    color: #6C758F;
+  }
+
+  .text.scaffold {
+    color: #293E58;
+  }
 }

@@ -3,14 +3,15 @@ import s from './Order.module.scss';
 import Image from "next/image";
 
 import image from '@/public/Order/image.png';
+import {IOrderProps} from "@/types/types";
 
-const Order = () => {
+const Order = (props: IOrderProps) => {
     return (
         <div className={s.content}>
             <div className={'container'}>
                 <h2 className={s.title}>Оставьте заявку на расчет стоимости и сроков поставки:</h2>
             </div>
-            <div className={s.form_part}>
+            <div className={s.form_part + ' ' + s[props.viewMode.page]}>
                 <div className={s.container + ' container'}>
                     <div className={s.form}>
                         <div className={s.user_data_inputs}>

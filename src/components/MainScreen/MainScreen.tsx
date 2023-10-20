@@ -24,7 +24,7 @@ const MainScreen = (props: IMainScreenProps) => {
     }
 
     return (
-        <div className={s.main_screen}>
+        <div className={s.main_screen + ' ' + s[props.viewMode.page]}>
             <div className={s.content}>
                 <div className={s.top_section}>
                     <Header viewMode={props.viewMode} linksData={props.headerData}/>

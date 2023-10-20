@@ -4,7 +4,7 @@ import {ITableBodyData, ITableData, ITableHeadData} from "@/types/types";
 
 const Table = (props: {tableData: ITableData}) => {
     const tableHeadRender = (tableHeadData: ITableHeadData) => {
-        return tableHeadData.map((tdData, id) => <td className={s.td}>{tdData}</td>)
+        return tableHeadData.map((tdData, id) => <td className={s.td} key={id}>{tdData}</td>)
     }
 
     const tableBodyRender = (tableBodyData: ITableBodyData) => {

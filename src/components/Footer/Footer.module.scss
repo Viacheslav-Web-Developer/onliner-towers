@@ -5,8 +5,8 @@
 
   .content {
     display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
-    gap: 70px;
+    grid-template-columns: 2fr 1.5fr 1.5fr;
+    gap: 100px;
 
     .part {
       width: 100%;
@@ -88,15 +88,40 @@
 
         .links_item {
           list-style: none;
+          position: relative;
 
           a {
-            color: #FFF;
-            font-family: Montserrat, sans-serif;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
+            color: #fff;
             text-decoration: none;
+            font-family: Jura, sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            transition: 0.3s;
+
+            &:active{
+              color: #F3A242;
+            }
+          }
+
+          .underline {
+            width: 35%;
+            height: 2px;
+            background-color: #F3A242;
+            position: absolute;
+            top: 110%;
+            left: 0;
+            transform: scale(0);
+            transition: 0.3s;
+            transform-origin: left;
+
+          }
+
+          &:hover {
+            .underline {
+              transform: scale(1);
+            }
           }
         }
       }
@@ -110,7 +135,7 @@
 
       .button {
         padding: 18px 0;
-        width: 50%;
+        width: 75%;
         border-radius: 50px;
         border: 2px solid #FFB31E;
         background: #FFB31E;

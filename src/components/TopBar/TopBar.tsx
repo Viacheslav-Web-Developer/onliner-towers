@@ -25,9 +25,9 @@ const TopBar = () => {
     ]
 
     const listItemRender = (listData) => {
-        return listData.map(el => {
+        return listData.map((el, id) => {
             return (
-                <li className={s.list_item}>
+                <li className={s.list_item} key={id}>
                     {el.href
                         ? <a href={el.href}>
                             <Image src={el.image} alt={'Icon'}/>
@@ -39,7 +39,6 @@ const TopBar = () => {
                         </>
                     }
                 </li>
-
             )
         })
     }

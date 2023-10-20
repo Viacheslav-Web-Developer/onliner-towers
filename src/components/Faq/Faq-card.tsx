@@ -17,15 +17,16 @@ const FaqCard = (props: {cardData: IFaqCardsData}) => {
 
     useEffect(() => {
         setAnswerHeight(answerRef.current.clientHeight)
-    }, [null])
+        console.log(answerRef.current.clientHeight)
+    })
 
     return (
         <div className={s.card}>
             <button className={s.question} onClick={() => setIsOpen(!isOpen)}>
                 <p className={s.text}>{props.cardData.question}</p>
                 <div className={buttonPlusClassName}>
-                    <div className={s.hor_line}></div>
-                    <div className={s.ver_line}></div>
+                    <div className={s.hor_line}/>
+                    <div/>
                 </div>
             </button>
             <div className={s.answer} style={isOpen ? {height: `${answerHeight}px`} : {height: '0'}}>

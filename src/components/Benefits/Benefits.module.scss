@@ -20,10 +20,42 @@
         }
     }
 
+    .header.tower {
+        background: #2A4B7B;
+    }
+
+    .header.stairs {
+        background: #636872;
+    }
+
+    .header.scaffolding {
+        background: #6C758F;
+    }
+
+    .header.scaffold {
+        background: #293E58;
+    }
+
     .under_header {
         width: 100%;
         height: 50px;
         background: #2A4B7B;
+    }
+
+    .under_header.tower {
+        background: #2A4B7B;
+    }
+
+    .under_header.stairs {
+        background: #636872;
+    }
+
+    .under_header.scaffolding {
+        background: #6C758F;
+    }
+
+    .under_header.scaffold {
+        background: #293E58;
     }
 
     .body {

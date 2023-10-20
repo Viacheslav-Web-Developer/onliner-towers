@@ -40,7 +40,7 @@ const NavLinks = (props: {viewMode: INavLinksProps}) => {
 
     const linksRender = (linksData: INavLinksCardProps[]) => {
         const newLinksData = linksData.filter(el => el.page !== props.viewMode.page)
-        return newLinksData.map(el => <NavLinksCard linkData={el} viewMode={props.viewMode}/>)
+        return newLinksData.map((el, id) => <NavLinksCard linkData={el} key={id} viewMode={props.viewMode}/>)
     }
 
     return (

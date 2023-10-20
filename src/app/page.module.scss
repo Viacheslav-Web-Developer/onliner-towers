@@ -1,6 +1,8 @@
 .home {
+  position: relative;
 
-  .table_title {
+
+  .table_title, .button_to_up {
     color: #000;
     font-family: Montserrat, sans-serif;
     font-size: 30px;
@@ -10,10 +12,12 @@
     margin-bottom: 30px;
   }
 
-    .videos_section{
-        margin-bottom: 150px;
-        display: flex;
-        flex-direction: column;
-        gap: 100px;
-    }
+  .videos_section {
+    margin-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+  }
+
+
 }

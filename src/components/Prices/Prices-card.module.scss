@@ -52,7 +52,7 @@
 
       .carousel_layout {
         display: flex;
-        transition: 0.3s;
+        transition: cubic-bezier(.43,-0.01,.33,1) 0.6s;
         margin: 0;
 
         .carousel_item_title {
@@ -83,7 +83,7 @@
 
       .layout {
         display: flex;
-        transition: 0.3s;
+        transition: cubic-bezier(.43,-0.01,.33,1) 0.6s;
 
         .prices_block {
           display: flex;
