@@ -108,6 +108,11 @@ export interface IOrderProps {
     viewMode: IViewModeProps,
 }
 
+export interface IOrderInputsProps {
+    userData: string,
+    setUserData: Dispatch<SetStateAction<string>>
+}
+
 
 
 export type ITableHeadData = string[];

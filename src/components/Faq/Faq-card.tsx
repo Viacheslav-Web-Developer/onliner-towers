@@ -17,7 +17,6 @@ const FaqCard = (props: {cardData: IFaqCardsData}) => {
 
     useEffect(() => {
         setAnswerHeight(answerRef.current.clientHeight)
-        console.log(answerRef.current.clientHeight)
     })
 
     return (
