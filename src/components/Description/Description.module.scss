@@ -1,0 +1,46 @@
+.content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 120px;
+  padding: 60px 90px;
+  border-radius: 14px;
+  background: #FFF;
+  filter: drop-shadow(4px 4px 20px rgba(0, 0, 0, 0.05));
+  margin-bottom: 150px;
+
+  .img_part {
+
+  }
+
+  .text_part {
+    width: 50%;
+
+    .title {
+      color: #171616;
+      font-family: Montserrat, sans-serif;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 60px;
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+
+      .item {
+        list-style-position: inside;
+        color: #000;
+        font-family: Montserrat, sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+}

@@ -1,9 +1,6 @@
 .layout {
-  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 100px;
 
   .table {
     min-width: 60%;
@@ -17,7 +14,7 @@
         padding: 8px 0 8px 30px;
         color: #000;
         font-family: Montserrat, sans-serif;
-        font-size: 20px;
+        font-size: 16px;
         font-style: normal;
         font-weight: 500;
         line-height: 130%;

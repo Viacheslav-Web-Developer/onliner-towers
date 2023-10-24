@@ -21,6 +21,7 @@
     ],
     "paths": {
       "@/components/*": ["./src/components/*"],
+      "@/common_components/*": ["./src/common_components/*"],
       "@/assets/*": ["./src/assets/*"],
       "@/types/*": ["./src/types/*"],
       "@/public/*": ["./public/*"],

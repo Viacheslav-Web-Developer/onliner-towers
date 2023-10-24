@@ -159,3 +159,18 @@ export interface IModalProps {
     modalIsOpen: boolean,
     setModalOpen: Dispatch<SetStateAction<boolean>>
 }
+
+
+
+export interface IStairsPageDescriptionData {
+    title: string,
+    description: string[],
+    table: ITableData,
+    image: StaticImageData,
+}
+
+export interface IScaffoldingPageDescriptionData {
+    img: StaticImageData,
+    title: string,
+    listData: string[]
+}

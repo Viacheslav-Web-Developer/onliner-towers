@@ -19,7 +19,6 @@ const Order = (props: IOrderProps) => {
         let regName = /^[a-zA-Zа-яёА-ЯЁ]{3,}\s?([a-zA-Zа-яёА-ЯЁ]{3,})*\s?([a-zA-Zа-яёА-ЯЁ]{3,})*$/;
         let regPhone = /^\+375 \(\d{2}\) \d{3}-\d{2}-\d{2}$/;
         (regName.test(userName) && regPhone.test(changedUserPhone)) ? setSubmitButtonStatus(true) : setSubmitButtonStatus(false);
-        console.log(regPhone.test(changedUserPhone))
     }, [userName, changedUserPhone])
 
     return (

@@ -1,8 +1,14 @@
 .home {
   position: relative;
 
+.table{
+  display: flex;
+  margin-bottom: 100px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
-  .table_title, .button_to_up {
+  .table_title {
     color: #000;
     font-family: Montserrat, sans-serif;
     font-size: 30px;
@@ -10,7 +16,9 @@
     font-weight: 600;
     line-height: normal;
     margin-bottom: 30px;
+    align-self: flex-start;
   }
+}
 
   .videos_section {
     margin-bottom: 150px;
