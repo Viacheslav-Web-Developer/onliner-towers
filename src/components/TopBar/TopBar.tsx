@@ -1,42 +1,18 @@
 import React from 'react';
 import s from './TopBar.module.scss'
-import Image from "next/image";
 
-import phoneIcon from '@/public/TopBar/phoneIcon.svg';
-import mailIcon from '@/public/TopBar/mailIcon.svg';
-import timeIcon from '@/public/TopBar/timeIcon.svg'
+import {ITopBarCards, ITopBarProps} from "@/types/types";
+import TopBarLink from "@/components/TopBar/TopBar-link";
+import TopBarCard from "@/components/TopBar/TopBar-card";
 
-const TopBar = () => {
-    const listData = [
-        {
-            href: 'tel:+3753391619',
-            image: phoneIcon,
-            text: '+375 (33) 916 16 19'
-        },
-        {
-            href: 'mailto:gradovichnicolay@gmail.com',
-            image: mailIcon,
-            text: 'gradovichnicolay@gmail.com'
-        },
-        {
-            image: timeIcon,
-            text: '9:00 - 20:00'
-        },
-    ]
-
-    const listItemRender = (listData) => {
-        return listData.map((el, id) => {
+const TopBar = (props: ITopBarProps) => {
+    const listItemRender = (cardsData: ITopBarCards[]) => {
+        return cardsData.map((el, id) => {
             return (
                 <li className={s.list_item} key={id}>
                     {el.href
-                        ? <a href={el.href}>
-                            <Image src={el.image} alt={'Icon'}/>
-                            <p>{el.text}</p>
-                        </a>
-                        : <>
-                            <Image src={el.image} alt={'Icon'}/>
-                            <p>{el.text}</p>
-                        </>
+                        ? <TopBarLink text={el.text} image={el.image} href={el.href}/>
+                        : <TopBarCard text={el.text} image={el.image}/>
                     }
                 </li>
             )
@@ -46,7 +22,7 @@ const TopBar = () => {
     return (
         <div className={s.top_bar}>
             <ul className={s.list}>
-                {listItemRender(listData)}
+                {listItemRender(props.cards)}
             </ul>
         </div>
     );

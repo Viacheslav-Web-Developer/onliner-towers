@@ -9,40 +9,24 @@ export const enum EPages {
 }
 
 
-export interface IViewModeProps {
-    page: string,
-    component: string
-}
-
 
 export interface IMainScreenProps {
-    viewMode: IViewModeProps,
-    headerData: IHeaderLinksData,
-    setModalOpen: Dispatch<SetStateAction<boolean>>
-}
-
-export interface IMainScreenTitlesData {
-    tower: IMainScreenTitles,
-    scaffold: IMainScreenTitles,
-    scaffolding: IMainScreenTitles,
-    stairs: IMainScreenTitles,
-}
-
-export interface IMainScreenTitles {
-    title: string
+    title: string,
+    setModalOpen: Dispatch<SetStateAction<boolean>>,
+    page: EPages,
+    headerLinks: IHeaderLinks[],
+    topBarCards: ITopBarCards[],
+    navLinks: INavLinks[]
 }
 
 
 
-export interface IHeaderProps extends IViewModeProps {
-
+export interface IHeaderProps {
+    links: IHeaderLinks[],
 }
 
-export interface IHeaderLinksData {
-    tower: IHeaderLinks[],
-    scaffold: IHeaderLinks[],
-    scaffolding: IHeaderLinks[],
-    stairs: IHeaderLinks[],
+export interface IHeaderLinksProps extends IHeaderLinks {
+
 }
 
 export interface IHeaderLinks {
@@ -52,11 +36,42 @@ export interface IHeaderLinks {
 
 
 
-export interface INavLinksProps extends IViewModeProps {
+export interface ITopBarProps {
+    cards: ITopBarCards[]
+}
 
+export interface ITopBarCards {
+    href?: string,
+    image: StaticImageData,
+    text: string
+}
+
+export interface ITopBarCardsProps {
+    image: StaticImageData,
+    text: string
+}
+
+export interface ITopBarLinksProps {
+    href: string,
+    image: StaticImageData,
+    text: string
+}
+
+
+
+
+export interface INavLinksProps{
+    page: EPages,
+    component: string,
+    navLinks: INavLinks[]
 }
 
 export interface INavLinksCardProps {
+    component: string,
+    navLinks: INavLinks
+}
+
+export interface INavLinks{
     page: EPages,
     title: string,
     image: StaticImageData,
@@ -66,21 +81,30 @@ export interface INavLinksCardProps {
 
 
 export interface IPricesProps {
-    viewMode: IViewModeProps,
-    cardsData: IPricesCardProps[],
+    page: EPages,
+    cardsData: IPricesCard[],
     setModalOpen: Dispatch<SetStateAction<boolean>>
 }
 
 export interface IPricesCardProps {
+    setModalOpen: () => void,
+    cardData: IPricesCard
+}
+
+export interface IPricesCard {
     title: string,
     description: string,
     image: StaticImageData,
-    prices: IPricesCardPricesData[],
+    prices: IPricesCardPrices[],
 }
 
-export interface IPricesCardPricesData {
+export interface IPricesCardPrices {
     title: string,
     pricesValue: JSX.Element[],
+}
+
+export interface IPricesCarouselProps {
+    prices: IPricesCardPrices[],
 }
 
 export interface IPricesCardButtonProps {
@@ -93,7 +117,8 @@ export interface IPricesCardButtonProps {
 
 
 export interface IBenefitsProps {
-    viewMode: IViewModeProps,
+    cardsData: IBenefitsCardProps[],
+    page: EPages
 }
 
 export interface IBenefitsCardProps {
@@ -105,7 +130,7 @@ export interface IBenefitsCardProps {
 
 
 export interface IOrderProps {
-    viewMode: IViewModeProps,
+    page: EPages
 }
 
 export interface IOrderInputsProps {
@@ -148,7 +173,6 @@ export interface IVideoProps {
 
 
 export interface IFooterProps {
-    viewMode: IViewModeProps,
     linksData: IHeaderLinksData,
     setModalOpen: Dispatch<SetStateAction<boolean>>
 }

@@ -1,23 +1,11 @@
-'use client'
-import React, {useState} from 'react';
+import React from 'react';
 import Image from "next/image";
+import {IPricesCardProps} from "@/types/types";
 import s from './Prices-card.module.scss';
 
-import {IPricesCardProps} from "@/types/types";
+import PricesCarousel from "@/components/Prices/Prices-carousel";
 
-import PricesCardButton from "@/components/Prices/Prices-card-button";
-
-const PricesCard = (props: { cardData: IPricesCardProps, setModalOpen: () => void }) => {
-    const [priceState, setPriceState] = useState(0);
-
-    const nextState = () => {
-        priceState < props.cardData.prices.length - 1 ? setPriceState(priceState + 1) : console.log('last item')
-    }
-
-    const prevState = () => {
-        priceState > 0 ? setPriceState(priceState - 1) : console.log('first item')
-    }
-
+const PricesCard = (props: IPricesCardProps ) => {
     return (
         <div className={s.card}>
             <h2 className={s.title}>{props.cardData.title}</h2>
@@ -25,26 +13,7 @@ const PricesCard = (props: { cardData: IPricesCardProps, setModalOpen: () => voi
             <div className={s.card_img}>
                 <Image src={props.cardData.image} alt={'Фото вышки'}/>
             </div>
-            <div className={s.prices}>
-                <div className={s.titles_carousel}>
-                    <div className={s.carousel_layout} style={{transform: `translateX(${priceState * -100}%)`}}>
-                        {props.cardData.prices.map((el, id) => <h3 className={s.carousel_item_title} key={id}>{el.title}</h3>)}
-                    </div>
-                </div>
-                <div className={s.buttons}>
-                    <PricesCardButton buttonClassName={'prev_button'} onClickFunc={prevState} currentItem={priceState} itemsNumber={props.cardData.prices.length}/>
-                    <PricesCardButton buttonClassName={'next_button'} onClickFunc={nextState} currentItem={priceState} itemsNumber={props.cardData.prices.length}/>
-                </div>
-                <div className={s.prices_value}>
-                    <div className={s.layout} style={{transform: `translateX(${priceState * -100}%)`}}>
-                        {props.cardData.prices.map((el, id) =>
-                            <div className={s.prices_block} key={id}>
-                                {el.pricesValue.map((price, priceId) => <div className={s.price_value} key={priceId}>{price}</div>)}
-                            </div>
-                        )}
-                    </div>
-                </div>
-            </div>
+            <PricesCarousel prices={props.cardData.prices}/>
             <button onClick={() => props.setModalOpen()} className={s.order_button}>Заказать аренду</button>
         </div>
     );

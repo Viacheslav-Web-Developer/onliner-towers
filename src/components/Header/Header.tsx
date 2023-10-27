@@ -3,11 +3,12 @@ import s from './Header.module.scss';
 import Image from "next/image";
 import logo from '@/public/Header/logo.svg';
 
-import {IHeaderLinks, IHeaderLinksData, IHeaderProps} from "@/types/types";
+import {IHeaderLinks, IHeaderProps} from "@/types/types";
+import HeaderLinks from "@/components/Header/Header-links";
 
-const Header = (props: {viewMode: IHeaderProps, linksData: IHeaderLinksData}) => {
+const Header = (props: IHeaderProps) => {
     const linksRender = (linksData: IHeaderLinks[]) => {
-        return linksData.map((el, id) => <li className={s.links_item} key={id}><a href={el.url}>{el.text}</a><div className={s.underline}/></li>)
+        return linksData.map((el, id) => <HeaderLinks text={el.text} url={el.url} key={id}/>)
     }
 
     return (
@@ -17,7 +18,7 @@ const Header = (props: {viewMode: IHeaderProps, linksData: IHeaderLinksData}) =>
                     <Image src={logo} alt={'Logo'}/>
                 </div>
                 <ul className={s.links}>
-                    {linksRender(props.linksData[props.viewMode.page])}
+                    {linksRender(props.links)}
                 </ul>
             </div>
         </div>
