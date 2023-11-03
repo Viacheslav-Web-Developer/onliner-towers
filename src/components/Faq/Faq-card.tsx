@@ -2,9 +2,9 @@
 import React, {createRef, useEffect, useState} from 'react';
 import s from './Faq-card.module.scss'
 import classNames from "classnames";
-import {IFaqCardsData} from "@/types/types";
+import {IFaqCardProps} from "@/types/types";
 
-const FaqCard = (props: {cardData: IFaqCardsData}) => {
+const FaqCard = (props: IFaqCardProps) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     const buttonPlusClassName = classNames([s.button as string], {

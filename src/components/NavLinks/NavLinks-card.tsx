@@ -1,9 +1,9 @@
 import React from 'react';
-import s from './NavLinks-card.module.scss'
 import Image from "next/image";
 import classNames from "classnames";
 import {INavLinksCardProps} from "@/types/types";
 import Link from "next/link";
+import s from './NavLinks-card.module.scss'
 
 const NavLinksCard = (props: INavLinksCardProps) => {
     const imgClassName = classNames([s.image as string], [s[props.component as string]])

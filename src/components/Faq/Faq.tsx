@@ -1,11 +1,11 @@
 import React from 'react';
 import s from './Faq.module.scss';
+import {IFaqCard, IFaqProps} from "@/types/types";
+
 import FaqCard from "@/components/Faq/Faq-card";
-import {IFaqCardsData} from "@/types/types";
 
-const Faq = (props: {cardsData: IFaqCardsData[]}) => {
-
-    const cardsRender = (cardsData: IFaqCardsData[]) => {
+const Faq = (props: IFaqProps) => {
+    const cardsRender = (cardsData: IFaqCard[]) => {
         return cardsData.map((el, id) => <FaqCard cardData={el} key={id}/>)
     }
 

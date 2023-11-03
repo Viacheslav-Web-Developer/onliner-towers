@@ -1,12 +1,12 @@
 import React from 'react';
 import s from './Description-card.module.scss';
-
-import {IStairsPageDescriptionData} from "@/types/types";
-import Table from "@/components/Table/Table";
+import {IStairsDescriptionCard} from "@/types/types";
 import Image from "next/image";
 import classNames from "classnames";
 
-const DescriptionCard = (props: {cardData: IStairsPageDescriptionData, reverseRow: boolean}) => {
+import Table from "@/components/Table/Table";
+
+const DescriptionCard = (props: IStairsDescriptionCard) => {
     const listRender = (listData: string[]) => {
         return listData.map((el, id) => <li className={s.item} key={id}>{el}</li>)
     }

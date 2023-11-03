@@ -9,15 +9,16 @@
     cursor: pointer;
 
     .text {
+      width: 75%;
       color: #303030;
       font-family: Montserrat, sans-serif;
       font-size: 18px;
       font-style: normal;
       font-weight: 400;
-      line-height: normal;
+      line-height: 30px;
       text-transform: uppercase;
-      padding: 20px 0;
-
+      padding: 15px 0;
+      text-align: left;
     }
 
     .button {
@@ -55,13 +56,12 @@
       width: 100%;
       padding: 30px 50px;
       background: #002543;
-      //padding: 25px 50px;
       color: #FFF;
       font-family: Montserrat, sans-serif;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
-      line-height: normal;
+      line-height: 22px;
     }
   }
 }

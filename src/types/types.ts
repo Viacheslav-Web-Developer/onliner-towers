@@ -9,7 +9,6 @@ export const enum EPages {
 }
 
 
-
 export interface IMainScreenProps {
     title: string,
     setModalOpen: Dispatch<SetStateAction<boolean>>,
@@ -18,7 +17,6 @@ export interface IMainScreenProps {
     topBarCards: ITopBarCards[],
     navLinks: INavLinks[]
 }
-
 
 
 export interface IHeaderProps {
@@ -35,15 +33,8 @@ export interface IHeaderLinks {
 }
 
 
-
 export interface ITopBarProps {
     cards: ITopBarCards[]
-}
-
-export interface ITopBarCards {
-    href?: string,
-    image: StaticImageData,
-    text: string
 }
 
 export interface ITopBarCardsProps {
@@ -57,10 +48,14 @@ export interface ITopBarLinksProps {
     text: string
 }
 
+export interface ITopBarCards {
+    href?: string,
+    image: StaticImageData,
+    text: string
+}
 
 
-
-export interface INavLinksProps{
+export interface INavLinksProps {
     page: EPages,
     component: string,
     navLinks: INavLinks[]
@@ -71,13 +66,12 @@ export interface INavLinksCardProps {
     navLinks: INavLinks
 }
 
-export interface INavLinks{
+export interface INavLinks {
     page: EPages,
     title: string,
     image: StaticImageData,
     linkHref: string
 }
-
 
 
 export interface IPricesProps {
@@ -115,7 +109,6 @@ export interface IPricesCardButtonProps {
 }
 
 
-
 export interface IBenefitsProps {
     cardsData: IBenefitsCardProps[],
     page: EPages
@@ -128,7 +121,6 @@ export interface IBenefitsCardProps {
 }
 
 
-
 export interface IOrderProps {
     page: EPages
 }
@@ -139,30 +131,47 @@ export interface IOrderInputsProps {
 }
 
 
+export interface ITableProps {
+    tableData: ITable
+}
 
-export type ITableHeadData = string[];
-export type ITableBodyData = string[][];
+export interface ITable {
+    thead: ITableHead,
+    tbody: ITableBody
+}
 
-export interface ITableData {
-    thead: ITableHeadData,
-    tbody: ITableBodyData
+export type ITableHead = string[];
+export type ITableBody = string[][];
+
+
+export interface IFaqProps {
+    cardsData: IFaqCard[]
+}
+
+export interface IFaqCardProps {
+    cardData: IFaqCard
+}
+
+export interface IFaqCard {
+    question: string,
+    answer: string
 }
 
 
-
-export interface IFaqCardsData {
-    answer: string,
-    question: string
+export interface IInstructionsProps {
+    cardsData: IInstructions[]
 }
 
+export interface IInstructionsCardsProps {
+    cardData: IInstructions,
+    cardNumber: number
+}
 
-
-export interface IInstructionsData {
+export interface IInstructions {
     text: string,
     image: StaticImageData,
     textAfterImage?: string
 }
-
 
 
 export interface IVideoProps {
@@ -171,12 +180,16 @@ export interface IVideoProps {
 }
 
 
-
-export interface IFooterProps {
-    linksData: IHeaderLinksData,
-    setModalOpen: Dispatch<SetStateAction<boolean>>
+export interface IMoreQuestions {
+    title: string,
+    component: string
 }
 
+
+export interface IFooterProps {
+    links: IHeaderLinks[],
+    setModalOpen: Dispatch<SetStateAction<boolean>>
+}
 
 
 export interface IModalProps {
@@ -185,15 +198,21 @@ export interface IModalProps {
 }
 
 
-
-export interface IStairsPageDescriptionData {
+export interface IStairsDescription {
     title: string,
     description: string[],
-    table: ITableData,
+    table: ITable,
     image: StaticImageData,
 }
 
-export interface IScaffoldingPageDescriptionData {
+
+export interface IStairsDescriptionCard {
+    cardData: IStairsDescription,
+    reverseRow: boolean
+}
+
+
+export interface IScaffoldingDescription {
     img: StaticImageData,
     title: string,
     listData: string[]

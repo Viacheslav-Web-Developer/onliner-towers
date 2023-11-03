@@ -1,7 +1,8 @@
 import React from 'react';
 import s from './MoreQuestions.module.scss'
+import {IMoreQuestions} from "@/types/types";
 
-const MoreQuestions = (props: {title: string, component: string}) => {
+const MoreQuestions = (props: IMoreQuestions) => {
     return (
         <div className={s.layout + ' ' + s[props.component]}>
             <div className={s.content}>

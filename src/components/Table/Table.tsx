@@ -1,8 +1,8 @@
 import React from 'react';
 import s from './Table.module.scss';
-import {ITableBodyData, ITableData, ITableHeadData} from "@/types/types";
+import {ITableBodyData, ITableHeadData, ITableProps} from "@/types/types";
 
-const Table = (props: {tableData: ITableData}) => {
+const Table = (props: ITableProps) => {
     const tableHeadRender = (tableHeadData: ITableHeadData) => {
         return tableHeadData.map((tdData, id) => <td className={s.td} key={id}>{tdData}</td>)
     }

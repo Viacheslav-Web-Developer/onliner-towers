@@ -52,7 +52,7 @@ const Footer = (props: IFooterProps) => {
                     </div>
                     <div className={s.links_part + ' ' + s.part}>
                         <ul className={s.links_list}>
-                            {linksRender(props.linksData[props.viewMode.page])}
+                            {linksRender(props.links)}
                         </ul>
                     </div>
                     <div className={s.button_part + ' ' + s.part}>
