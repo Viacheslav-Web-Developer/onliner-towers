@@ -2,9 +2,11 @@ import React from 'react';
 import s from './Header.module.scss';
 import Image from "next/image";
 import logo from '@/public/Header/logo.svg';
-
 import {IHeaderLinks, IHeaderProps} from "@/types/types";
+import Link from "next/link";
+
 import HeaderLinks from "@/components/Header/Header-links";
+
 
 const Header = (props: IHeaderProps) => {
     const linksRender = (linksData: IHeaderLinks[]) => {
@@ -15,7 +17,7 @@ const Header = (props: IHeaderProps) => {
         <div className={s.header}>
             <div className={s.content + ' container'}>
                 <div className={s.logo}>
-                    <Image src={logo} alt={'Logo'}/>
+                    <Link href={'/'}><Image src={logo} alt={'Logo'}/></Link>
                 </div>
                 <ul className={s.links}>
                     {linksRender(props.links)}

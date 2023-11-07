@@ -135,8 +135,16 @@ export interface ITableProps {
     tableData: ITable
 }
 
+export interface ITableHeadProps {
+    tableHeadData: ITableHead
+}
+
+export interface ITableBodyProps {
+    tableBodyData: ITableBody
+}
+
 export interface ITable {
-    thead: ITableHead,
+    thead?: ITableHead,
     tbody: ITableBody
 }
 
@@ -216,4 +224,34 @@ export interface IScaffoldingDescription {
     img: StaticImageData,
     title: string,
     listData: string[]
+}
+
+
+export interface IDocsCardProps {
+    cardData: IDocsCards
+}
+
+export interface IDocsCards {
+    docName: string,
+    docUrl: string
+}
+
+
+
+export interface IScaffoldingPricesTypeProps {
+    typeData: IScaffoldingPricesType
+}
+
+export interface IScaffoldingPricesCardProps {
+    cardData: IScaffoldingPricesCard
+}
+
+export interface IScaffoldingPricesType {
+    typeTitle: string,
+    pricesCards: IScaffoldingPricesCard[]
+}
+
+export interface IScaffoldingPricesCard {
+    title: string,
+    prices: string[]
 }

@@ -27,7 +27,9 @@ const DescriptionCard = (props: IStairsDescriptionCard) => {
             <h3 className={s.specifications_title}>Технические характеристики</h3>
             <div className={tableClassName}>
                 <Image src={props.cardData.image} alt={'Изображение лестницы'}/>
-                <Table tableData={props.cardData.table}/>
+                <div className={s.layout}>
+                    <Table tableData={props.cardData.table}/>
+                </div>
             </div>
         </div>
     );

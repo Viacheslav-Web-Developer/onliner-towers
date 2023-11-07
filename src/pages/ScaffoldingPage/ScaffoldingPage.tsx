@@ -16,6 +16,8 @@ import Order from "@/components/Order/Order";
 import Benefits from "@/components/Benefits/Benefits";
 import Description from "@/components/Description/Description";
 import MainScreen from "@/components/MainScreen/MainScreen";
+import Docs from "@/components/Docs/Docs";
+import Prices from "@/pages/ScaffoldingPage/Prices/Prices";
 
 const ScaffoldingPage = () => {
     const [modalIsOpen, setModalOpen] = useState(false)
@@ -35,8 +37,11 @@ const ScaffoldingPage = () => {
                          listData={store.scaffolding.description.list}
             />
 
-            {/*/!*Якорь цены*!/*/}
-            {/*<div className={'anchor_link'} id={'prices'}/>*/}
+            <Docs/>
+
+            {/*Якорь цены*/}
+            <div className={'anchor_link'} id={'prices'}/>
+            <Prices/>
 
             <Benefits cardsData={store.benefits} page={EPages.scaffolding}/>
 

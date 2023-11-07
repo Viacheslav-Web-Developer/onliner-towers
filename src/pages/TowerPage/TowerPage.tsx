@@ -46,13 +46,19 @@ const TowerPage = () => {
 
             {/*Якорь характеристики*/}
             <div className={'anchor_link'} id={'specifications'}/>
-            <div className={s.table + ' container'}>
-                <h2 className={s.table_title}>Технические характеристики вышки туры передвижной</h2>
-                <Table tableData={store.tower.firstTable}/>
-            </div>
-            <div className={s.table + ' container'}>
-                <h2 className={s.table_title}>Подробные технические характеристики вышки туры передвижной</h2>
-                <Table tableData={store.tower.secondTable}/>
+            <div className={'container'}>
+                <div className={s.table}>
+                    <h2 className={s.table_title}>Технические характеристики вышки туры передвижной</h2>
+                    <div className={s.layout}>
+                        <Table tableData={store.tower.firstTable}/>
+                    </div>
+                </div>
+                <div className={s.table}>
+                    <h2 className={s.table_title}>Подробные технические характеристики вышки туры передвижной</h2>
+                    <div className={s.layout}>
+                        <Table tableData={store.tower.secondTable}/>
+                    </div>
+                </div>
             </div>
 
             <NavLinks navLinks={store.navLinks} page={EPages.tower} component={'main'}/>

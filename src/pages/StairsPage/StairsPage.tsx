@@ -9,7 +9,7 @@ import Footer from "@/components/Footer/Footer";
 import MoreQuestions from "@/components/MoreQuestions/MoreQuestions";
 import Faq from "@/components/Faq/Faq";
 import NavLinks from "@/components/NavLinks/NavLinks";
-import Description from "@/pages/StairsPage/components/Description/Description";
+import Description from "@/pages/StairsPage/Description/Description";
 import {store} from "@/assets/store";
 import {EPages} from "@/types/types";
 import Order from "@/components/Order/Order";
