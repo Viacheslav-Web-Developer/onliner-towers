@@ -255,3 +255,22 @@ export interface IScaffoldingPricesCard {
     title: string,
     prices: string[]
 }
+
+
+
+
+export interface IComponentsCarouselCardProps {
+    cardWidth: number,
+    cardData: IComponentsCarouselCard
+}
+
+export interface IComponentsCarouselMarkerProps {
+    id: number,
+    setPosition: Dispatch<SetStateAction<number>>,
+    activeStatus: boolean,
+}
+
+export interface IComponentsCarouselCard {
+    title: string,
+    img: StaticImageData,
+}

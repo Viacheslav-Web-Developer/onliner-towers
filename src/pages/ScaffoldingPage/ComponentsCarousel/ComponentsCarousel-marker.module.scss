@@ -1,0 +1,24 @@
+.button {
+  width: 100%;
+  padding: 10px 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  .marker {
+    height: 3px;
+    width: 100%;
+    background-color: #777;
+    transition: 0.4s;
+  }
+
+  &:hover {
+    .marker {
+      background-color: orange;
+    }
+  }
+
+  .marker.active {
+    background-color: red;
+  }
+}

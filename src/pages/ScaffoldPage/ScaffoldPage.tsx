@@ -18,6 +18,7 @@ import Description from "@/components/Description/Description";
 import MainScreen from "@/components/MainScreen/MainScreen";
 import Specifications from "@/pages/ScaffoldPage/Specifications/Specifications";
 import Prices from "@/pages/ScaffoldPage/Prices/Prices";
+import ComponentsCarousel from "@/pages/ScaffoldingPage/ComponentsCarousel/ComponentsCarousel";
 
 const ScaffoldPage = () => {
     const [modalIsOpen, setModalOpen] = useState(false)
@@ -40,6 +41,10 @@ const ScaffoldPage = () => {
             <Specifications/>
 
             <Prices/>
+
+            <div className={'container'}>
+                <ComponentsCarousel/>
+            </div>
 
             {/*Якорь цены*/}
             <div className={'anchor_link'} id={'prices'}/>

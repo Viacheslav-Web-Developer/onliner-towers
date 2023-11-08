@@ -1,0 +1,43 @@
+.carousel {
+  width: 100%;
+  .layout {
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+
+    .content {
+      width: 100%;
+      overflow: hidden;
+
+      .track {
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+        transition: 0.3s;
+      }
+    }
+
+    .button {
+
+    }
+
+    .button.next {
+
+    }
+
+    .button.prev {
+
+    }
+  }
+
+  .markers {
+    margin: 0 auto;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5%;
+  }
+}
+
