@@ -101,11 +101,23 @@ const ComponentsCarousel = () => {
         [s.disable as string]: !buttonPrevActive
     })
 
+    const timer = setInterval(() => {
+        position < (cardsData.length - visibleCardsCount) ? setPosition(position+1) : setPosition(0)
+    }, 1000)
+
+    const carouselAutoScroller = () => {
+
+    }
+
     useEffect(() => {
-        setTimeout(() => {
-            setPosition(position + 1)
-        }, 1000)
-    }, [position])
+
+    }, [null])
+
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         position < (cardsData.length - visibleCardsCount) ? setPosition(position+1) : setPosition(0)
+    //     }, 1000)
+    // }, [position])
 
     return (
         <div className={s.carousel}>
