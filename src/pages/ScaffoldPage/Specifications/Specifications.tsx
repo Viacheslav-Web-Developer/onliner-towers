@@ -1,8 +1,9 @@
 import React from 'react';
 import s from './Specifications.module.scss';
 import Image from "next/image";
-import Table from "@/components/Table/Table";
 import {ITable} from "@/types/types";
+
+import Table from "@/components/Table/Table";
 
 import scaffoldImage from '@/public/ScaffoldSpecifications/image.png'
 

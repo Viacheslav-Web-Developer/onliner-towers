@@ -273,4 +273,6 @@ export interface IComponentsCarouselMarkerProps {
 export interface IComponentsCarouselCard {
     title: string,
     img: StaticImageData,
+    size: string,
+    weight: string
 }

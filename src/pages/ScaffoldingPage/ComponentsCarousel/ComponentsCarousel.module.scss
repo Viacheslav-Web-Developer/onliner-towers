@@ -1,10 +1,12 @@
 .carousel {
   width: 100%;
+  margin-bottom: 150px;
+
   .layout {
     width: 100%;
     display: flex;
-    gap: 50px;
-    align-items: center;
+    align-items: stretch;
+    margin-bottom: 10px;
 
     .content {
       width: 100%;
@@ -19,7 +21,35 @@
     }
 
     .button {
+      width: 5%;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      color: #000;
+      font-family: Montserra, sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
 
+      img {
+        height: 100%;
+        width: 70%;
+        transition: 0.4s;
+        opacity: 0.5;
+      }
+
+      &:hover {
+        img {
+          opacity: 0.3;
+        }
+      }
+
+      &:active {
+        img {
+          opacity: 0.1;
+        }
+      }
     }
 
     .button.next {
@@ -27,7 +57,23 @@
     }
 
     .button.prev {
+      img {
+        transform: rotateZ(180deg);
+      }
+    }
 
+    .button.next.disable {
+      cursor: auto;
+      img {
+        opacity: 0.1;
+      }
+    }
+
+    .button.prev.disable {
+      cursor: auto;
+      img {
+        opacity: 0.1;
+      }
     }
   }
 

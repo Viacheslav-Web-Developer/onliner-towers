@@ -2,12 +2,21 @@
   margin: 0 auto 150px auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 30px;
-  width: 40%;
+  width: 35%;
+
+  .title {
+    color: #000;
+    font-family: Montserra, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
 
   .layout {
-    min-width: 80%;
+    min-width: 100%;
   }
 
   .ps {

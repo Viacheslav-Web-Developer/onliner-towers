@@ -1,9 +1,26 @@
 .card {
-  padding: 15px;
+  padding: 0 15px;
 
   .content {
-    background-color: blue;
-    border: 2px solid red;
+    border: 1px solid #000;
 
+    .img_part {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .title {
+
+    }
+
+    .params {
+
+
+      .text {
+
+      }
+    }
   }
 }

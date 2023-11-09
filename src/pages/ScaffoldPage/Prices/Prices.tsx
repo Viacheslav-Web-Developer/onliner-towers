@@ -15,6 +15,7 @@ const Prices = () => {
     return (
         <div className={'container'}>
             <div className={s.content}>
+                <h3 className={s.title}>Стоимость</h3>
                 <div className={s.layout}>
                     <Table tableData={pricesData}/>
                 </div>
