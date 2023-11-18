@@ -10,7 +10,7 @@ const PricesType = (props: IScaffoldingPricesTypeProps) => {
 
     return (
         <div className={s.type}>
-            {/*<h2 className={s.title}>{props.typeData.typeTitle}</h2>*/}
+            <h2 className={s.title}>{props.typeData.typeTitle}</h2>
             <div className={s.cards}>
                 {cardsRender(props.typeData.pricesCards)}
             </div>

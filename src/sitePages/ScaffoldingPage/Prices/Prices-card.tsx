@@ -9,7 +9,7 @@ const PricesCard = (props: IScaffoldingPricesCardProps) => {
 
     return (
         <div className={s.card}>
-            {/*<h3 className={s.title}>{props.cardData.title}</h3>*/}
+            <h3 className={s.title}>{props.cardData.title}</h3>
             <ul className={s.list}>
                 {pricesRender(props.cardData.prices)}
             </ul>
