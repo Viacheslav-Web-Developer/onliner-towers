@@ -105,16 +105,6 @@ const ComponentsCarousel = () => {
         position < (cardsData.length - visibleCardsCount) ? setPosition(position+1) : setPosition(0)
     }, 1000)
 
-    useEffect(() => {
-
-    }, [null])
-
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         position < (cardsData.length - visibleCardsCount) ? setPosition(position+1) : setPosition(0)
-    //     }, 1000)
-    // }, [position])
-
     return (
         <div className={s.carousel}>
             <div className={s.layout}>

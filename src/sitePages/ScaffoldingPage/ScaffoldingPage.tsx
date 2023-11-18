@@ -18,6 +18,7 @@ import Description from "@/components/Description/Description";
 import MainScreen from "@/components/MainScreen/MainScreen";
 import Docs from "@/components/Docs/Docs";
 import Prices from "../ScaffoldingPage/Prices/Prices";
+import ComponentsCarousel from "./ComponentsCarousel/ComponentsCarousel";
 
 const ScaffoldingPage = () => {
     const [modalIsOpen, setModalOpen] = useState(false)
@@ -42,6 +43,10 @@ const ScaffoldingPage = () => {
             {/*Якорь цены*/}
             <div className={'anchor_link'} id={'prices'}/>
             <Prices/>
+
+            <div className={'container'}>
+                <ComponentsCarousel/>
+            </div>
 
             <Benefits cardsData={store.benefits} page={EPages.scaffolding}/>
 

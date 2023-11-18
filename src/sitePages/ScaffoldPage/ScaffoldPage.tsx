@@ -42,10 +42,6 @@ const ScaffoldPage = () => {
 
             <Prices/>
 
-            <div className={'container'}>
-                <ComponentsCarousel/>
-            </div>
-
             {/*Якорь цены*/}
             <div className={'anchor_link'} id={'prices'}/>
             <Benefits cardsData={store.benefits} page={EPages.scaffold}/>
