@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './page.module.scss';
 
-import TowerPage from "@/pages/TowerPage/TowerPage";
+import TowerPage from "../../sitePages/TowerPage/TowerPage";
 
 const Page = () => {
     return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Prices.module.scss'
-import PricesType from "@/pages/ScaffoldingPage/Prices/Prices-type";
+import PricesType from "../../ScaffoldingPage/Prices/Prices-type";
 import {IScaffoldingPricesType} from "@/types/types";
 
 const Prices = () => {

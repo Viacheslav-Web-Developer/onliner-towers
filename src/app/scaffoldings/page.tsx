@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './page.module.scss';
 
-import ScaffoldingPage from "@/pages/ScaffoldingPage/ScaffoldingPage";
+import ScaffoldingPage from "../../sitePages/ScaffoldingPage/ScaffoldingPage";
 
 const Page = () => {
     return (

@@ -3,7 +3,7 @@ import s from './Description.module.scss';
 import {IStairsDescription} from "@/types/types";
 import {store} from "@/assets/store";
 
-import DescriptionCard from "@/pages/StairsPage/Description/Description-card";
+import DescriptionCard from "../../StairsPage/Description/Description-card";
 
 const Description = () => {
     const descriptionDataRender = (descriptionData: IStairsDescription[]) => {

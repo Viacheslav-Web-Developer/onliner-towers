@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react';
 import s from './ComponentsCarousel.module.scss'
 import {IComponentsCarouselCard} from "@/types/types";
 
-import ComponentsCarouselCard from "@/pages/ScaffoldingPage/ComponentsCarousel/ComponentsCarousel-card";
-import ComponentsCarouselMarker from "@/pages/ScaffoldingPage/ComponentsCarousel/ComponentsCarousel-marker";
+import ComponentsCarouselCard from "../../ScaffoldingPage/ComponentsCarousel/ComponentsCarousel-card";
+import ComponentsCarouselMarker from "../../ScaffoldingPage/ComponentsCarousel/ComponentsCarousel-marker";
 
 import img from '@/public/ScaffoldingCarousel/templateImg.png'
 import arrow from '@/public/ScaffoldingCarousel/arrow.svg'

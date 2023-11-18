@@ -1,8 +1,8 @@
 'use client'
 import React, {useState} from 'react';
+import s from "@/app/page.module.scss";
 import {store} from "@/assets/store";
 import {EPages} from "@/types/types";
-import s from "@/app/page.module.scss";
 
 import YandexMap from "@/components/YandexMap/YandexMap";
 import Modal from "@/components/Modal/Modal";
@@ -16,58 +16,53 @@ import Order from "@/components/Order/Order";
 import Benefits from "@/components/Benefits/Benefits";
 import Description from "@/components/Description/Description";
 import MainScreen from "@/components/MainScreen/MainScreen";
-import Specifications from "@/pages/ScaffoldPage/Specifications/Specifications";
-import Prices from "@/pages/ScaffoldPage/Prices/Prices";
-import ComponentsCarousel from "@/pages/ScaffoldingPage/ComponentsCarousel/ComponentsCarousel";
+import Docs from "@/components/Docs/Docs";
+import Prices from "../ScaffoldingPage/Prices/Prices";
 
-const ScaffoldPage = () => {
+const ScaffoldingPage = () => {
     const [modalIsOpen, setModalOpen] = useState(false)
 
     return (
         <div className={s.home}>
-            <MainScreen title={store.scaffold.mainScreenTitle}
+            <MainScreen title={store.scaffolding.mainScreenTitle}
                         setModalOpen={setModalOpen}
-                        page={EPages.scaffold}
-                        headerLinks={store.scaffold.headerLinks}
+                        page={EPages.scaffolding}
+                        headerLinks={store.scaffolding.headerLinks}
                         topBarCards={store.topBarCards}
                         navLinks={store.navLinks}
             />
 
-            <Description img={store.scaffold.description.img}
-                         title={store.scaffold.description.title}
-                         listData={store.scaffold.description.listData}
+            <Description img={store.scaffolding.description.img}
+                         title={store.scaffolding.description.title}
+                         listData={store.scaffolding.description.list}
             />
 
-            <Specifications/>
-
-            <Prices/>
-
-            <div className={'container'}>
-                <ComponentsCarousel/>
-            </div>
+            <Docs/>
 
             {/*Якорь цены*/}
             <div className={'anchor_link'} id={'prices'}/>
-            <Benefits cardsData={store.benefits} page={EPages.scaffold}/>
+            <Prices/>
 
-            <Order page={EPages.scaffold}/>
+            <Benefits cardsData={store.benefits} page={EPages.scaffolding}/>
 
-            <NavLinks page={EPages.scaffold}
+            <Order page={EPages.scaffolding}/>
+
+            <NavLinks page={EPages.scaffolding}
                       component={'main'}
                       navLinks={store.navLinks}
             />
 
             {/*Якорь вопрос/ответ*/}
             <div className={'anchor_link'} id={'faq'}/>
-            <Faq cardsData={store.scaffold.faq}/>
+            <Faq cardsData={store.scaffolding.faq}/>
 
-            <Instructions cardsData={store.scaffold.instructions}/>
+            <Instructions cardsData={store.scaffolding.instructions}/>
 
             <MoreQuestions title={'Остались вопросы?'} component={'main'}/>
 
             {/*Якорь контакты*/}
             <div className={'anchor_link'} id={'contacts'}/>
-            <Footer links={store.scaffold.headerLinks} setModalOpen={setModalOpen}/>
+            <Footer links={store.scaffolding.headerLinks} setModalOpen={setModalOpen}/>
 
             <YandexMap/>
             <Modal modalIsOpen={modalIsOpen} setModalOpen={setModalOpen}/>
@@ -76,4 +71,4 @@ const ScaffoldPage = () => {
     )
 };
 
-export default ScaffoldPage;
+export default ScaffoldingPage;
