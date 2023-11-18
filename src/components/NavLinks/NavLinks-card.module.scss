@@ -1,7 +1,7 @@
 .card {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   align-items: center;
 
   .title {
@@ -14,7 +14,14 @@
   }
 
   .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    img {
+      width: 80%;
+      height: auto;
+    }
   }
 
   .image.main_screen {

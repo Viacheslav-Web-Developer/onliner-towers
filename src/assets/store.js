@@ -10,10 +10,10 @@ import instImage3 from "@/public/Instructions/towers/image3.png";
 import instImage4 from "@/public/Instructions/towers/image4.png";
 import instImage5 from "@/public/Instructions/towers/image5.png";
 
-import towerImage from "@/assets/images/NavLinks/tower.png";
-import scaffoldImage from "@/assets/images/NavLinks/scaffold.png";
-import scaffoldingImage from "@/assets/images/NavLinks/scaffold.png";
-import stairsImage from "@/assets/images/NavLinks/stairs.png";
+import towerImage from "@/public/NavLinks/tower.png";
+import scaffoldImage from "@/public/NavLinks/scaffold.png";
+import scaffoldingImage from "@/public/NavLinks/scaffolding.png";
+import stairsImage from "@/public/NavLinks/stairs.png";
 
 import benefitsImg1 from "@/public/Benefits/img1.svg";
 import benefitsImg2 from "@/public/Benefits/img2.svg";
