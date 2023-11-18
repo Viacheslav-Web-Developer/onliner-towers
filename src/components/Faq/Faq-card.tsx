@@ -11,12 +11,12 @@ const FaqCard = (props: IFaqCardProps) => {
         [s.active as string]: isOpen
     })
 
-    const answerRef = createRef();
+    const answerRef = createRef<HTMLParagraphElement>();
 
     const [answerHeight, setAnswerHeight] = useState<null | number>(null)
 
     useEffect(() => {
-        setAnswerHeight(answerRef.current.clientHeight)
+        setAnswerHeight(answerRef.current!.clientHeight)
     })
 
     return (

@@ -42,7 +42,7 @@ const Prices = () => {
     ]
 
     const pricesRender = (pricesData: IScaffoldingPricesType[]) => {
-        return pricesData.map((el, id) => <PricesType typeData={el} rey={id}/>)
+        return pricesData.map((el, id) => <PricesType typeData={el} key={id}/>)
     }
 
     return (

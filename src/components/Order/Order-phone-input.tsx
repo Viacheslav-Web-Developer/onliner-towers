@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {BaseSyntheticEvent, SyntheticEvent, useEffect, useState} from 'react';
 import s from "@/components/Order/Order.module.scss";
 import {IOrderInputsProps} from "@/types/types";
 
@@ -27,12 +27,12 @@ const OrderPhoneInput = (props: IOrderInputsProps) => {
     }, [userPhone])
 
     //Показать шаблон +375 (__) ___-__-__
-    const handleClick = (e) => {
+    const handleClick = (e: BaseSyntheticEvent) => {
         e.target.classList.add(s.show)
     }
 
     //Скрыть шаблон если ничего не введено
-    const handleAbort = (e) => {
+    const handleAbort = (e: BaseSyntheticEvent) => {
         !userPhone ? e.target.classList.remove(s.show) : undefined;
     }
 
@@ -42,7 +42,7 @@ const OrderPhoneInput = (props: IOrderInputsProps) => {
         let regPhone = /^\d{0,9}$/;
         if (quickInput.test(value)) {
             let quickDigits = value.match(/\d/g);
-            setUserPhone(quickDigits.join('').slice(-9));
+            setUserPhone(quickDigits!.join('').slice(-9));
         }
         else {
             regPhone.test(value) ? setUserPhone(value) : undefined;

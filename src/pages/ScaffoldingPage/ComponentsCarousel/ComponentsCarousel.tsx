@@ -105,10 +105,6 @@ const ComponentsCarousel = () => {
         position < (cardsData.length - visibleCardsCount) ? setPosition(position+1) : setPosition(0)
     }, 1000)
 
-    const carouselAutoScroller = () => {
-
-    }
-
     useEffect(() => {
 
     }, [null])
