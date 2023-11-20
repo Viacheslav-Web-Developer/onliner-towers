@@ -1,8 +1,9 @@
 import React from 'react';
 import s from './Docs.module.scss'
-import DocsCard from "@/components/Docs/Docs-card";
 import {IDocsCards} from "@/types/types";
 import {store} from "@/assets/store";
+
+import DocsCard from "@/components/Docs/Docs-card";
 
 const Docs = () => {
     const cardsRender = (cardsData: IDocsCards[]) => {

@@ -38,11 +38,11 @@ const ScaffoldingPage = () => {
                          listData={store.scaffolding.description.list}
             />
 
-            <Docs/>
+            <Docs />
 
             {/*Якорь цены*/}
             <div className={'anchor_link'} id={'prices'}/>
-            <Prices/>
+            <Prices pricesData={store.scaffolding.prices}/>
 
             <div className={'container'}>
                 <ComponentsCarousel/>

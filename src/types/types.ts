@@ -87,7 +87,7 @@ export interface IPricesCardProps {
 
 export interface IPricesCard {
     title: string,
-    description: string,
+    description?: string,
     image: StaticImageData,
     prices: IPricesCardPrices[],
 }
@@ -237,6 +237,9 @@ export interface IDocsCards {
 }
 
 
+export interface IScaffoldingPricesProps {
+    pricesData: IScaffoldingPricesType[]
+}
 
 export interface IScaffoldingPricesTypeProps {
     typeData: IScaffoldingPricesType

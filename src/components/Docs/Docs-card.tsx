@@ -4,13 +4,14 @@ import {IDocsCardProps} from "@/types/types";
 import Image from "next/image";
 
 import docIcon from '@/public/Docs/docIcon.svg';
+import Link from "next/link";
 
 const DocsCard = (props: IDocsCardProps) => {
     return (
-        <div className={s.card}>
+        <Link href={props.cardData.docUrl} className={s.card}>
             <Image src={docIcon} alt={'Иконка документа'}/>
             <p className={s.text}>{props.cardData.docName}</p>
-        </div>
+        </Link>
     );
 };
 

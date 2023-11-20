@@ -1,8 +1,12 @@
 import {EPages} from "@/types/types";
 
-import pricesImg1 from "@/public/Prices/tower/img1.png";
-import pricesImg2 from "@/public/Prices/tower/img2.png";
-import pricesImg3 from "@/public/Prices/tower/img3.png";
+import pricesTowerImg1 from "@/public/Prices/tower/img1.png";
+import pricesTowerImg2 from "@/public/Prices/tower/img2.png";
+import pricesTowerImg3 from "@/public/Prices/tower/img3.png";
+
+import pricesStairsImg1 from "@/public/Prices/stairs/img1.png";
+import pricesStairsImg2 from "@/public/Prices/stairs/img2.png";
+import pricesStairsImg3 from "@/public/Prices/stairs/img3.png";
 
 import instImage1 from "@/public/Instructions/towers/image1.png";
 import instImage2 from "@/public/Instructions/towers/image2.png";
@@ -90,7 +94,7 @@ export const store = {
             "text": "9:00 - 20:00"
         }
     ],
-    "tower": {
+    "tower":  {
         "pageTitle": "", //Metadata
         "headerLinks": [
             {
@@ -119,7 +123,7 @@ export const store = {
             {
                 "title": "Вышка тура ВСР-1",
                 "description": "(рабочая площадка 0,7 на 1,6 метра)",
-                "image": pricesImg1,
+                "image": pricesTowerImg1,
                 "prices": [
                     {
                         "title": "До 7,6 м",
@@ -142,7 +146,7 @@ export const store = {
             {
                 "title": "Вышка тура ВСР-1",
                 "description": "(рабочая площадка 0,7 на 1,6 метра)",
-                "image": pricesImg2,
+                "image": pricesTowerImg2,
                 "prices": [
                     {
                         "title": "До 7,6 м",
@@ -154,7 +158,7 @@ export const store = {
             {
                 "title": "Вышка тура ВСР-1",
                 "description": "(рабочая площадка 0,7 на 1,6 метра)",
-                "image": pricesImg3,
+                "image": pricesTowerImg3,
                 "prices": [
                     {
                         "title": "До 7,6 м",
@@ -301,50 +305,75 @@ export const store = {
         "mainScreenTitle": "Аренда строительных лестниц в Минске",
         "prices": [
             {
-                "title": "Вышка тура ВСР-1",
-                "description": "(рабочая площадка 0,7 на 1,6 метра)",
-                "image": pricesImg1,
+                "title": "Стремянка алюминиевая",
+                "image": pricesStairsImg1,
                 "prices": [
                     {
-                        "title": "До 7,6 м",
-                        "pricesValue": [<p><span>8</span> рублей / 1 сутки</p>, <p><span>25</span> рублей / 7 дней</p>,
-                            <p><span>50</span> рублей / 30 дней</p>]
+                        "title": "Ам703",
+                        "pricesValue": [<p><span>3</span> рублей / 1 сутки</p>, <p><span>21</span> рублей / 7 дней</p>,
+                            <p><span>90</span> рублей / 30 дней</p>]
                     },
                     {
-                        "title": "До 7,7 м",
-                        "pricesValue": [<p><span>8</span> рублей / 1 сутки</p>, <p><span>25</span> рублей / 7 дней</p>,
-                            <p><span>50</span> рублей / 30 дней</p>]
-
+                        "title": "Ам704",
+                        "pricesValue": [<p><span>4</span> рублей / 1 сутки</p>, <p><span>28</span> рублей / 7 дней</p>,
+                            <p><span>120</span> рублей / 30 дней</p>]
                     },
                     {
-                        "title": "До 7,8 м",
-                        "pricesValue": [<p><span>8</span> рублей / 1 сутки</p>, <p><span>25</span> рублей / 7 дней</p>,
-                            <p><span>50</span> рублей / 30 дней</p>]
+                        "title": "Ам705",
+                        "pricesValue": [<p><span>5</span> рублей / 1 сутки</p>, <p><span>35</span> рублей / 7 дней</p>,
+                            <p><span>150</span> рублей / 30 дней</p>]
                     },
-
-                ],
-            },
-            {
-                "title": "Вышка тура ВСР-1",
-                "description": "(рабочая площадка 0,7 на 1,6 метра)",
-                "image": pricesImg2,
-                "prices": [
                     {
-                        "title": "До 7,6 м",
-                        "pricesValue": [<p><span>8</span> рублей / 1 сутки</p>, <p><span>25</span> рублей / 7 дней</p>,
-                            <p><span>50</span> рублей / 30 дней</p>]
+                        "title": "Ам708",
+                        "pricesValue": [<p><span>8</span> рублей / 1 сутки</p>, <p><span>56</span> рублей / 7 дней</p>,
+                            <p><span>240</span> рублей / 30 дней</p>]
                     },
                 ],
             },
             {
-                "title": "Вышка тура ВСР-1",
-                "description": "(рабочая площадка 0,7 на 1,6 метра)",
-                "image": pricesImg3,
+                "title": "Лестница алюминиевая 3-х секционная",
+                "image": pricesStairsImg2,
                 "prices": [
                     {
-                        "title": "До 7,6 м",
-                        "pricesValue": [<p><span>8</span> рублей / 1 сутки</p>, <p><span>25</span> рублей / 7 дней</p>,
-                            <p><span>50</span> рублей / 30 дней</p>]
+                        "title": "арт. 5306",
+                        "pricesValue": [<p><span>8</span> рублей / 1 сутки</p>, <p><span>56</span> рублей / 7 дней</p>,
+                            <p><span>240</span> рублей / 30 дней</p>]
+                    },
+                    {
+                        "title": "арт. 5308",
+                        "pricesValue": [<p><span>8</span> рублей / 1 сутки</p>, <p><span>56</span> рублей / 7 дней</p>,
+                            <p><span>240</span> рублей / 30 дней</p>]
+                    },
+                    {
+                        "title": "арт. 5310",
+                        "pricesValue": [<p><span>10</span> рублей / 1 сутки</p>, <p><span>70</span> рублей / 7 дней</p>,
+                            <p><span>300</span> рублей / 30 дней</p>]
+                    },
+                    {
+                        "title": "арт. 5312",
+                        "pricesValue": [<p><span>10</span> рублей / 1 сутки</p>, <p><span>70</span> рублей / 7 дней</p>,
+                            <p><span>300</span> рублей / 30 дней</p>]
+                    },
+                    {
+                        "title": "арт. 5314",
+                        "pricesValue": [<p><span>10</span> рублей / 1 сутки</p>, <p><span>70</span> рублей / 7 дней</p>,
+                            <p><span>300</span> рублей / 30 дней</p>]
+                    },
+                ],
+            },
+            {
+                "title": "Лестница шарнирная 4-х секционная",
+                "image": pricesStairsImg3,
+                "prices": [
+                    {
+                        "title": "Т433",
+                        "pricesValue": [<p><span>10</span> рублей / 1 сутки</p>, <p><span>70</span> рублей / 7 дней</p>,
+                            <p><span>300</span> рублей / 30 дней</p>]
+                    },
+                    {
+                        "title": "Т455",
+                        "pricesValue": [<p><span>10</span> рублей / 1 сутки</p>, <p><span>70</span> рублей / 7 дней</p>,
+                            <p><span>300</span> рублей / 30 дней</p>]
                     },
                 ],
             }
@@ -373,7 +402,7 @@ export const store = {
                     "thead": ["Параметр", "арт. 5306", "арт. 5308", "арт. 5310", "арт. 5312", "арт. 5314"],
                     "tbody": [
                         ["Кол-во ступеней", "3х6", "3х8", "3х10", "3х12", "3х14"],
-                        ["Длина в сложенном виде(min), м", "2,82", "1,68", "2,24", "3,38", "3,94"],
+                        ["Длина в сложенном виде(min), м", "1,68", "2,24", "2,82", "3,38", "3,94"],
                         ["Высота стремянки с выдвинутой 3 секцией, м", "2,51", "3,63", "4,76", "5,60", "6,74"],
                         ["Общая длина лестницы (max), м", "3,36", "5,04", "6,46", "7,86", "9,54"],
                         ["Ширина лестниц, см", "33,5/39,2/44,5", "33,5/39,2/44,5", "33,5/39,2/44,5", "33,5/39,2/44,5", "33/39/44"],
@@ -611,18 +640,86 @@ export const store = {
         ],
         "faq": [
             {
-                "question": "",
-                "answer": ""
+                "question": "Возможна ли доставка?",
+                "answer": "К сожалению, собственной доставки у нас нет. Но это могут выполнить наши перевозчики."
+            },
+            {
+                "question": "Что мне нужно при себе иметь при аренде лесов строительных?",
+                "answer": "Чтобы взять в прокат строительные леса, вам нужно иметь при себе паспорт для заключения договора и деньги."
+            },
+            {
+                "question": "Как быть, когда минимальный срок аренды строительных лесов 3 дня, а мне они нужны на 1 день?",
+                "answer": "Вы можете привести их раньше положенного срока сдачи."
+            },
+            {
+                "question": "Можно оплатить по факту?",
+                "answer": "К сожалению, оплата у нас происходит наперед."
+            },
+            {
+                "question": "Можно ли продлить аренду, если не успел доделать работу?",
+                "answer": "Да, можно позвонить и предупредить по телефону, что не успели сделать в срок и продолжаем пользоваться дальше."
+            },
+            {
+                "question": "Как можно оплатить за продление?",
+                "answer": "Самый простой способ – оплатить через ЕРИП. Можно оплатить в любом инфокиоске, через интернет банкинг, почту, банк. "
+            },
+            {
+                "question": "Ничего, если мой знакомый привезет леса вместо меня?",
+                "answer": "Да ничего страшного, главное, чтобы вернули в полной комплектации. "
+            },
+            {
+                "question": "Нужно ли оставлять какой-то залог когда беру леса строительные в аренду?",
+                "answer": "Нет. Договор заключается без залоговой стоимость. Может попросить залог только в том случае, если человек приехал с большим количеством задолженностей по исполнительным документам."
+            },
+            {
+                "question": "Какие документы нужно иметь юридическому лицу, чтобы взять леса строительные в аренду?",
+                "answer": "Нужно иметь подписанные документы: - договор - счет - акт приема передачи или иметь доверенность."
             }
         ],
         "docs": [
             {
                 "docName": "Инструкция по эксплуатации (PDF)",
-                "docUrl": "/assets/docs/instruction"
+                "docUrl": "/assets/instruktsiia-po-ekspluatatsii-lrsp-40.pdf"
             },
             {
                 "docName": "Сертификат (PDF)",
-                "docUrl": "/assets/docs/certificate"
+                "docUrl": "/assets/lesa-ramnye-stroitelnye2.pdf"
+            }
+        ],
+        "prices": [
+            {
+                "typeTitle": "Стоимость по секциям:",
+                "pricesCards": [
+                    {
+                        "title": "1 секция",
+                        "prices": ["1 сутки – 10 руб", "7 суток – 30 руб", "30 суток – 40 руб"]
+                    },
+                    {
+                        "title": "2 секции",
+                        "prices": ["1 сутки – 10 руб", "7 суток – 35 руб", "30 суток – 50 руб"]
+                    },
+                    {
+                        "title": "3 секции",
+                        "prices": ["1 сутки – 12 руб", "7 суток – 40 руб", "30 суток – 60 руб"]
+                    }
+                ]
+            },
+            {
+                "typeTitle": "Стоимость по кв.метрам:",
+                "pricesCards": [
+                    {
+                        "title": "до 30 кв.м.",
+                        "prices": ["1 сутки – 15 руб", "7 суток – 50 руб", "30 суток – 80 руб"]
+                    },
+                    {
+                        "title": "до 50 кв.м.",
+                        "prices": ["1 сутки – 17 руб", "7 суток – 70 руб", "30 суток – 100 руб"]
+                    },
+                    {
+                        "title": "до 100 кв.м.",
+                        "prices": ["1 сутки – 20 руб", "7 суток – 90 руб", "30 суток – 150 руб"]
+                    }
+                ]
             }
         ]
     }

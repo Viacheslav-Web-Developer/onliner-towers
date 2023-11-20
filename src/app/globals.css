@@ -7,7 +7,7 @@
 
 body {
     scroll-behavior: smooth;
-    background-color: #F7F7F7;
+    background-color: #fcfcfc;
 }
 
 .container {
@@ -18,4 +18,20 @@ body {
 .anchor_link{
     margin-top: -100px;
     padding-bottom: 100px;
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+
 }

@@ -78,11 +78,11 @@ const ComponentsCarousel = () => {
     }, [position, buttonPrevActive, buttonNextActive])
 
     const cardsRender = (cardsData: IComponentsCarouselCard[]) => {
-        return cardsData.map((el, id) => <ComponentsCarouselCard cardWidth={cardWidth} cardData={el}/>)
+        return cardsData.map((el, id) => <ComponentsCarouselCard cardWidth={cardWidth} cardData={el} key={id}/>)
     }
 
     const markersRender = (cardsData: IComponentsCarouselCard[]) => {
-        return cardsData.map((el, id) => (id < cardsData.length - visibleCardsCount + 1) && <ComponentsCarouselMarker id={id} setPosition={setPosition} activeStatus={position === id}/> )
+        return cardsData.map((el, id) => (id < cardsData.length - visibleCardsCount + 1) && <ComponentsCarouselMarker id={id} setPosition={setPosition} activeStatus={position === id} key={id}/> )
     }
 
     const handleNext = () => {
@@ -100,10 +100,6 @@ const ComponentsCarousel = () => {
     const buttonPrevClassName = classNames([s.button as string], [s.prev as string], {
         [s.disable as string]: !buttonPrevActive
     })
-
-    const timer = setInterval(() => {
-        position < (cardsData.length - visibleCardsCount) ? setPosition(position+1) : setPosition(0)
-    }, 1000)
 
     return (
         <div className={s.carousel}>

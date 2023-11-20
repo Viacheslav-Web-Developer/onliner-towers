@@ -33,6 +33,29 @@ const TowerPage = () => {
                 navLinks={store.navLinks}
             />
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             {/*Якорь цены*/}
             <div className={'anchor_link'} id={'prices'}/>
             <Prices
@@ -41,52 +64,52 @@ const TowerPage = () => {
                 page={EPages.tower}
             />
 
-            <Benefits cardsData={store.benefits} page={EPages.tower}/>
-            <Order page={EPages.tower}/>
+            {/*<Benefits cardsData={store.benefits} page={EPages.tower}/>*/}
+            {/*<Order page={EPages.tower}/>*/}
 
-            {/*Якорь характеристики*/}
-            <div className={'anchor_link'} id={'specifications'}/>
-            <div className={'container'}>
-                <div className={s.table}>
-                    <h2 className={s.table_title}>Технические характеристики вышки туры передвижной</h2>
-                    <div className={s.layout}>
-                        <Table tableData={store.tower.firstTable}/>
-                    </div>
-                </div>
-                <div className={s.table}>
-                    <h2 className={s.table_title}>Подробные технические характеристики вышки туры передвижной</h2>
-                    <div className={s.layout}>
-                        <Table tableData={store.tower.secondTable}/>
-                    </div>
-                </div>
-            </div>
+            {/*/!*Якорь характеристики*!/*/}
+            {/*<div className={'anchor_link'} id={'specifications'}/>*/}
+            {/*<div className={'container'}>*/}
+            {/*    <div className={s.table}>*/}
+            {/*        <h2 className={s.table_title}>Технические характеристики вышки туры передвижной</h2>*/}
+            {/*        <div className={s.layout}>*/}
+            {/*            <Table tableData={store.tower.firstTable}/>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*    <div className={s.table}>*/}
+            {/*        <h2 className={s.table_title}>Подробные технические характеристики вышки туры передвижной</h2>*/}
+            {/*        <div className={s.layout}>*/}
+            {/*            <Table tableData={store.tower.secondTable}/>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
 
-            <NavLinks navLinks={store.navLinks} page={EPages.tower} component={'main'}/>
+            {/*<NavLinks navLinks={store.navLinks} page={EPages.tower} component={'main'}/>*/}
 
-            {/*Якорь вопрос/ответ*/}
-            <div className={'anchor_link'} id={'faq'}/>
-            <Faq cardsData={store.tower.faq}/>
+            {/*/!*Якорь вопрос/ответ*!/*/}
+            {/*<div className={'anchor_link'} id={'faq'}/>*/}
+            {/*<Faq cardsData={store.tower.faq}/>*/}
 
-            {/*Якорь инструкция*/}
-            <div className={'anchor_link'} id={'manual'}/>
-            <Instructions cardsData={store.tower.instructions}/>
+            {/*/!*Якорь инструкция*!/*/}
+            {/*<div className={'anchor_link'} id={'manual'}/>*/}
+            {/*<Instructions cardsData={store.tower.instructions}/>*/}
 
 
-            <div className={s.videos_section}>
-                <Video video={store.tower.firstVideo.video} title={store.tower.firstVideo.title}/>
-                <Video video={store.tower.secondVideo.video} title={store.tower.secondVideo.title}/>
-            </div>
+            {/*<div className={s.videos_section}>*/}
+            {/*    <Video video={store.tower.firstVideo.video} title={store.tower.firstVideo.title}/>*/}
+            {/*    <Video video={store.tower.secondVideo.video} title={store.tower.secondVideo.title}/>*/}
+            {/*</div>*/}
 
-            <MoreQuestions component={'main'} title={'Остались вопросы?'}/>
+            {/*<MoreQuestions component={'main'} title={'Остались вопросы?'}/>*/}
 
-            {/*Якорь контакты*/}
-            <div className={'anchor_link'} id={'contacts'}/>
-            <Footer setModalOpen={setModalOpen} links={store.tower.headerLinks}/>
+            {/*/!*Якорь контакты*!/*/}
+            {/*<div className={'anchor_link'} id={'contacts'}/>*/}
+            {/*<Footer setModalOpen={setModalOpen} links={store.tower.headerLinks}/>*/}
 
-            <YandexMap/>
+            {/*<YandexMap/>*/}
 
-            <Modal setModalOpen={setModalOpen} modalIsOpen={modalIsOpen}/>
-            <ButtonUp/>
+            {/*<Modal setModalOpen={setModalOpen} modalIsOpen={modalIsOpen}/>*/}
+            {/*<ButtonUp/>*/}
         </div>
     )
 }

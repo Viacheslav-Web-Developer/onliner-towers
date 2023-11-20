@@ -21,7 +21,7 @@ const StairsPage = () => {
 
     return (
         <div className={s.home}>
-            <MainScreen title={store.tower.mainScreenTitle}
+            <MainScreen title={store.stairs.mainScreenTitle}
                         setModalOpen={setModalOpen}
                         page={EPages.stairs}
                         headerLinks={store.stairs.headerLinks}
