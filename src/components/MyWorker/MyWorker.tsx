@@ -5,7 +5,7 @@ import {defaultLayoutPlugin} from "@react-pdf-viewer/default-layout";
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 
-export const MyWorker = (props: { params: { docs: string } }) => {
+export const MyWorker = (props: { params: { docs?: string } }) => {
     // const defaultPlugins = defaultLayoutPlugin();
     // const doc = require(`@/assets/docs/${props.params.docs}`)
 

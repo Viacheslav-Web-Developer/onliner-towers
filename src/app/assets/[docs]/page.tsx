@@ -4,7 +4,11 @@ import {useParams} from "next/navigation";
 import {MyWorker} from "@/components/MyWorker/MyWorker";
 
 const Page = () => {
-    const params: {docs: string} = useParams()
+    interface IParams {
+        docs?: string
+    }
+
+    const params: IParams = useParams()
 
     return (
         <div>
