@@ -40,22 +40,52 @@
       flex-direction: column;
       gap: 10px;
 
-      .input {
-        width: 100%;
+      .phone_input {
+        position: relative;
+        background-color: transparent;
+        padding: 1px;
         border-radius: 50px;
-        background: #ECEBE8;
-        border: none;
-        outline: none;
-        padding: 10px 0;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        color: #000;
-        font-family: Montserrat, sans-serif;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+        transition: 0.4s;
+
+        .input {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          caret-color: transparent;
+          opacity: 0;
+          background-color: transparent;
+          z-index: 1;
+          border: 1px solid green;
+        }
+
+        .phone_input_text {
+          border: none;
+          outline: none;
+          font-family: Montserrat, sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          height: 100%;
+          width: 100%;
+          z-index: 0;
+          color: #888;
+          padding: 10px 0;
+          border-radius: 50px;
+          background-color: #fcfcfc;
+          transition: 0.3s;
+          text-align: center;
+        }
+      }
+
+      .phone_input.handle_in {
+        background: #EE9A38;
+
+        .phone_input_text {
+          color: #444;
+        }
       }
 
       .button {

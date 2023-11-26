@@ -3,14 +3,19 @@ import s from './Table.module.scss'
 import {ITableBody, ITableBodyProps} from "@/types/types";
 
 const TableBody = (props: ITableBodyProps) => {
-    const tableBodyRender = (tableBodyData: ITableBody) => {
-        return tableBodyData.map((trData, trId) => <tr className={s.tr} key={trId}>{trData.map((tdData, tdId) => <td
-            className={s.td} key={tdId}>{tdData}</td>)}</tr>)
+    const tableBodyRowsRender = (tableBodyData: ITableBody) => {
+        return tableBodyData.map((el, id) => <tr className={s.tr} key={id}>{tableBodyCellSRender(el)}</tr>)
+    }
+
+    const tableBodyCellSRender = (tableBodyRowData: string[]) => {
+        return tableBodyRowData.map((el, id) => {
+            return(id > 0 ? <td className={s.td} key={id}>{el}</td> : <th className={s.td + ' ' + s.th} key={id}>{el}</th>)
+        })
     }
 
     return (
         <tbody className={s.body}>
-        {tableBodyRender(props.tableBodyData)}
+        {tableBodyRowsRender(props.tableBodyData)}
         </tbody>
     );
 };

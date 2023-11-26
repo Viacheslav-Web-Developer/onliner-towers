@@ -4,7 +4,7 @@ import {ITableHead, ITableHeadProps} from "@/types/types";
 
 const TableHead = (props: ITableHeadProps) => {
     const tableHeadRender = (tableHeadData: ITableHead) => {
-        return tableHeadData.map((tdData, id) => <td className={s.td} key={id}>{tdData}</td>)
+        return tableHeadData.map((el, id) => <th scope={'col'} className={s.td + ' ' + s.th} key={id}>{el}</th>)
     }
 
     return (

@@ -1,10 +1,11 @@
 import React from 'react';
 import s from './Description-card.module.scss';
-import {IStairsDescriptionCard} from "@/types/types";
 import Image from "next/image";
 import classNames from "classnames";
+import {IStairsDescriptionCard} from "@/types/types";
 
 import Table from "@/components/Table/Table";
+import MyTable from "@/components/MyTable/MyTable";
 
 const DescriptionCard = (props: IStairsDescriptionCard) => {
     const listRender = (listData: string[]) => {

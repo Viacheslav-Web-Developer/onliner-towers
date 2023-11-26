@@ -131,8 +131,15 @@ export interface IOrderInputsProps {
 }
 
 
+
 export interface ITableProps {
     tableData: ITable
+}
+
+export interface ITable {
+    titles?: ITableTitles,
+    thead?: ITableHead,
+    tbody: ITableBody
 }
 
 export interface ITableHeadProps {
@@ -143,11 +150,11 @@ export interface ITableBodyProps {
     tableBodyData: ITableBody
 }
 
-export interface ITable {
-    thead?: ITableHead,
-    tbody: ITableBody
+export interface ITableTitlesProps {
+    tableTitlesData: ITableTitles
 }
 
+export type ITableTitles = string[];
 export type ITableHead = string[];
 export type ITableBody = string[][];
 

@@ -1,51 +1,73 @@
-.table {
+.layout {
   width: 100%;
-  border-collapse: collapse;
-  overflow: hidden;
-  empty-cells: show;
 
-  .tr {
-    .td {
-      text-align: right;
-      padding: 8px 0 8px 30px;
-      color: #000;
-      font-family: Montserrat, sans-serif;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 130%;
-    }
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    empty-cells: show;
 
-    .td:first-child {
-      text-align: left;
-      font-size: 14px;
-      font-weight: 400;
-      padding: 8px 0 8px 5px;
-    }
-
-    .td:last-child {
-      padding: 8px 5px 8px 30px;
-    }
-  }
-
-  .head {
+    // Стили строки
     .tr {
-      border-bottom: 2px solid #2A4B7B;
 
+      // Стили ячейки
       .td {
-        font-size: 14px;
-        font-weight: 400;
+        padding: 10px 20px;
+
+        // Стили текста ячейки
+        color: #000;
+        font-family: Montserrat, sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+        text-align: right;
+
+        // Стили первой ячейки
+        &:first-child {
+          top: 0;
+          left: 0;
+          white-space: nowrap;
+          width: 0;
+          border-right: 1px solid rgba(200, 200, 200, 1);
+
+          // Стили текста первой ячейки
+          text-align: left;
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+
+      .th {
+
       }
     }
-  }
 
-  .body {
-    .tr {
-      border-bottom: 1px solid rgba(220, 220, 220, 0.75);
-      transition: 0.3s;
+    // Стили шапки таблицы
+    .head {
+      .tr {
+        border-bottom: 2px solid rgba(200, 200, 200, 1);
 
-      &:hover {
-        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.30);
+        .td {
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    // Стили тела таблицы
+    .body {
+      .tr {
+        border-bottom: 1px solid rgba(220, 220, 220, 0.75);
+        transition: 0.3s;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &:hover {
+          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.30);
+        }
       }
     }
   }

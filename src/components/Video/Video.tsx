@@ -9,7 +9,11 @@ const Video = (props: IVideoProps) => {
             <div className={s.content}>
                 <h2 className={s.title}>{props.title}</h2>
                 <div className={s.video_part}>
-                    video
+                    <iframe width="560" height="315" src={props.video}
+                            title="YouTube video player" frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen>
+                    </iframe>
                 </div>
             </div>
         </div>

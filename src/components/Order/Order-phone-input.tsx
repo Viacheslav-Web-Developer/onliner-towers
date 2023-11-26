@@ -1,4 +1,4 @@
-import React, {BaseSyntheticEvent, SyntheticEvent, useEffect, useState} from 'react';
+import React, {BaseSyntheticEvent, useEffect, useState} from 'react';
 import s from "@/components/Order/Order.module.scss";
 import {IOrderInputsProps} from "@/types/types";
 
@@ -58,7 +58,6 @@ const OrderPhoneInput = (props: IOrderInputsProps) => {
                            onChange={e => handleChange(e.target.value)} onClick={handleClick} onBlur={handleAbort}/>
                     <div className={s.phone_input_text}>{props.userData}</div>
                 </div>
-
             </label>
         </div>
     );

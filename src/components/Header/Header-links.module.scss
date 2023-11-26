@@ -24,7 +24,7 @@
     position: absolute;
     top: 110%;
     left: 0;
-    transform: scale(0);
+    transform: scaleX(0);
     transition: 0.3s;
     transform-origin: left;
 
@@ -32,7 +32,7 @@
 
   &:hover {
     .underline {
-      transform: scale(1);
+      transform: scaleX(1);
     }
   }
 }
