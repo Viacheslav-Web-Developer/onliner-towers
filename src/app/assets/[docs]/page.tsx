@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import {useParams} from "next/navigation";
-import {MyWorker} from "@/components/MyWorker/MyWorker";
+import PdfReader from "@/components/PDFReader/PDFReader";
 
 const Page = () => {
     interface IParams {
@@ -12,7 +12,7 @@ const Page = () => {
 
     return (
         <div>
-            <MyWorker params={params}/>
+            <PdfReader file={'https://pdfobject.com/pdf/sample.pdf'}/>
         </div>
 
     );
