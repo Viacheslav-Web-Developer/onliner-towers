@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import s from './Header.module.scss';
 import Image from "next/image";
 import logo from '@/public/Header/logoMin.svg';
@@ -6,35 +6,33 @@ import {IHeaderLinks, IHeaderProps} from "@/types/types";
 import Link from "next/link";
 
 import HeaderLinks from "@/components/Header/Header-links";
-import classNames from "classnames";
 
 const Header = (props: IHeaderProps) => {
     const linksRender = (linksData: IHeaderLinks[]) => {
         return linksData.map((el, id) => <HeaderLinks text={el.text} url={el.url} key={id}/>)
     }
 
-    const headerClassname = classNames([s.header as string], {
-        [s.sticky as string]: props.isSticky
+    let header = React.createRef<HTMLElement>();
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if (document.documentElement.scrollTop < 50) {
+                if(document.documentElement.scrollTop > 5){
+                    header.current!.classList.add(s.sticky);
+                }
+                else{
+                    header.current!.classList.remove(s.sticky);
+                }
+                header.current!.style.height = `${100 - document.documentElement.scrollTop}px`;
+            }
+            else{
+                header.current!.classList.add(s.sticky);
+                header.current!.style.height = '50px';
+            }
+        })
     })
 
-    const [fixedHeaderPosition, setFixedHeaderPosition] = useState<number>(-100)
-
-
-    useEffect(() => {
-        document.documentElement.scrollTop > 100 && setFixedHeaderPosition(0)
-        props.isSticky ? window.addEventListener('scroll', () => {
-            if (document.documentElement.scrollTop > 100 && document.documentElement.scrollTop < 200) {
-                setFixedHeaderPosition(document.documentElement.scrollTop - 200)
-            }
-            else if (document.documentElement.scrollTop > 200) setFixedHeaderPosition(0)
-            else setFixedHeaderPosition(-100)
-
-
-        }) : setFixedHeaderPosition(0)
-    }, [null])
-
     return (
-        <header className={headerClassname} id={'header'} style={{transform: `translateY(${fixedHeaderPosition}%)`}}>
+        <header className={s.header} id={'header'} ref={header}>
             <div className={s.content + ' container'}>
                 <div className={s.logo}>
                     <Link href={'/'}>

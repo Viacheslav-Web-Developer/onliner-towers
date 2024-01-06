@@ -5,6 +5,9 @@
   background-color: rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s;
   z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
 
   .content {
     height: 100%;
@@ -49,23 +52,15 @@
   }
 }
 
-.header.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  //transition: 50ms;
-  height: 60px;
+.First_header.sticky {
+  .logo {
+    img {
+      transform: translateY(0) scale(0.8);
+    }
 
-  .content{
-    .logo{
-      img{
-        transform: translateY(0) scale(0.8);
-      }
-      p {
-        display: none;
-        transform: none;
-      }
+    p{
+      opacity: 0;
+      transform: translateY(0);
     }
   }
 }

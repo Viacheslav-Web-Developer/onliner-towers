@@ -20,7 +20,6 @@ export interface IMainScreenProps {
 
 
 export interface IHeaderProps {
-    isSticky: boolean,
     links: IHeaderLinks[],
 }
 
