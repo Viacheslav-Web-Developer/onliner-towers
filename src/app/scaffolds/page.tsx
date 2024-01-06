@@ -5,9 +5,7 @@ import ScaffoldPage from "../../sitePages/ScaffoldPage/ScaffoldPage";
 
 const Page = () => {
     return (
-        <div className={s.content}>
-            <ScaffoldPage/>
-        </div>
+        <ScaffoldPage/>
     );
 };
 

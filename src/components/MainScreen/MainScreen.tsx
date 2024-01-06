@@ -11,7 +11,8 @@ const MainScreen = (props: IMainScreenProps) => {
         <div className={s.main_screen + ' ' + s[props.page]}>
             <div className={s.content}>
                 <div className={s.top_section}>
-                    <Header links={props.headerLinks}/>
+                    <Header links={props.headerLinks} isSticky={false}/>
+                    <Header links={props.headerLinks} isSticky={true}/>
                     <TopBar cards={props.topBarCards}/>
                 </div>
                 <div className={s.middle_section + ' container'}>

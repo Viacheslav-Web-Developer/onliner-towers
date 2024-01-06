@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import {store} from "@/assets/store";
 import {EPages} from "@/types/types";
-import s from "@/app/page.module.scss";
+import s from "./ScaffoldPage.module.scss";
 
 import YandexMap from "@/components/YandexMap/YandexMap";
 import Modal from "@/components/Modal/Modal";

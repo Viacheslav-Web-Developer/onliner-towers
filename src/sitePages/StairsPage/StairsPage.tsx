@@ -1,6 +1,9 @@
 'use client'
 import React, {useState} from 'react';
-import s from "@/app/page.module.scss";
+import s from "./StairsPage.module.scss";
+import {store} from "@/assets/store";
+import {EPages} from "@/types/types";
+
 import MainScreen from "@/components/MainScreen/MainScreen";
 import YandexMap from "@/components/YandexMap/YandexMap";
 import Modal from "@/components/Modal/Modal";
@@ -10,11 +13,9 @@ import MoreQuestions from "@/components/MoreQuestions/MoreQuestions";
 import Faq from "@/components/Faq/Faq";
 import NavLinks from "@/components/NavLinks/NavLinks";
 import Description from "../StairsPage/Description/Description";
-import {store} from "@/assets/store";
-import {EPages} from "@/types/types";
-import Order from "@/components/Order/Order";
 import Benefits from "@/components/Benefits/Benefits";
 import Prices from "@/components/Prices/Prices";
+import Order from "@/components/Order/Order";
 
 const StairsPage = () => {
     const [modalIsOpen, setModalOpen] = useState(false)

@@ -1,6 +1,6 @@
 'use client'
 import React, {useState} from 'react';
-import s from "@/app/page.module.scss";
+import s from "./ScaffoldingPage.module.scss";
 import {store} from "@/assets/store";
 import {EPages} from "@/types/types";
 

@@ -3,7 +3,6 @@
     border: none;
     display: flex;
     cursor: pointer;
-    padding: 10px 0;
 
     .arrow_image {
         position: relative;
@@ -80,7 +79,7 @@
     .arrow_image {
         .arrow {
             img {
-                opacity: 0.5;
+                opacity: 0.3;
             }
         }
 
@@ -93,7 +92,7 @@
         &:hover {
             .arrow {
                 img {
-                    opacity: 0.5;
+                    opacity: 0.3;
                 }
             }
 

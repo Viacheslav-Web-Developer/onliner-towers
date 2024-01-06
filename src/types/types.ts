@@ -20,6 +20,7 @@ export interface IMainScreenProps {
 
 
 export interface IHeaderProps {
+    isSticky: boolean,
     links: IHeaderLinks[],
 }
 
@@ -137,7 +138,7 @@ export interface ITableProps {
 }
 
 export interface ITable {
-    titles?: ITableTitles,
+
     thead?: ITableHead,
     tbody: ITableBody
 }
@@ -150,11 +151,6 @@ export interface ITableBodyProps {
     tableBodyData: ITableBody
 }
 
-export interface ITableTitlesProps {
-    tableTitlesData: ITableTitles
-}
-
-export type ITableTitles = string[];
 export type ITableHead = string[];
 export type ITableBody = string[][];
 
@@ -285,4 +281,10 @@ export interface IComponentsCarouselCard {
     img: StaticImageData,
     size: string,
     weight: string
+}
+
+
+
+export interface ITowerTable extends ITableProps{
+    title: string,
 }

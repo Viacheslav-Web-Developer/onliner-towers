@@ -1,6 +1,6 @@
 'use client'
 import React, {useState} from "react";
-import s from '@/app/page.module.scss';
+import s from './TowerPage.module.scss';
 import {EPages} from "@/types/types";
 import {store} from '@/assets/store';
 
@@ -8,7 +8,6 @@ import MainScreen from "@/components/MainScreen/MainScreen";
 import Prices from "@/components/Prices/Prices";
 import Benefits from "@/components/Benefits/Benefits";
 import Order from "@/components/Order/Order";
-import Table from "@/components/Table/Table";
 import NavLinks from "@/components/NavLinks/NavLinks";
 import Faq from "@/components/Faq/Faq";
 import Instructions from "@/components/Instructions/Instructions";
@@ -18,6 +17,7 @@ import Modal from "@/components/Modal/Modal";
 import Footer from "@/components/Footer/Footer";
 import YandexMap from "@/components/YandexMap/YandexMap";
 import Video from "@/components/Video/Video";
+import TowersTable from "@/sitePages/TowerPage/TowersTable/TowersTable";
 
 const TowerPage = () => {
     const [modalIsOpen, setModalOpen] = useState(false);
@@ -46,20 +46,9 @@ const TowerPage = () => {
 
             {/*Якорь характеристики*/}
             <div className={'anchor_link'} id={'specifications'}/>
-            <div className={'container'}>
-                <div className={s.table}>
-                    <h2 className={s.table_title}>Технические характеристики вышки туры передвижной</h2>
-                    <div className={s.layout}>
-                        <Table tableData={store.tower.firstTable}/>
-                    </div>
-                </div>
-                <div className={s.table}>
-                    <h2 className={s.table_title}>Подробные технические характеристики вышки туры передвижной</h2>
-                    <div className={s.layout}>
-                        <Table tableData={store.tower.secondTable}/>
-                    </div>
-                </div>
-            </div>
+
+            <TowersTable tableData={store.tower.firstTable.tableData} title={store.tower.firstTable.title}/>
+            <TowersTable tableData={store.tower.secondTable.tableData} title={store.tower.secondTable.title}/>
 
             <NavLinks navLinks={store.navLinks} page={EPages.tower} component={'main'}/>
 
@@ -70,7 +59,6 @@ const TowerPage = () => {
             {/*Якорь инструкция*/}
             <div className={'anchor_link'} id={'manual'}/>
             <Instructions cardsData={store.tower.instructions}/>
-
 
             <div className={s.videos_section}>
                 <Video video={store.tower.firstVideo.video} title={store.tower.firstVideo.title}/>

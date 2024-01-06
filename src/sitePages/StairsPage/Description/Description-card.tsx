@@ -5,7 +5,6 @@ import classNames from "classnames";
 import {IStairsDescriptionCard} from "@/types/types";
 
 import Table from "@/components/Table/Table";
-import MyTable from "@/components/MyTable/MyTable";
 
 const DescriptionCard = (props: IStairsDescriptionCard) => {
     const listRender = (listData: string[]) => {

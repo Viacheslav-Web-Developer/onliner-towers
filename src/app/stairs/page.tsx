@@ -5,9 +5,7 @@ import StairsPage from "../../sitePages/StairsPage/StairsPage";
 
 const Page = () => {
     return (
-        <div className={s.content}>
-            <StairsPage/>
-        </div>
+        <StairsPage/>
     );
 };
 
