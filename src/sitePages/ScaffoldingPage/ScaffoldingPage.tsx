@@ -59,7 +59,7 @@ const ScaffoldingPage = () => {
 
             {/*Якорь вопрос/ответ*/}
             <div className={'anchor_link'} id={'faq'}/>
-            <Faq cardsData={store.scaffolding.faq}/>
+            <Faq cardsData={store.scaffolding.faq} page={EPages.scaffolding}/>
 
             <Instructions cardsData={store.scaffolding.instructions}/>
 

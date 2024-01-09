@@ -66,7 +66,7 @@ const MoreQuestions = (props: IMoreQuestions) => {
                 <p className={s.text}>Оставьте заявку, мы перезвоним и с удовольствием ответим на все интересующие вопросы.</p>
                 <div className={s.form}>
                     <div className={phoneInputClassName}>
-                        <input type="tel" name={'phone'} className={s.input} value={userPhone}
+                        <input type="tel" name={'user_phone'} className={s.input} value={userPhone}
                                onChange={e => handleChange(e.target.value)} onClick={handleClick} onBlur={handleAbort}/>
                         <div className={s.phone_input_text}>{changedUserPhone}</div>
                     </div>

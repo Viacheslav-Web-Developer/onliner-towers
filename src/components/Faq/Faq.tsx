@@ -6,7 +6,7 @@ import FaqCard from "@/components/Faq/Faq-card";
 
 const Faq = (props: IFaqProps) => {
     const cardsRender = (cardsData: IFaqCard[]) => {
-        return cardsData.map((el, id) => <FaqCard cardData={el} key={id}/>)
+        return cardsData.map((el, id) => <FaqCard cardData={el} key={id} page={props.page}/>)
     }
 
     return (

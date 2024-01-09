@@ -1,20 +1,27 @@
 .content {
-    .title {
-        width: 75%;
-        color: #000;
-        font-family: Montserrat, sans-serif;
-        font-size: 30px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 130%;
-        text-align: center;
-        margin: 0 auto 30px auto;
-    }
+  .title {
+    width: 75%;
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    text-align: center;
+    margin: 0 auto 30px auto;
+  }
 
-    .video_part {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+  .video_part {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    iframe {
+      width: 75%;
+      height: auto;
+      aspect-ratio: 16/9;
     }
+  }
 }

@@ -10,7 +10,7 @@ const NavLinks = (props: INavLinksProps) => {
     }
 
     return (
-        <div className={s.nav_links}>
+        <div className={s.nav_links + ' ' + s[props.component]}>
             <div className={s.content}>
                 {linksRender(props.navLinks)}
             </div>

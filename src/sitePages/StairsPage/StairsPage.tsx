@@ -49,7 +49,7 @@ const StairsPage = () => {
 
             {/*Якорь вопрос/ответ*/}
             <div className={'anchor_link'} id={'faq'}/>
-            <Faq cardsData={store.stairs.faq}/>
+            <Faq cardsData={store.stairs.faq} page={EPages.stairs}/>
 
             <MoreQuestions component={'main'} title={'Остались вопросы?'}/>
 

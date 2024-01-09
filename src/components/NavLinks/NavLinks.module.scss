@@ -3,9 +3,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 50px 0;
-
+  padding: 30px 0;
+  background-color: rgba(255,255,255,0.7);
 
   .content{
     width: 900px;
@@ -13,4 +12,9 @@
     align-items: center;
     justify-content: space-between;
   }
+}
+
+.nav_links.main {
+  padding: 50px 0;
+  background: #fff;
 }

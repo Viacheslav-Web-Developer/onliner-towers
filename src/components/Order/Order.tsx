@@ -35,7 +35,7 @@ const Order = (props: IOrderProps) => {
                         <div className={s.order_description_input}>
                             <label>
                                 <p className={s.text}>Опишите ваш заказ:</p>
-                                <textarea className={s.input} value={userOrderDescription}
+                                <textarea name={'user_description'} className={s.input} value={userOrderDescription}
                                           onChange={e => setUserOrderDescription(e.target.value)}/>
                             </label>
                         </div>

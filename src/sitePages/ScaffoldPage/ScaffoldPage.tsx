@@ -18,7 +18,6 @@ import Description from "@/components/Description/Description";
 import MainScreen from "@/components/MainScreen/MainScreen";
 import Specifications from "../ScaffoldPage/Specifications/Specifications";
 import Prices from "../ScaffoldPage/Prices/Prices";
-import ComponentsCarousel from "../ScaffoldingPage/ComponentsCarousel/ComponentsCarousel";
 
 const ScaffoldPage = () => {
     const [modalIsOpen, setModalOpen] = useState(false)
@@ -55,7 +54,7 @@ const ScaffoldPage = () => {
 
             {/*Якорь вопрос/ответ*/}
             <div className={'anchor_link'} id={'faq'}/>
-            <Faq cardsData={store.scaffold.faq}/>
+            <Faq cardsData={store.scaffold.faq} page={EPages.scaffold}/>
 
             <Instructions cardsData={store.scaffold.instructions}/>
 

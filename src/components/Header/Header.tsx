@@ -14,25 +14,26 @@ const Header = (props: IHeaderProps) => {
 
     let header = React.createRef<HTMLElement>();
     useEffect(() => {
+        document.documentElement.scrollTop > 100 && (header.current!.style.height = '50px') && (header.current!.classList.add(s.sticky));
         window.addEventListener('scroll', () => {
             if (document.documentElement.scrollTop < 50) {
                 if(document.documentElement.scrollTop > 5){
-                    header.current!.classList.add(s.sticky);
+                    header.current && header.current!.classList.add(s.sticky);
                 }
                 else{
-                    header.current!.classList.remove(s.sticky);
+                    header.current && header.current!.classList.remove(s.sticky);
                 }
-                header.current!.style.height = `${100 - document.documentElement.scrollTop}px`;
+                header.current && (header.current!.style.height = `${100 - document.documentElement.scrollTop}px`);
             }
             else{
-                header.current!.classList.add(s.sticky);
-                header.current!.style.height = '50px';
+                header.current && header.current!.classList.add(s.sticky);
+                header.current && (header.current!.style.height = '50px');
             }
         })
     })
 
     return (
-        <header className={s.header} id={'header'} ref={header}>
+        <header className={s.header + ' ' + s[props.page]} id={'header'} ref={header}>
             <div className={s.content + ' container'}>
                 <div className={s.logo}>
                     <Link href={'/'}>

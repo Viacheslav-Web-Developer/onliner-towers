@@ -55,13 +55,37 @@
     .text {
       width: 100%;
       padding: 30px 50px;
-      background: #002543;
+      background: #2A4B7B;
       color: #FFF;
       font-family: Montserrat, sans-serif;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
       line-height: 22px;
+    }
+  }
+
+  .answer.tower {
+    .text {
+      background-color: #2A4B7B;
+    }
+  }
+
+  .answer.stairs {
+    .text {
+      background-color: #636872;
+    }
+  }
+
+  .answer.scaffolding {
+    .text {
+      background-color: #6C758F;
+    }
+  }
+
+  .answer.scaffold {
+    .text {
+      background-color: #293E58;
     }
   }
 }

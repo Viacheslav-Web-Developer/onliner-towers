@@ -54,7 +54,7 @@ const OrderPhoneInput = (props: IOrderInputsProps) => {
             <label>
                 <p className={s.text}>Ваш телефон:</p>
                 <div className={s.phone_input}>
-                    <input type="tel" name={'phone'} className={s.input} value={userPhone}
+                    <input type="tel" name={'user_phone'} className={s.input} value={userPhone}
                            onChange={e => handleChange(e.target.value)} onClick={handleClick} onBlur={handleAbort}/>
                     <div className={s.phone_input_text}>{props.userData}</div>
                 </div>

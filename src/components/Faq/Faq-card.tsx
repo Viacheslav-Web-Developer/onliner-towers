@@ -28,7 +28,7 @@ const FaqCard = (props: IFaqCardProps) => {
                     <div/>
                 </div>
             </button>
-            <div className={s.answer} style={isOpen ? {height: `${answerHeight}px`} : {height: '0'}}>
+            <div className={s.answer + ' ' + s[props.page]} style={isOpen ? {height: `${answerHeight}px`} : {height: '0'}}>
                 <p className={s.text} ref={answerRef}>{props.cardData.answer}</p>
             </div>
         </div>

@@ -20,6 +20,7 @@ export interface IMainScreenProps {
 
 
 export interface IHeaderProps {
+    page: EPages,
     links: IHeaderLinks[],
 }
 
@@ -155,10 +156,12 @@ export type ITableBody = string[][];
 
 
 export interface IFaqProps {
+    page: EPages,
     cardsData: IFaqCard[]
 }
 
 export interface IFaqCardProps {
+    page: EPages,
     cardData: IFaqCard
 }
 

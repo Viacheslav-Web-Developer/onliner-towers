@@ -54,7 +54,7 @@ const TowerPage = () => {
 
             {/*Якорь вопрос/ответ*/}
             <div className={'anchor_link'} id={'faq'}/>
-            <Faq cardsData={store.tower.faq}/>
+            <Faq cardsData={store.tower.faq} page={EPages.tower}/>
 
             {/*Якорь инструкция*/}
             <div className={'anchor_link'} id={'manual'}/>
