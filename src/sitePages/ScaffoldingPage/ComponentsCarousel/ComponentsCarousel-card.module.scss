@@ -1,7 +1,11 @@
 .card {
-  padding: 0 15px;
+  padding: 0 10px;
 
   .content {
+    background-color: #fff;
+    padding: 30px 15px;
+    border: none;
+    border-radius: 14px;
 
     .img_part {
       display: flex;
@@ -11,14 +15,31 @@
     }
 
     .title {
-
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+      color: #000000;
+      margin-bottom: 5px;
     }
 
     .params {
 
-
       .text {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 35px;
+        color: #282828;
+      }
 
+      .text.select {
+        color: #EE9A38;
+        padding-left: 5px;
+        font-size: 18px;
+        line-height: 20px;
       }
     }
   }

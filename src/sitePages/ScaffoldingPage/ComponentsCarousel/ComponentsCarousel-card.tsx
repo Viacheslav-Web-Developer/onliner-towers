@@ -12,8 +12,10 @@ const ComponentsCarouselCard = (props: IComponentsCarouselCardProps) => {
                 </div>
                 <h3 className={s.title}>{props.cardData.title}</h3>
                 <div className={s.params}>
-                    <p className={s.text}>{props.cardData.size}</p>
-                    <p className={s.text}>{props.cardData.weight}</p>
+                    <h4 className={s.text}>Размер элемента:</h4>
+                    <p className={s.text + ' ' + s.select}>{props.cardData.size}</p>
+                    <h4 className={s.text}>Масса элемента:</h4>
+                    <p className={s.text + ' ' + s.select}>{props.cardData.weight}</p>
                 </div>
             </div>
         </div>

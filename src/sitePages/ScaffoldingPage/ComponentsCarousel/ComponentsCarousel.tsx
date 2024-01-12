@@ -10,55 +10,64 @@ import arrow from '@/public/ScaffoldingCarousel/arrow.svg'
 import Image from "next/image";
 import classNames from "classnames";
 
+import frame_without_ladder from '@/public/ScaffoldingCarousel/frame_without_ladder.png';
+import frame_with_ladder from '@/public/ScaffoldingCarousel/frame_with_ladder.png'
+import horizontal_screed from '@/public/ScaffoldingCarousel/horizontal_screed.png'
+import diagonal_screed from '@/public/ScaffoldingCarousel/diagonal_screed.png'
+import shoe from '@/public/ScaffoldingCarousel/shoe.png';
+import mounting_bracket from '@/public/ScaffoldingCarousel/mounting_bracket.png'
+import rigel from '@/public/ScaffoldingCarousel/rigel.png'
+import wooden_flooring from '@/public/ScaffoldingCarousel/wooden_flooring.png'
+
 const ComponentsCarousel = () => {
     const cardsData: IComponentsCarouselCard[] = [
         {
-            title: 'Название элемента',
-            img: img,
-            size: 'Размер элемента',
-            weight: 'Вес элемента'
+            title: 'Рама без лестницы',
+            img: frame_without_ladder,
+            size: '1060*2000',
+            weight: '7,4'
         },
         {
-            title: 'Название элемента',
-            img: img,
-            size: 'Размер элемента',
-            weight: 'Вес элемента'
+            title: 'Рама с лестницей',
+            img: frame_with_ladder,
+            size: '1060*2000',
+            weight: '9,4'
         },
         {
-            title: 'Название элемента',
-            img: img,
-            size: 'Размер элемента',
-            weight: 'Вес элемента'
+            title: 'Горизонтальная стяжка',
+            img: horizontal_screed,
+            size: '3050',
+            weight: '1,7'
         },
         {
-            title: 'Название элемента',
-            img: img,
-            size: 'Размер элемента',
-            weight: 'Вес элемента'
+            title: 'Диагональная стяжка',
+            img: diagonal_screed,
+            size: '3300',
+            weight: '3,65'
         },
         {
-            title: 'Название элемента',
-            img: img,
-            size: 'Размер элемента',
-            weight: 'Вес элемента'
+            title: 'Башмак',
+            img: shoe,
+            size: '100*100*160',
+            weight: '0,41'
         },
         {
-            title: 'Название элемента',
-            img: img,
-            size: 'Размер элемента',
-            weight: 'Вес элемента'
+            title: 'Кронштейн крепления',
+            img: mounting_bracket,
+            size: '300-600',
+            weight: '0,42'
         },
         {
-            title: 'Название элемента',
-            img: img,
-            size: 'Размер элемента',
-            weight: 'Вес элемента'
+            title: 'Ригель',
+            img: rigel,
+            size: '3060',
+            weight: '6,5'
         },
         {
-            title: 'Название элемента',
-            img: img,
-            size: 'Размер элемента',
-            weight: 'Вес элемента'
+            title: 'Настил деревянный',
+            img: wooden_flooring,
+            size: '1000*1000',
+            weight: '20'
         },
     ]
 
@@ -105,9 +114,12 @@ const ComponentsCarousel = () => {
         <div className={s.carousel}>
             <div className={s.layout}>
                 <button onClick={handlePrev} className={buttonPrevClassName}><Image src={arrow} alt={'Назад'}/></button>
-                <div className={s.content}>
-                    <div className={s.track} style={{transform: `translateX(-${position * cardWidth}%)`}}>
-                        {cardsRender(cardsData)}
+                <div className={'container ' + s.container}>
+                    <h2 className={s.title}>Комплектация:</h2>
+                    <div className={s.content}>
+                        <div className={s.track} style={{transform: `translateX(-${position * cardWidth}%)`}}>
+                            {cardsRender(cardsData)}
+                        </div>
                     </div>
                 </div>
                 <button onClick={handleNext} className={buttonNextClassName}><Image src={arrow} alt={'Вперед'}/></button>
