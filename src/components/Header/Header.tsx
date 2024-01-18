@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import s from './Header.module.scss';
 import Image from "next/image";
 import logo from '@/public/Header/logoMin.svg';
@@ -6,8 +6,11 @@ import {IHeaderLinks, IHeaderProps} from "@/types/types";
 import Link from "next/link";
 
 import HeaderLinks from "@/components/Header/Header-links";
+import BurgerMenu from "@/components/BurgerMenu/BurgerMenu";
 
 const Header = (props: IHeaderProps) => {
+    const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState<boolean>(false)
+
     const linksRender = (linksData: IHeaderLinks[]) => {
         return linksData.map((el, id) => <HeaderLinks text={el.text} url={el.url} key={id}/>)
     }
@@ -16,7 +19,7 @@ const Header = (props: IHeaderProps) => {
     useEffect(() => {
         document.documentElement.scrollTop > 100 && (header.current!.style.height = '50px') && (header.current!.classList.add(s.sticky));
         window.addEventListener('scroll', () => {
-            if (document.documentElement.scrollTop < 50) {
+            if (document.documentElement.scrollTop < 40) {
                 if(document.documentElement.scrollTop > 5){
                     header.current && header.current!.classList.add(s.sticky);
                 }
@@ -27,7 +30,7 @@ const Header = (props: IHeaderProps) => {
             }
             else{
                 header.current && header.current!.classList.add(s.sticky);
-                header.current && (header.current!.style.height = '50px');
+                header.current && (header.current!.style.height = '60px');
             }
         })
     })
@@ -44,7 +47,13 @@ const Header = (props: IHeaderProps) => {
                 <ul className={s.links}>
                     {linksRender(props.links)}
                 </ul>
+                <button onClick={() => setMobileMenuIsOpen(true)} className={s.burger_menu}>
+                    <div/>
+                    <div/>
+                    <div/>
+                </button>
             </div>
+            <BurgerMenu mobileMenuIsOpen={mobileMenuIsOpen} setMobileMenuIsOpen={setMobileMenuIsOpen}/>
         </header>
     );
 };

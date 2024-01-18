@@ -33,48 +33,49 @@ const TowerPage = () => {
                 navLinks={store.navLinks}
             />
 
-            {/*Якорь цены*/}
-            <div className={'anchor_link'} id={'prices'}/>
-            <Prices
-                cardsData={store.tower.prices}
-                setModalOpen={setModalOpen}
-                page={EPages.tower}
-            />
+            {/*/!*Якорь цены*!/*/}
+            {/*<div className={'anchor_link'} id={'prices'}/>*/}
+            {/*<Prices*/}
+            {/*    cardsData={store.tower.prices}*/}
+            {/*    setModalOpen={setModalOpen}*/}
+            {/*    page={EPages.tower}*/}
+            {/*/>*/}
 
-            <Benefits cardsData={store.benefits} page={EPages.tower}/>
-            <Order page={EPages.tower}/>
+            {/*<Benefits cardsData={store.benefits} page={EPages.tower}/>*/}
+            {/*<Order page={EPages.tower}/>*/}
 
-            {/*Якорь характеристики*/}
-            <div className={'anchor_link'} id={'specifications'}/>
+            {/*/!*Якорь характеристики*!/*/}
+            {/*<div className={'anchor_link'} id={'specifications'}/>*/}
 
-            <TowersTable tableData={store.tower.firstTable.tableData} title={store.tower.firstTable.title}/>
-            <TowersTable tableData={store.tower.secondTable.tableData} title={store.tower.secondTable.title}/>
+            {/*<TowersTable tableData={store.tower.firstTable.tableData} title={store.tower.firstTable.title}/>*/}
+            {/*<TowersTable tableData={store.tower.secondTable.tableData} title={store.tower.secondTable.title}/>*/}
 
-            <NavLinks navLinks={store.navLinks} page={EPages.tower} component={'main'}/>
+            {/*<NavLinks navLinks={store.navLinks} page={EPages.tower} component={'main'}/>*/}
 
-            {/*Якорь вопрос/ответ*/}
-            <div className={'anchor_link'} id={'faq'}/>
-            <Faq cardsData={store.tower.faq} page={EPages.tower}/>
+            {/*/!*Якорь вопрос/ответ*!/*/}
+            {/*<div className={'anchor_link'} id={'faq'}/>*/}
+            {/*<Faq cardsData={store.tower.faq} page={EPages.tower}/>*/}
 
-            {/*Якорь инструкция*/}
-            <div className={'anchor_link'} id={'manual'}/>
-            <Instructions cardsData={store.tower.instructions}/>
+            {/*/!*Якорь инструкция*!/*/}
+            {/*<div className={'anchor_link'} id={'manual'}/>*/}
+            {/*<Instructions cardsData={store.tower.instructions}/>*/}
 
-            <div className={s.videos_section}>
-                <Video video={store.tower.firstVideo.video} title={store.tower.firstVideo.title}/>
-                <Video video={store.tower.secondVideo.video} title={store.tower.secondVideo.title}/>
-            </div>
+            {/*<div className={s.videos_section}>*/}
+            {/*    <Video video={store.tower.firstVideo.video} title={store.tower.firstVideo.title}/>*/}
+            {/*    <Video video={store.tower.secondVideo.video} title={store.tower.secondVideo.title}/>*/}
+            {/*    <Video title={store.tower.thirdVideo.title} video={store.tower.thirdVideo.video}/>*/}
+            {/*</div>*/}
 
-            <MoreQuestions component={'main'} title={'Остались вопросы?'}/>
+            {/*<MoreQuestions component={'main'} title={'Остались вопросы?'}/>*/}
 
-            {/*Якорь контакты*/}
-            <div className={'anchor_link'} id={'contacts'}/>
-            <Footer setModalOpen={setModalOpen} links={store.tower.headerLinks}/>
+            {/*/!*Якорь контакты*!/*/}
+            {/*<div className={'anchor_link'} id={'contacts'}/>*/}
+            {/*<Footer setModalOpen={setModalOpen} links={store.tower.headerLinks}/>*/}
 
-            <YandexMap/>
+            {/*<YandexMap/>*/}
 
-            <Modal setModalOpen={setModalOpen} modalIsOpen={modalIsOpen}/>
-            <ButtonUp/>
+            {/*<Modal setModalOpen={setModalOpen} modalIsOpen={modalIsOpen}/>*/}
+            {/*<ButtonUp/>*/}
         </div>
     )
 }

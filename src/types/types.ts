@@ -290,3 +290,11 @@ export interface IComponentsCarouselCard {
 export interface ITowerTable extends ITableProps{
     title: string,
 }
+
+
+
+
+export interface BurgerMenuProps {
+    mobileMenuIsOpen: boolean,
+    setMobileMenuIsOpen: Dispatch<SetStateAction<boolean>>
+}

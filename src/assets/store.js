@@ -236,6 +236,10 @@ export const store = {
             "title": "Видео инструкция комплекта для установки на лестничный марш для вышки тура",
             "video": "https://www.youtube.com/embed/Nj_xApZx898?si=oroHGYBooskPJ6Hl"
         },
+        "thirdVideo": {
+            "title": "Техника безопасности при работе на высоте",
+            "video": "https://www.youtube.com/embed/Zqe_gmfkAfo?si=-_wlHaAkHkA8wdPf"
+        },
         "faq": [
             {
                 "question": "Почему именно вышка тура?",
