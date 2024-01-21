@@ -36,3 +36,38 @@
     color: #293E58;
   }
 }
+
+
+
+@media (max-width: 1200px) {
+  .content {
+    align-items: center;
+
+    .cards {
+      width: 50%;
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-gap: 0;
+      grid-row-gap: 30px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+  .content {
+    .cards {
+      width: 70%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .content {
+    .cards {
+      width: 90%;
+    }
+  }
+}

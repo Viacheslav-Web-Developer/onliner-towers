@@ -18,3 +18,39 @@
   padding: 50px 0;
   background: #fff;
 }
+
+@media (max-width: 1200px) {
+  .nav_links {
+    .content {
+      width: 90%;
+      justify-content: space-around;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .nav_links {
+    .content {
+      width: 95%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .nav_links {
+    background-color: #f1f1f1;
+    padding: 6px 0;
+
+    .content {
+      gap: 3%;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .nav_links {
+    .content {
+      gap: 2%;
+    }
+  }
+}

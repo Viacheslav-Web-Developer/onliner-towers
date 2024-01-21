@@ -70,6 +70,7 @@ export interface INavLinksCardProps {
 export interface INavLinks {
     page: EPages,
     title: string,
+    titleMobile: string,
     image: StaticImageData,
     linkHref: string
 }

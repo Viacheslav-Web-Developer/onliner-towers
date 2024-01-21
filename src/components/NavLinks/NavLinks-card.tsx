@@ -15,6 +15,7 @@ const NavLinksCard = (props: INavLinksCardProps) => {
                 <Image src={props.navLinks.image} alt={'Image'}/>
             </div>
             <Link href={props.navLinks.linkHref} className={s.button}>Подробнее</Link>
+            <Link href={props.navLinks.linkHref} className={s.button + ' ' + s.mobile}>{props.navLinks.titleMobile}</Link>
         </div>
     );
 };

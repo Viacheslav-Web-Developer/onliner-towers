@@ -39,24 +39,28 @@ export const store = {
         {
             "page": EPages.tower,
             "title": "Аренда вышек",
+            "titleMobile": "Вышки",
             "image": towerImage,
             "linkHref": "/towers"
         },
         {
             "page": EPages.stairs,
             "title": "Аренда лестниц",
+            "titleMobile": "Лестницы",
             "image": stairsImage,
             "linkHref": "/stairs"
         },
         {
             "page": EPages.scaffolding,
             "title": "Аренда лесов",
+            "titleMobile": "Леса",
             "image": scaffoldingImage,
             "linkHref": "/scaffoldings"
         },
         {
             "page": EPages.scaffold,
             "title": "Аренда помостов",
+            "titleMobile": "Помосты",
             "image": scaffoldImage,
             "linkHref": "/scaffolds"
         }

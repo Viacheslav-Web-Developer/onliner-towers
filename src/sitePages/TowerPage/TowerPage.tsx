@@ -12,7 +12,7 @@ import NavLinks from "@/components/NavLinks/NavLinks";
 import Faq from "@/components/Faq/Faq";
 import Instructions from "@/components/Instructions/Instructions";
 import MoreQuestions from "@/components/MoreQuestions/MoreQuestions";
-import ButtonUp from "@/common_components/ButtonUp/ButtonUp";
+import ButtonUp from "@/components/ButtonUp/ButtonUp";
 import Modal from "@/components/Modal/Modal";
 import Footer from "@/components/Footer/Footer";
 import YandexMap from "@/components/YandexMap/YandexMap";
@@ -20,6 +20,8 @@ import Video from "@/components/Video/Video";
 import TowersTable from "@/sitePages/TowerPage/TowersTable/TowersTable";
 
 const TowerPage = () => {
+
+
     const [modalIsOpen, setModalOpen] = useState(false);
 
     return (
@@ -33,13 +35,13 @@ const TowerPage = () => {
                 navLinks={store.navLinks}
             />
 
-            {/*/!*Якорь цены*!/*/}
-            {/*<div className={'anchor_link'} id={'prices'}/>*/}
-            {/*<Prices*/}
-            {/*    cardsData={store.tower.prices}*/}
-            {/*    setModalOpen={setModalOpen}*/}
-            {/*    page={EPages.tower}*/}
-            {/*/>*/}
+            {/*Якорь цены*/}
+            <div className={'anchor_link'} id={'prices'}/>
+            <Prices
+                cardsData={store.tower.prices}
+                setModalOpen={setModalOpen}
+                page={EPages.tower}
+            />
 
             {/*<Benefits cardsData={store.benefits} page={EPages.tower}/>*/}
             {/*<Order page={EPages.tower}/>*/}

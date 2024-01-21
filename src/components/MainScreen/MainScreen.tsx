@@ -12,7 +12,7 @@ const MainScreen = (props: IMainScreenProps) => {
             <div className={s.content}>
                 <div className={s.top_section}>
                     <Header links={props.headerLinks} page={props.page}/>
-                    {/*<TopBar cards={props.topBarCards}/>*/}
+                    <TopBar cards={props.topBarCards}/>
                 </div>
                 <div className={s.middle_section + ' container'}>
                     <h1 className={s.title}>{props.title}</h1>
@@ -20,7 +20,7 @@ const MainScreen = (props: IMainScreenProps) => {
                     <button className={s.button} onClick={() => props.setModalOpen(true)}>Заказать звонок</button>
                 </div>
                 <div className={s.bottom_section}>
-                    {/*<NavLinks navLinks={props.navLinks} page={props.page} component={'main_screen'}/>*/}
+                    <NavLinks navLinks={props.navLinks} page={props.page} component={'main_screen'}/>
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@ import s from "./ScaffoldPage.module.scss";
 
 import YandexMap from "@/components/YandexMap/YandexMap";
 import Modal from "@/components/Modal/Modal";
-import ButtonUp from "@/common_components/ButtonUp/ButtonUp";
+import ButtonUp from "@/components/ButtonUp/ButtonUp";
 import Footer from "@/components/Footer/Footer";
 import MoreQuestions from "@/components/MoreQuestions/MoreQuestions";
 import Instructions from "@/components/Instructions/Instructions";
