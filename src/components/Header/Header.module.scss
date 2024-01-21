@@ -4,7 +4,7 @@
   padding: 16px 0;
   background-color: rgba(27, 46, 75, 0.5);
   transition: background-color 0.3s;
-  z-index: 1;
+  z-index: 3;
   position: fixed;
   top: 0;
   left: 0;
@@ -94,7 +94,6 @@
 }
 
 .header.sticky {
-  z-index: 10;
   background-color: rgba(27, 46, 75, 1);
   box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.25);
 
@@ -110,7 +109,6 @@
       }
     }
   }
-
 }
 
 .header.tower.sticky {
@@ -177,5 +175,22 @@
 }
 
 @media (max-width: 576px) {
+  .header {
+    padding: 10px 0;
 
+    .content {
+      align-items: center;
+
+      .logo {
+        img {
+          transform: translateY(0) scale(0.8);
+        }
+
+        p {
+          opacity: 0;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
 }

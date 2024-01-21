@@ -19,7 +19,7 @@ const Header = (props: IHeaderProps) => {
     useEffect(() => {
         document.documentElement.scrollTop > 100 && (header.current!.style.height = '50px') && (header.current!.classList.add(s.sticky));
         window.addEventListener('scroll', () => {
-            if (document.documentElement.scrollTop < 40) {
+            if (document.documentElement.scrollTop < 55) {
                 if(document.documentElement.scrollTop > 5){
                     header.current && header.current!.classList.add(s.sticky);
                 }
@@ -30,7 +30,7 @@ const Header = (props: IHeaderProps) => {
             }
             else{
                 header.current && header.current!.classList.add(s.sticky);
-                header.current && (header.current!.style.height = '60px');
+                header.current && (header.current!.style.height = '45px');
             }
         })
     })

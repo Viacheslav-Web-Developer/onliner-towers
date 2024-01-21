@@ -130,8 +130,10 @@
 
 @media (max-width: 576px) {
   .main_screen {
+    height: 100vh;
 
     .content {
+      height: 100vh;
       justify-content: center;
 
       .middle_section {
@@ -158,8 +160,10 @@
       .bottom_section {
         position: fixed;
         left: 0;
-        bottom: 0;
-        z-index: 1;
+        bottom: 10px;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
       }
     }
   }
