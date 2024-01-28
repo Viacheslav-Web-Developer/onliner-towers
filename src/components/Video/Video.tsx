@@ -7,13 +7,13 @@ const Video = (props: IVideoProps) => {
     return (
         <div className={'container'}>
             <div className={s.content}>
-                <h2 className={s.title}>{props.title}</h2>
                 <div className={s.video_part}>
 
                     <iframe src={props.video}
-                            allowFullScreen="allowfullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={true}
                     ></iframe>
                 </div>
+                <h2 className={s.title}>{props.title}</h2>
             </div>
         </div>
     );

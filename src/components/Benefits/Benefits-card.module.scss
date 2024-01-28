@@ -1,37 +1,89 @@
 .card {
-    width: 25%;
-    min-width: 25%;
-    max-width: 25%;
+  width: 100%;
+  text-align: center;
+
+  img {
+    margin-bottom: 10px;
+  }
+
+  .title {
+    color: #000;
     text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .line {
+    margin: 15px auto;
+    height: 1px;
+    width: 30px;
+    background-color: #000;
+  }
+
+  .text {
+    color: #000;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+  .card {
+    width: 30%;
+
+    .text {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 80%;
 
     img {
-        margin-bottom: 10px;
+      width: 40%;
+      height: auto;
     }
 
     .title {
-        color: #000;
-        text-align: center;
-        font-family: Montserrat, sans-serif;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-    }
-
-    .line {
-        margin: 15px auto;
-        height: 1px;
-        width: 30px;
-        background-color: #000;
+      font-size: 18px;
     }
 
     .text {
-        color: #000;
-        text-align: center;
-        font-family: Montserrat, sans-serif;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+      font-size: 13px;
+      font-weight: 500;
     }
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: 70%;
+
+    .title {
+      font-size: 20px;
+    }
+
+    .text {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .card {
+    width: 100%;
+  }
 }

@@ -18,7 +18,7 @@ const BurgerMenu = (props: BurgerMenuProps) => {
 
     useEffect(() => {
         let body = document.getElementById('body')
-        props.mobileMenuIsOpen ? body.classList.add('none-scroll') : body.classList.remove('none-scroll')
+        props.mobileMenuIsOpen ? body!.classList.add('none-scroll') : body!.classList.remove('none-scroll')
     }, [props.mobileMenuIsOpen])
 
     return (

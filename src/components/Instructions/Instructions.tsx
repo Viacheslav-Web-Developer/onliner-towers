@@ -10,14 +10,14 @@ const Instructions = (props: IInstructionsProps) => {
     }
 
     return (
-        <div className={'container'}>
+        // <div className={'container'}>
             <div className={s.content}>
                 <h2 className={s.title}>Инструкция по сборке вышки туры</h2>
                 <div className={s.cards}>
                     {cardsRender(props.cardsData)}
                 </div>
             </div>
-        </div>
+        // </div>
     );
 };
 

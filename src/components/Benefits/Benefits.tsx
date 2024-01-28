@@ -10,12 +10,12 @@ const Benefits = (props: IBenefitsProps) => {
     }
 
     return (
-        <div className={s.content}>
+        <div className={s.layout}>
             <div className={s.header + ' ' + s[props.page]}>
                 <h2 className={s.title}>Наши преимущества:</h2>
             </div>
             <div className={s.under_header + ' ' + s[props.page]}/>
-            <div className={s.body}>
+            <div className={s.content}>
                 <div className={s.cards}>
                     {cardsRender(props.cardsData)}
                 </div>

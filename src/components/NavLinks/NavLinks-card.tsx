@@ -6,12 +6,12 @@ import Link from "next/link";
 import s from './NavLinks-card.module.scss'
 
 const NavLinksCard = (props: INavLinksCardProps) => {
-    const imgClassName = classNames([s.image as string], [s[props.component as string]])
+    const cardClassName = classNames([s.card as string], [s[props.component as string]])
 
     return (
-        <div className={s.card}>
+        <div className={cardClassName}>
             <h2 className={s.title}>{props.navLinks.title}</h2>
-            <div className={imgClassName}>
+            <div className={s.image}>
                 <Image src={props.navLinks.image} alt={'Image'}/>
             </div>
             <Link href={props.navLinks.linkHref} className={s.button}>Подробнее</Link>

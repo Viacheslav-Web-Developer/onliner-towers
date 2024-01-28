@@ -21,11 +21,11 @@ const Order = (props: IOrderProps) => {
     }, [userName, changedUserPhone])
 
     return (
-        <div className={s.content}>
-            <div className={'container'}>
-                <h2 className={s.title}>Оставьте заявку на расчет стоимости и сроков поставки:</h2>
+        <div className={s.content + ' ' + s[props.page]}>
+            <div className={'container' + ' ' + s.header_container}>
+                <h2 className={s.title}>Заявка на расчет стоимости и сроков поставки:</h2>
             </div>
-            <div className={s.form_part + ' ' + s[props.page]}>
+            <div className={s.form_part}>
                 <div className={s.container + ' container'}>
                     <div className={s.form}>
                         <div className={s.user_data_inputs}>

@@ -4,7 +4,7 @@ import s from './page.module.scss';
 import TowerPage from "../sitePages/TowerPage/TowerPage";
 import {Metadata} from "next";
 
-export const metadata: Metad0ata = {
+export const metadata: Metadata = {
     title: 'Тайтл',
     description: 'Дескрипшн',
 }

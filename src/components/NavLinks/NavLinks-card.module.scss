@@ -25,10 +25,6 @@
     }
   }
 
-  .image.main_screen {
-    display: none;
-  }
-
   .button {
     display: flex;
     align-items: center;
@@ -78,10 +74,20 @@
   }
 }
 
+.card.main_screen {
+  .image {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .card {
     .title {
-      font-size: 20px;
+      font-size: 18px;
+    }
+
+    .image {
+      width: 80%;
     }
 
     .button {
@@ -97,6 +103,11 @@
 
 @media (max-width: 576px) {
   .card {
+    display: none;
+  }
+
+  .card.main_screen {
+    display: flex;
     width: 100%;
     justify-content: center;
 
@@ -114,6 +125,14 @@
       text-align: center;
       background: none;
       padding: 10px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .card {
+    .button.mobile {
       font-size: 10px;
     }
   }

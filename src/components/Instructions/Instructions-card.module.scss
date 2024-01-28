@@ -1,50 +1,132 @@
 .card {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 60px;
+  position: relative;
+
+  .number_part_layout {
+    position: absolute;
+    right: 105%;
+    top: 0;
 
     .number_part {
+      position: relative;
+
+      span {
+        font-family: Open Sans, sans-serif;
+        font-size: 120px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .text {
+        color: #2A4B7B;
+        z-index: 1;
         position: relative;
+      }
 
+      .bcg_text {
+        transform: translateX(-8px) translateY(-2px);
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #FBFBFB;
+        -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  .text_part {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+
+    p {
+      color: #000;
+      font-family: Montserrat, sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      letter-spacing: 0.3px;
+    }
+  }
+}
+
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+  .card {
+    .number_part_layout {
+      .number_part {
         span {
-            font-family: Open Sans, sans-serif;
-            font-size: 120px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
+          font-size: 80px;
         }
-
-        .text {
-            color: #2A4B7B;
-        }
-
-        .bcg_text {
-            transform: translateX(-8px) translateY(-2px);
-            z-index: -1;
-            position: absolute;
-            top: 0;
-            left: 0;
-            color: #FBFBFB;
-            -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
-        }
+      }
     }
 
     .text_part {
-        margin-top: 80px;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        align-items: center;
-
-        p {
-            color: #000;
-            font-family: Montserrat, sans-serif;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 140%;
-            letter-spacing: 0.3px;
-        }
+      margin-top: 40px;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    display: flex;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 40px;
+    flex-direction: column;
+    box-shadow: 0 4px 20px 0 rgba(134, 134, 134, 0.1);
+    gap: 30px;
+
+    .number_part_layout {
+      position: static;
+
+      .number_part {
+        span {
+          padding-left: 25px;
+        }
+      }
+    }
+
+    .text_part {
+      margin: 0;
+
+      img {
+        width: 80%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .card {
+    .number_part_layout {
+      .number_part {
+        span {
+          font-size: 64px;
+        }
+      }
+    }
+
+    .text_part {
+      p {
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
 }

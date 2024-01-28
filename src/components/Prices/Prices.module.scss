@@ -38,18 +38,8 @@
 }
 
 
-
 @media (max-width: 1200px) {
-  .content {
-    align-items: center;
 
-    .cards {
-      width: 50%;
-      grid-template-columns: repeat(1, 1fr);
-      grid-column-gap: 0;
-      grid-row-gap: 30px;
-    }
-  }
 }
 
 @media (max-width: 992px) {
@@ -57,7 +47,7 @@
     align-items: center;
 
     .cards {
-      width: 70%;
+      width: 60%;
       grid-template-columns: repeat(1, 1fr);
       grid-column-gap: 0;
       grid-row-gap: 30px;
@@ -75,8 +65,25 @@
 
 @media (max-width: 576px) {
   .content {
+    gap: 20px;
+    margin-bottom: 75px;
+
     .cards {
       width: 90%;
+      grid-row-gap: 15px;
+    }
+
+    .text {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .content {
+    .text {
+      font-size: 14px;
     }
   }
 }

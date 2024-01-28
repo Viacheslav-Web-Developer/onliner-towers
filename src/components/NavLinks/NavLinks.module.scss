@@ -38,8 +38,11 @@
 
 @media (max-width: 576px) {
   .nav_links {
+    display: none;
+  }
+
+  .nav_links.main_screen {
     width: 95%;
-    //background-color: #f1f1f1;
     border-radius: 50px;
     padding: 6px 0;
     background: linear-gradient(90deg, #243949 0%, #517FA4 100%);

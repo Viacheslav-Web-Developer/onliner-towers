@@ -1,14 +1,15 @@
 .content {
+  height: 100%;
+
   .title {
-    width: 75%;
+    width: 100%;
     color: #000;
     font-family: Montserrat, sans-serif;
-    font-size: 30px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 130%;
     text-align: center;
-    margin: 0 auto 30px auto;
   }
 
   .video_part {
@@ -16,12 +17,50 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    margin-bottom: 30px;
 
     iframe {
-      width: 75%;
+      width: 100%;
       height: auto;
       aspect-ratio: 16/9;
     }
   }
+}
+
+
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+  .content {
+    .title {
+      font-size: 20px;
+    }
+
+    .video_part {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+  .content {
+    .title {
+      font-size: 14px;
+    }
+
+    .video_part {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+
 }

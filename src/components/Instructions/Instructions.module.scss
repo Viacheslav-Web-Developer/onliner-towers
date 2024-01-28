@@ -1,20 +1,60 @@
 .content {
-    margin-bottom: 150px;
+  width: 60%;
+  margin: 0 auto 150px auto;
+
+  .title {
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 30px;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+  .content {
+    .title {
+      font-size: 25px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+  .content {
+    width: 95%;
 
     .title {
-        color: #000;
-        font-family: Montserrat, sans-serif;
-        font-size: 30px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        margin-bottom: 30px;
+      text-align: center;
     }
 
     .cards {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        width: 100%;
+      gap: 50px;
     }
+  }
+}
+
+@media (max-width: 380px) {
+  .content {
+    .title {
+      font-size: 20px;
+    }
+  }
 }
