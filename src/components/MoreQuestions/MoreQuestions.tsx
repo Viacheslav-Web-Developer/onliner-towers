@@ -1,4 +1,4 @@
-import React, {BaseSyntheticEvent, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import s from './MoreQuestions.module.scss'
 import {IMoreQuestions} from "@/types/types";
 import classNames from "classnames";
@@ -46,24 +46,21 @@ const MoreQuestions = (props: IMoreQuestions) => {
         if (quickInput.test(value)) {
             let quickDigits = value.match(/\d/g);
             setUserPhone(quickDigits!.join('').slice(-9));
-        }
-        else {
+        } else {
             regPhone.test(value) ? setUserPhone(value) : undefined;
         }
     }
 
-    const phoneInputClassName = classNames(
-        [s.phone_input as string],
-        {
+    const phoneInputClassName = classNames([s.phone_input as string], {
             [s.handle_in as string]: handleStatus,
-        }
-    )
+        })
 
     return (
         <div className={s.layout + ' ' + s[props.component]}>
             <div className={s.content}>
                 <h2 className={s.title}>{props.title}</h2>
-                <p className={s.text}>Оставьте заявку, мы перезвоним и с удовольствием ответим на все интересующие вопросы.</p>
+                <p className={s.text}>Оставьте заявку, мы перезвоним и с удовольствием ответим на все интересующие
+                    вопросы.</p>
                 <div className={s.form}>
                     <div className={phoneInputClassName}>
                         <input type="tel" name={'user_phone'} className={s.input} value={userPhone}

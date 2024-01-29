@@ -71,7 +71,7 @@ const TowerPage = () => {
                 </div>
             </div>
 
-            {/*<MoreQuestions component={'main'} title={'Остались вопросы?'}/>*/}
+            <MoreQuestions component={'main'} title={'Остались вопросы?'}/>
 
             {/*Якорь контакты*/}
             <div className={'anchor_link'} id={'contacts'}/>

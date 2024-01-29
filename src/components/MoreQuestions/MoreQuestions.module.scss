@@ -160,3 +160,56 @@
     box-shadow: none;
   }
 }
+
+
+@media (max-width: 768px) {
+  .layout {
+    .content {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .layout {
+    .content {
+      width: 95%;
+      padding: 35px;
+
+      .title {
+        font-size: 24px;
+      }
+
+      .text {
+        font-size: 14px;
+      }
+
+      .form {
+        width: 75%;
+      }
+
+      .hor_line {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .layout {
+    .content {
+
+      .title {
+        font-size: 18px;
+      }
+
+      .text {
+        font-size: 12px;
+      }
+
+      .form {
+        width: 85%;
+      }
+    }
+  }
+}
