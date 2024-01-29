@@ -75,7 +75,7 @@ const TowerPage = () => {
 
             {/*Якорь контакты*/}
             <div className={'anchor_link'} id={'contacts'}/>
-            <Footer setModalOpen={setModalOpen} links={store.tower.headerLinks}/>
+            {/*<Footer setModalOpen={setModalOpen} links={store.tower.headerLinks}/>*/}
 
             <YandexMap/>
 

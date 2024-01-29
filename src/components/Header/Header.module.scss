@@ -5,7 +5,6 @@
   background-color: rgba(27, 46, 75, 0.5);
   transition: background-color 0.3s;
   z-index: 3;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -57,8 +56,8 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      width: 65px;
-      height: 50px;
+      width: 75px;
+      height: 55px;
       padding: 18px 20px;
       background-color: transparent;
       border: none;
@@ -66,7 +65,7 @@
       border-radius: 5px;
 
       &:hover, &:active {
-        background-color: rgba(0,0,0,0.2);
+        background-color: rgba(0, 0, 0, 0.2);
       }
 
       div {
@@ -130,109 +129,108 @@
 }
 
 
-
 //Адаптив
-//@media (max-width: 1200px) {
-//  .header {
-//    .content {
-//      .links {
-//        gap: 25px;
-//      }
-//    }
-//  }
-//}
-//
-//@media (max-width: 992px) {
-//  .header {
-//    background-color: transparent;
-//    display: flex;
-//
-//    .content {
-//      width: 100%;
-//      padding: 30px 0;
-//      height: 40px;
-//      position: fixed;
-//      top: 0;
-//      left: 0;
-//
-//      .links {
-//        display: none;
-//      }
-//
-//      .burger_menu {
-//        display: flex;
-//      }
-//
-//      .logo {
-//        img {
-//          transform: translateY(0) scale(0.8);
-//        }
-//
-//        p {
-//          opacity: 0;
-//          transform: translateY(0);
-//        }
-//      }
-//    }
-//  }
-//
-//  .header.tower {
-//    background-color: transparent;
-//  }
-//  .header.stairs {
-//    background-color: transparent;
-//  }
-//  .header.scaffolding {
-//    background-color: transparent;
-//  }
-//  .header.scaffold {
-//    background-color: transparent;
-//  }
-//
-//  .header.tower.sticky {
-//    background-color: transparent;
-//    box-shadow: none;
-//
-//    .content {
-//      background-color: rgba(27, 46, 75, 1);
-//    }
-//  }
-//  .header.stairs.sticky {
-//    background-color: transparent;
-//    box-shadow: none;
-//
-//    .content {
-//      background-color: rgba(68, 70, 77, 1);
-//    }
-//  }
-//  .header.scaffolding.sticky {
-//    background-color: transparent;
-//    box-shadow: none;
-//
-//    .content {
-//      background-color: rgba(68, 75, 93, 1);
-//    }
-//  }
-//  .header.scaffold.sticky {
-//    background-color: transparent;
-//    box-shadow: none;
-//
-//    .content {
-//      background-color: rgba(28, 42, 58, 1);
-//    }
-//  }
-//}
-//
-//@media (max-width: 768px) {
-//
-//}
-//
-//@media (max-width: 576px) {
-//  .header {
-//    padding: 10px 0;
-//
-//    .content {
-//      align-items: center;
-//    }
-//  }
-//}
+@media (max-width: 1200px) {
+  .header {
+    .content {
+      .links {
+        gap: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    background-color: transparent;
+    display: flex;
+
+    .content {
+      width: 100%;
+      padding: 30px 0;
+      height: 60px;
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      .links {
+        display: none;
+      }
+
+      .burger_menu {
+        display: flex;
+      }
+
+      .logo {
+        img {
+          transform: translateY(0) scale(0.8);
+        }
+
+        p {
+          opacity: 0;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  .header.tower {
+    background-color: transparent;
+  }
+  .header.stairs {
+    background-color: transparent;
+  }
+  .header.scaffolding {
+    background-color: transparent;
+  }
+  .header.scaffold {
+    background-color: transparent;
+  }
+
+  .header.tower.sticky {
+    background-color: transparent;
+    box-shadow: none;
+
+    .content {
+      background-color: rgba(27, 46, 75, 1);
+    }
+  }
+  .header.stairs.sticky {
+    background-color: transparent;
+    box-shadow: none;
+
+    .content {
+      background-color: rgba(68, 70, 77, 1);
+    }
+  }
+  .header.scaffolding.sticky {
+    background-color: transparent;
+    box-shadow: none;
+
+    .content {
+      background-color: rgba(68, 75, 93, 1);
+    }
+  }
+  .header.scaffold.sticky {
+    background-color: transparent;
+    box-shadow: none;
+
+    .content {
+      background-color: rgba(28, 42, 58, 1);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+  .header {
+    padding: 10px 0;
+
+    .content {
+      align-items: center;
+    }
+  }
+}
