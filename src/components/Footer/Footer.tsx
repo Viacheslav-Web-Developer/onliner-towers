@@ -26,7 +26,7 @@ const Footer = (props: IFooterProps) => {
                                         <Image src={phone} alt={'Icon'}/>
                                         <span className={s.item_title}>Телефон:</span>
                                     </div>
-                                    <a href={'#'} className={s.text}>+375 33 916 16 19</a>
+                                    <a href={'tel:+375339161619'} className={s.text}>+375 33 916 16 19</a>
                                 </div>
                                 <p className={s.ps}>Предварительно ОБЯЗАТЕЛЬНО звонить!</p>
                             </div>
@@ -36,7 +36,7 @@ const Footer = (props: IFooterProps) => {
                                         <Image src={map} alt={'Icon'}/>
                                         <span className={s.item_title}>Адрес:</span>
                                     </div>
-                                    <span className={s.text}>д. Лесковка, улица Центральная, 6а (только яндекс навигатор, другие навигаторы не показывают этот адрес)</span>
+                                    <span className={s.text}>д. Лесковка, улица Центральная, 6а <br/> (только YANDEX карты)</span>
                                 </div>
                             </div>
                             <div className={s.item}>
@@ -45,7 +45,7 @@ const Footer = (props: IFooterProps) => {
                                         <Image src={mail} alt={'Icon'}/>
                                         <span className={s.item_title}>E-mail:</span>
                                     </div>
-                                    <a href={'#'} className={s.text}>gradovichnicolay@gmail.com</a>
+                                    <a href={'mailto:gradovichnicolay@gmail.com'} className={s.text}>gradovichnicolay@gmail.com</a>
                                 </div>
                             </div>
                         </div>

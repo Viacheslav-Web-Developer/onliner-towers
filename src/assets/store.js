@@ -115,7 +115,7 @@ export const store = {
 			},
 			{
 				url: "#manual",
-				text: "Инструкция по сборке",
+				text: "Инструкция сборки",
 			},
 			{
 				url: "#contacts",
