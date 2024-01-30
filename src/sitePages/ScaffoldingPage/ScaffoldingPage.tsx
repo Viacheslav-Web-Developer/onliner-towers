@@ -19,6 +19,7 @@ import MainScreen from "@/components/MainScreen/MainScreen";
 import Docs from "@/components/Docs/Docs";
 import Prices from "../ScaffoldingPage/Prices/Prices";
 import ComponentsCarousel from "./ComponentsCarousel/ComponentsCarousel";
+import Video from "@/components/Video/Video";
 
 const ScaffoldingPage = () => {
     const [modalIsOpen, setModalOpen] = useState(false)
@@ -44,9 +45,9 @@ const ScaffoldingPage = () => {
             <div className={'anchor_link'} id={'prices'}/>
             <Prices pricesData={store.scaffolding.prices}/>
 
-
+            {/*Якорь характеристики*/}
+            <div className={'anchor_link'} id={'specifications'}/>
             <ComponentsCarousel/>
-
 
             <Benefits cardsData={store.benefits} page={EPages.scaffolding}/>
 
@@ -61,7 +62,18 @@ const ScaffoldingPage = () => {
             <div className={'anchor_link'} id={'faq'}/>
             <Faq cardsData={store.scaffolding.faq} page={EPages.scaffolding}/>
 
-            <Instructions cardsData={store.scaffolding.instructions}/>
+            {/*Якорь инструкция*/}
+            <div className={'anchor_link'} id={'manual'}/>
+            <Instructions cardsData={store.scaffolding.instructions.content}
+                          title={store.scaffolding.instructions.title}/>
+
+            <div className={s.videos_section + ' '}>
+                <h2 className={s.title}>Видеоинструкции</h2>
+                <div className={s.content}>
+                    <Video video={store.scaffolding.firstVideo.video} title={store.scaffolding.firstVideo.title}/>
+                    <Video title={store.scaffolding.secondVideo.title} video={store.scaffolding.secondVideo.video}/>
+                </div>
+            </div>
 
             <MoreQuestions title={'Остались вопросы?'} component={'main'}/>
 

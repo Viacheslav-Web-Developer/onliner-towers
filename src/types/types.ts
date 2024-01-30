@@ -173,6 +173,7 @@ export interface IFaqCard {
 
 
 export interface IInstructionsProps {
+    title: string,
     cardsData: IInstructions[]
 }
 

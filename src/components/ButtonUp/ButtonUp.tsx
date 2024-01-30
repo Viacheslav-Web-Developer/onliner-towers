@@ -6,6 +6,12 @@ import classNames from "classnames";
 const ButtonUp = () => {
     const [scrollY, setScrollY] = useState<number>(0);
 
+    const [documentHeight, setDocumentHeight] = useState<number>(0)
+
+    useEffect(() => {
+        setDocumentHeight(document.documentElement.clientHeight)
+    })
+
     function scrollListener() {
         setScrollY(window.scrollY);
     }
@@ -20,18 +26,12 @@ const ButtonUp = () => {
         };
     });
 
-    const [documentHeight, setDocumentHeight] = useState<number>(0)
-
-    useEffect(() => {
-        setDocumentHeight(document.documentElement.clientHeight)
-    })
-
     const upBtnClassName = classNames([s.button_to_up as string], {
         [s.show as string]: scrollY > documentHeight
     })
 
     return (
-        <button className={upBtnClassName} onClick={() => window.scrollTo(0,0)}>{'>'}</button>
+        <a className={upBtnClassName} href={'#'}>{'>'}</a>
     );
 };
 

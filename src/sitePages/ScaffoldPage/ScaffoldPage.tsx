@@ -18,6 +18,7 @@ import Description from "@/components/Description/Description";
 import MainScreen from "@/components/MainScreen/MainScreen";
 import Specifications from "../ScaffoldPage/Specifications/Specifications";
 import Prices from "../ScaffoldPage/Prices/Prices";
+import Video from "@/components/Video/Video";
 
 const ScaffoldPage = () => {
     const [modalIsOpen, setModalOpen] = useState(false)
@@ -37,12 +38,14 @@ const ScaffoldPage = () => {
                          listData={store.scaffold.description.listData}
             />
 
+            {/*Якорь характеристики*/}
+            <div className={'anchor_link'} id={'specifications'}/>
             <Specifications/>
-
-            <Prices/>
 
             {/*Якорь цены*/}
             <div className={'anchor_link'} id={'prices'}/>
+            <Prices/>
+
             <Benefits cardsData={store.benefits} page={EPages.scaffold}/>
 
             <Order page={EPages.scaffold}/>
@@ -56,7 +59,16 @@ const ScaffoldPage = () => {
             <div className={'anchor_link'} id={'faq'}/>
             <Faq cardsData={store.scaffold.faq} page={EPages.scaffold}/>
 
-            <Instructions cardsData={store.scaffold.instructions}/>
+            {/*Якорь инструкция*/}
+            <div className={'anchor_link'} id={'manual'}/>
+            <Instructions cardsData={store.scaffold.instructions.content} title={store.scaffold.instructions.title}/>
+
+            <div className={s.videos_section + ' '}>
+                <h2 className={s.title}>Видеоинструкции</h2>
+                <div className={s.content}>
+                    <Video title={store.scaffold.firstVideo.title} video={store.scaffold.firstVideo.video}/>
+                </div>
+            </div>
 
             <MoreQuestions title={'Остались вопросы?'} component={'main'}/>
 

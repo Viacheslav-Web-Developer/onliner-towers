@@ -16,6 +16,7 @@ import Description from "../StairsPage/Description/Description";
 import Benefits from "@/components/Benefits/Benefits";
 import Prices from "@/components/Prices/Prices";
 import Order from "@/components/Order/Order";
+import Video from "@/components/Video/Video";
 
 const StairsPage = () => {
     const [modalIsOpen, setModalOpen] = useState(false)
@@ -50,6 +51,13 @@ const StairsPage = () => {
             {/*Якорь вопрос/ответ*/}
             <div className={'anchor_link'} id={'faq'}/>
             <Faq cardsData={store.stairs.faq} page={EPages.stairs}/>
+
+            <div className={s.videos_section + ' '}>
+                <h2 className={s.title}>Видеоинструкции</h2>
+                <div className={s.content}>
+                    <Video video={store.stairs.firstVideo.video} title={store.stairs.firstVideo.title}/>
+                </div>
+            </div>
 
             <MoreQuestions component={'main'} title={'Остались вопросы?'}/>
 

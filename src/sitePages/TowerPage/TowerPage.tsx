@@ -60,7 +60,7 @@ const TowerPage = () => {
 
             {/*Якорь инструкция*/}
             <div className={'anchor_link'} id={'manual'}/>
-            <Instructions cardsData={store.tower.instructions}/>
+            <Instructions cardsData={store.tower.instructions.content} title={store.tower.instructions.title}/>
 
             <div className={s.videos_section + ' '}>
                 <h2 className={s.title}>Видеоинструкции</h2>

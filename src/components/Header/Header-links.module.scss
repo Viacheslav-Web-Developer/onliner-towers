@@ -6,8 +6,9 @@
     color: #fff;
     text-decoration: none;
     font-family: Jura, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
+    letter-spacing: 1px;
     font-weight: 600;
     line-height: 21px;
     transition: 0.4s;
@@ -22,7 +23,7 @@
     height: 2px;
     background-color: #F3A242;
     position: absolute;
-    top: 110%;
+    top: 105%;
     left: 0;
     transform: scaleX(0);
     transition: 0.3s;
