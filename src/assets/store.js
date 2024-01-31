@@ -98,6 +98,26 @@ export const store = {
 			text: "9:00 - 20:00",
 		},
 	],
+	burgerMenuInfo: [
+		{
+			title: "Время работы:",
+			text: "Пн - Пт: 8:00 - 17:00"
+		},
+		{
+			title: "Телефон:",
+			text: "+375 33 916 16 19",
+			href: "tel: +375 33 916 16 19"
+		},
+		{
+			title: "Адрес:",
+			text: "д.Лесковка, улица Центральная, 6а"
+		},
+		{
+			title: "E-mail:",
+			text: "gradovichnicolay@gmail.com",
+			href: "mailto:gradovichnicolay@gmail.com"
+		}
+	],
 	tower: {
 		pageTitle: "", //Metadata
 		headerLinks: [

@@ -7,6 +7,7 @@ import Link from "next/link";
 
 import HeaderLinks from "@/components/Header/Header-links";
 import BurgerMenu from "@/components/BurgerMenu/BurgerMenu";
+import {store} from "@/assets/store";
 
 const Header = (props: IHeaderProps) => {
     const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState<boolean>(false)
@@ -53,7 +54,7 @@ const Header = (props: IHeaderProps) => {
                     <div/>
                 </button>
             </div>
-            <BurgerMenu mobileMenuIsOpen={mobileMenuIsOpen} setMobileMenuIsOpen={setMobileMenuIsOpen}/>
+            <BurgerMenu mobileMenuIsOpen={mobileMenuIsOpen} setMobileMenuIsOpen={setMobileMenuIsOpen} links={props.links} info={store.burgerMenuInfo}/>
         </header>
     );
 };

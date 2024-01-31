@@ -1,6 +1,7 @@
 import {StaticImageData} from "next/image";
 import {Dispatch, SetStateAction} from "react";
 
+
 export const enum EPages {
     'tower' = 'tower',
     'scaffold' = 'scaffold',
@@ -21,7 +22,7 @@ export interface IMainScreenProps {
 
 export interface IHeaderProps {
     page: EPages,
-    links: IHeaderLinks[],
+    links: IHeaderLinks[]
 }
 
 export interface IHeaderLinksProps extends IHeaderLinks {
@@ -131,7 +132,6 @@ export interface IOrderInputsProps {
     userData: string,
     setUserData: Dispatch<SetStateAction<string>>
 }
-
 
 
 export interface ITableProps {
@@ -267,8 +267,6 @@ export interface IScaffoldingPricesCard {
 }
 
 
-
-
 export interface IComponentsCarouselCardProps {
     cardWidth: number,
     cardData: IComponentsCarouselCard
@@ -288,15 +286,31 @@ export interface IComponentsCarouselCard {
 }
 
 
-
-export interface ITowerTable extends ITableProps{
+export interface ITowerTable extends ITableProps {
     title: string,
 }
 
 
+interface IBurgerMenuInfo {
+    href?: string,
+    title: string,
+    text: string
+}
 
+export type TBurgerMenuLinksProps = IHeaderLinks[];
+export type TBurgerMenuInfoProps = IBurgerMenuInfo[];
+
+export interface IBurgerMenuLinksProps {
+    links: TBurgerMenuLinksProps
+}
+
+export interface IBurgerMenuInfoProps {
+    info: TBurgerMenuInfoProps
+}
 
 export interface BurgerMenuProps {
+    links: TBurgerMenuLinksProps,
+    info: TBurgerMenuInfoProps,
     mobileMenuIsOpen: boolean,
     setMobileMenuIsOpen: Dispatch<SetStateAction<boolean>>
 }

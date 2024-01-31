@@ -2,6 +2,8 @@ import React, {useEffect} from 'react';
 import s from './BurgerMenu.module.scss';
 import classNames from "classnames";
 import {BurgerMenuProps} from "@/types/types";
+import BurgerMenuLinks from "@/components/BurgerMenu/BurgerMenu-links";
+import BurgerMenuInfo from "@/components/BurgerMenu/BurgerMenu-info";
 
 const BurgerMenu = (props: BurgerMenuProps) => {
     const layoutClassName = classNames([s.layout as string], {
@@ -28,6 +30,8 @@ const BurgerMenu = (props: BurgerMenuProps) => {
                     <div/>
                     <div/>
                 </button>
+                <BurgerMenuLinks links={props.links}/>
+                <BurgerMenuInfo info={props.info}/>
             </div>
         </div>
     );
