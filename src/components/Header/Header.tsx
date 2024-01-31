@@ -45,6 +45,9 @@ const Header = (props: IHeaderProps) => {
                         <p>ArendaTur</p>
                     </Link>
                 </div>
+                <div className={s.logo_title}>
+                    <h1 className={s.title}><a href="#">ArendaTur</a></h1>
+                </div>
                 <ul className={s.links}>
                     {linksRender(props.links)}
                 </ul>

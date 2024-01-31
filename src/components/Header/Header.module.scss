@@ -45,6 +45,19 @@
       }
     }
 
+    .logo_title {
+      .title, .title a {
+        font-family: 'Jura', sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 22px;
+        line-height: 2px;
+        letter-spacing: 1px;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+
     .links {
       display: flex;
       gap: 50px;
@@ -231,6 +244,18 @@
 
     .content {
       align-items: center;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .header {
+    .content {
+      .logo_title {
+        .title, .title a {
+          font-size: 18px;
+        }
+      }
     }
   }
 }
