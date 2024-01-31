@@ -6,7 +6,7 @@ const BurgerMenuLinks = (props: IBurgerMenuLinksProps) => {
     const linksRender = (linksData: TBurgerMenuLinksProps) => linksData.map((el, id) => {
         return (
             <li className={s.item}>
-                <a href={el.url} className={s.link}>{el.text}</a>
+                <a href={el.url} className={s.link} onClick={props.closeMenuFunc}>{el.text}</a>
             </li>
         )
     })

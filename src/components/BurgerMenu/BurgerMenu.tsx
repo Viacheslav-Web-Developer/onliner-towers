@@ -24,13 +24,13 @@ const BurgerMenu = (props: BurgerMenuProps) => {
     }, [props.mobileMenuIsOpen])
 
     return (
-        <div className={layoutClassName} onClick={(e) => closeMenuFunc()}>
+        <div className={layoutClassName} onClick={closeMenuFunc}>
             <div className={contentClassName} onClick={(e) => e.stopPropagation()}>
-                <button className={s.button_close} onClick={() => props.setMobileMenuIsOpen(false)}>
+                <button className={s.button_close} onClick={closeMenuFunc}>
                     <div/>
                     <div/>
                 </button>
-                <BurgerMenuLinks links={props.links}/>
+                <BurgerMenuLinks links={props.links} closeMenuFunc={closeMenuFunc}/>
                 <BurgerMenuInfo info={props.info}/>
             </div>
         </div>

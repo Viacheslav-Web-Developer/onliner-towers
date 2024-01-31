@@ -301,6 +301,7 @@ export type TBurgerMenuLinksProps = IHeaderLinks[];
 export type TBurgerMenuInfoProps = IBurgerMenuInfo[];
 
 export interface IBurgerMenuLinksProps {
+    closeMenuFunc: () => Dispatch<SetStateAction<boolean>>
     links: TBurgerMenuLinksProps
 }
 
