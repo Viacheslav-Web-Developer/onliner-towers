@@ -71,49 +71,65 @@ const ComponentsCarousel = () => {
         },
     ]
 
-    const [position, setPosition] = useState<number>(0)
     const [cardWidth, setCardWidth] = useState<number>(100)
-    const [visibleCardsCount, setVisibleCardsCount] = useState<number>(4)
-    const [buttonPrevActive, setButtonPrevActive] = useState<boolean>(false)
-    const [buttonNextActive, setButtonNextActive] = useState<boolean>(false)
+    const [visibleCardsCount] = useState<number>(4)
 
+    const [position, setPosition] = useState<number>(0)
+
+    const [slideShowIsPaused, setSlideShowIsPaused] = useState<boolean>(false)
+
+    // Рассчитать ширину карточки
     useEffect(() => {
         setCardWidth(100 / visibleCardsCount)
     })
 
+    // Цикличность скроллинга
     useEffect(() => {
-        position > 0 ? setButtonPrevActive(true) : setButtonPrevActive(false)
-        position < (cardsData.length - visibleCardsCount) ? setButtonNextActive(true) : setButtonNextActive(false)
-    }, [position, buttonPrevActive, buttonNextActive])
+        position < 0 && setPosition(cardsData.length - visibleCardsCount)
+        position === (cardsData.length - visibleCardsCount + 1) && setPosition(0)
+    }, [position])
 
+    // Авто-прокручивание карусели
+    useEffect(() => {
+        const timer = setTimeout(carouselAutoScrollerLogic, 5000); // 5 секунд
+
+        return () => clearTimeout(timer);
+    }, [position, slideShowIsPaused])
+
+    const carouselAutoScrollerLogic = () => {
+        !slideShowIsPaused && setPosition(position + 1)
+    }
+
+    // Рендеринг карточек карусели
     const cardsRender = (cardsData: IComponentsCarouselCard[]) => {
         return cardsData.map((el, id) => <ComponentsCarouselCard cardWidth={cardWidth} cardData={el} key={id}/>)
     }
 
+    // Рендеринг маркеров
     const markersRender = (cardsData: IComponentsCarouselCard[]) => {
-        return cardsData.map((el, id) => (id < cardsData.length - visibleCardsCount + 1) && <ComponentsCarouselMarker id={id} setPosition={setPosition} activeStatus={position === id} key={id}/> )
+        return cardsData.map((el, id) => (id < cardsData.length - visibleCardsCount + 1) &&
+			<ComponentsCarouselMarker id={id} setPosition={(position: number) => {
+                setSlideShowIsPaused(true)
+                setPosition(position)
+            }} activeStatus={position === id} key={id}/>)
     }
 
     const handleNext = () => {
-        position < (cardsData.length - visibleCardsCount) && setPosition(position+1)
+        setSlideShowIsPaused(true)
+        setPosition(position + 1)
     }
 
     const handlePrev = () => {
-        position > 0 && setPosition(position-1)
+        setSlideShowIsPaused(true)
+        setPosition(position - 1)
     }
 
-    const buttonNextClassName = classNames([s.button as string], [s.next as string], {
-        [s.disable as string]: !buttonNextActive
-    })
-
-    const buttonPrevClassName = classNames([s.button as string], [s.prev as string], {
-        [s.disable as string]: !buttonPrevActive
-    })
-
     return (
-        <div className={s.carousel}>
+        <div className={s.carousel} onMouseEnter={() => setSlideShowIsPaused(true)}
+             onMouseLeave={() => setSlideShowIsPaused(false)}>
             <div className={s.layout}>
-                <button onClick={handlePrev} className={buttonPrevClassName}><Image src={arrow} alt={'Назад'}/></button>
+                <button onClick={handlePrev} className={classNames([s.button as string], [s.prev as string])}><Image
+                    src={arrow} alt={'Назад'}/></button>
                 <div className={'container ' + s.container}>
                     <h2 className={s.title}>Комплектация:</h2>
                     <div className={s.content}>
@@ -122,7 +138,9 @@ const ComponentsCarousel = () => {
                         </div>
                     </div>
                 </div>
-                <button onClick={handleNext} className={buttonNextClassName}><Image src={arrow} alt={'Вперед'}/></button>
+                <button onClick={handleNext} className={classNames([s.button as string], [s.next as string])}><Image
+                    src={arrow} alt={'Вперед'}/>
+                </button>
             </div>
             <div className={s.markers}>
                 {markersRender(cardsData)}

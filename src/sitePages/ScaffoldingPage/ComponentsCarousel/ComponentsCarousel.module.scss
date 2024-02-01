@@ -30,7 +30,7 @@
           display: flex;
           align-self: center;
           justify-content: space-between;
-          transition: 0.7s ease-in-out;
+          transition: 1.5s cubic-bezier(.6,0,.4,1);
         }
       }
     }

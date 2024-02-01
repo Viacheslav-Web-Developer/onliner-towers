@@ -46,6 +46,8 @@
     }
 
     .logo_title {
+      display: none;
+
       .title, .title a {
         font-family: 'Jura', sans-serif;
         font-style: normal;
@@ -165,6 +167,10 @@
       position: fixed;
       top: 0;
       left: 0;
+
+      .logo_title {
+        display: block;
+      }
 
       .links {
         display: none;

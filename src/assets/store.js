@@ -8,11 +8,22 @@ import pricesStairsImg1 from "@/public/Prices/stairs/img1.png";
 import pricesStairsImg2 from "@/public/Prices/stairs/img2.png";
 import pricesStairsImg3 from "@/public/Prices/stairs/img3.png";
 
-import instImage1 from "@/public/Instructions/towers/image1.png";
-import instImage2 from "@/public/Instructions/towers/image2.png";
-import instImage3 from "@/public/Instructions/towers/image3.png";
-import instImage4 from "@/public/Instructions/towers/image4.png";
-import instImage5 from "@/public/Instructions/towers/image5.png";
+import instTowerImage1 from "@/public/Instructions/towers/image1.png";
+import instTowerImage2 from "@/public/Instructions/towers/image2.png";
+import instTowerImage3 from "@/public/Instructions/towers/image3.png";
+import instTowerImage4 from "@/public/Instructions/towers/image4.png";
+import instTowerImage5 from "@/public/Instructions/towers/image5.png";
+
+import instScaffoldingImage1 from "@/public/Instructions/scaffoldings/img1.jpg";
+import instScaffoldingImage2 from "@/public/Instructions/scaffoldings/img2.jpg";
+import instScaffoldingImage3 from "@/public/Instructions/scaffoldings/img3.jpg";
+import instScaffoldingImage4 from "@/public/Instructions/scaffoldings/img4.jpg";
+import instScaffoldingImage5 from "@/public/Instructions/scaffoldings/img5.jpg";
+import instScaffoldingImage6 from "@/public/Instructions/scaffoldings/img6.jpg";
+
+import instScaffoldImage1 from "@/public/Instructions/scaffolds/img1.png";
+import instScaffoldImage2 from "@/public/Instructions/scaffolds/img2.png";
+import instScaffoldImage3 from "@/public/Instructions/scaffolds/img3.png";
 
 import towerImage from "@/public/NavLinks/tower.png";
 import scaffoldImage from "@/public/NavLinks/scaffold.png";
@@ -150,7 +161,7 @@ export const store = {
 				image: pricesTowerImg1,
 				prices: [
 					{
-						title: "До 7,6 м",
+						title: "До 5 м",
 						pricesValue: [
 							<p>
 								<span>10</span> рублей / 1 сутки
@@ -160,6 +171,20 @@ export const store = {
 							</p>,
 							<p>
 								<span>100</span> рублей / 30 дней
+							</p>,
+						],
+					},
+					{
+						title: "До 7,6 м",
+						pricesValue: [
+							<p>
+								<span>12</span> рублей / 1 сутки
+							</p>,
+							<p>
+								<span>60</span> рублей / 7 дней
+							</p>,
+							<p>
+								<span>120</span> рублей / 30 дней
 							</p>,
 						],
 					},
@@ -180,7 +205,7 @@ export const store = {
 								<span>50</span> рублей / 7 дней
 							</p>,
 							<p>
-								<span>100</span> рублей / 30 дней
+								<span>120</span> рублей / 30 дней
 							</p>,
 						],
 					},
@@ -194,12 +219,12 @@ export const store = {
 								<span>60</span> рублей / 7 дней
 							</p>,
 							<p>
-								<span>120</span> рублей / 30 дней
+								<span>150</span> рублей / 30 дней
 							</p>,
 						],
 					},
 					{
-						title: "До 18,7 м",
+						title: "До 15 м",
 						pricesValue: [
 							<p>
 								<span>15</span> рублей / 1 сутки
@@ -208,7 +233,21 @@ export const store = {
 								<span>80</span> рублей / 7 дней
 							</p>,
 							<p>
-								<span>160</span> рублей / 30 дней
+								<span>190</span> рублей / 30 дней
+							</p>,
+						],
+					},
+					{
+						title: "До 18,7, м",
+						pricesValue: [
+							<p>
+								<span>20</span> рублей / 1 сутки
+							</p>,
+							<p>
+								<span>100</span> рублей / 7 дней
+							</p>,
+							<p>
+								<span>220</span> рублей / 30 дней
 							</p>,
 						],
 					},
@@ -229,7 +268,7 @@ export const store = {
 								<span>60</span> рублей / 7 дней
 							</p>,
 							<p>
-								<span>120</span> рублей / 30 дней
+								<span>150</span> рублей / 30 дней
 							</p>,
 						],
 					},
@@ -243,7 +282,21 @@ export const store = {
 								<span>80</span> рублей / 7 дней
 							</p>,
 							<p>
-								<span>160</span> рублей / 30 дней
+								<span>190</span> рублей / 30 дней
+							</p>,
+						],
+					},
+					{
+						title: "До 15 м",
+						pricesValue: [
+							<p>
+								<span>15</span> рублей / 1 сутки
+							</p>,
+							<p>
+								<span>80</span> рублей / 7 дней
+							</p>,
+							<p>
+								<span>190</span> рублей / 30 дней
 							</p>,
 						],
 					},
@@ -251,13 +304,13 @@ export const store = {
 						title: "До 21 м",
 						pricesValue: [
 							<p>
-								<span>20</span> рублей / 1 сутки
+								<span>25</span> рублей / 1 сутки
 							</p>,
 							<p>
-								<span>100</span> рублей / 7 дней
+								<span>125</span> рублей / 7 дней
 							</p>,
 							<p>
-								<span>200</span> рублей / 30 дней
+								<span>280</span> рублей / 30 дней
 							</p>,
 						],
 					},
@@ -325,25 +378,25 @@ export const store = {
 			content: [
 				{
 					text: "Монтаж вышки туры начинается с установки двухколесных балок. Вывернутые винтовые опоры ставим балки на ровную поверхность с замками внутрь параллельно друг другу. Сверху на стаканы базы прикладываем длинную объемную диагональ синего цвета. Обратите внимание на то, что эта деталь не вставляется в колесную базу, а именно прикладывается сверху.",
-					image: instImage1,
+					image: instTowerImage1,
 				},
 				{
 					text: "Далее вставляем лестницы секции через объемную диагональ длинными концами вниз, тем самым скрепляя предыдущие детали. Берем 4 стяжки желтого цвета, которые соединяют между собой лестницы и основание. Соединяем их между собой с помощью флажков замков последовательно по часовой стрелке. Теперь на лестнице основания надеваем гантели синего цвета и также закрепляем их между собой в той же последовательности с помощью желтых стяжек.",
-					image: instImage2,
+					image: instTowerImage2,
 					textAfterImage:
 						"После того как мы собрали полностью первую секцию, необходимо слегка встряхнуть получившуюся конструкцию и такую манипуляцию нужно будет проделать каждой последующей секции, чтобы убедиться, что все соединения плотно сели на свои места.",
 				},
 				{
 					text: "Теперь можно приступить к выравниванию туры по уровню с четырех сторон с помощью винтовых опор. На этом сборка первой части завершена. Теперь мы по такому же принципу можем продолжить монтаж последующих секций. На гантели синего цвета надеваем желтый рамы, крепим конструкции четырьмя стяжками, на этом моменте можно установить настил. Далее сверху снова установленных гантели и еще 4 стяжки. Когда все промежуточные секции готовы, у нас остаются детали красного цвета. Это секция ограждения. Берем лестницы ограждения и вставляем в гантели последней секции, также друг напротив друга. Далее берем 4 стяжки и закрепляем ими лестницы к гантелям предыдущий секции.\n",
-					image: instImage3,
+					image: instTowerImage3,
 				},
 				{
 					text: "На поперечные лестницы ограждения устанавливаем настил с люком и перекладину ограждения с помощью тех же флажковых соединений, к которым крепились стяжки. Устанавливаем гантели ограждения. Теперь осталось закрепить гантели. Для этого берем оставшийся 4 стяжки и соединяем ими гантели с лестницами. За счет расстояния между ступенями мы можем регулировать высоту установки настила каждые 40 сантиметров.\n",
-					image: instImage4,
+					image: instTowerImage4,
 				},
 				{
 					text: "Для обеспечения дополнительной устойчивости предусмотрена установка двух стабилизатора, которые рекомендуют устанавливать при высоте вышки более 6 метров. Cтабилизаторы крепится хомутами к основной конструкции вышки.\n",
-					image: instImage5,
+					image: instTowerImage5,
 				},
 			]
 		},
@@ -866,17 +919,17 @@ export const store = {
 				{
 					text: "Установить лестницу добора (1) и лестницу с колесом (2) на ровную поверхность на ширине" +
 						" 1,6 метров друг от друга.",
-					image: instImage1,
+					image: instScaffoldImage1,
 				},
 				{
 					text: "Закрепить лестницы помоста короткими горизонтальными (3) и длинными диагональными (4)" +
 						" стяжками.",
-					image: instImage1,
+					image: instScaffoldImage2,
 				},
 				{
 					text: "Установить настил с люком (5) на необходимой для работы, но на высоте не более 1,25 м." +
 						" Помост готов к работе.",
-					image: instImage1,
+					image: instScaffoldImage3,
 				},
 			]
 		},
@@ -943,7 +996,7 @@ export const store = {
 						" При монтаже, рамы строительных лесов должны быть исключительно в одной горизонтальной" +
 						" плоскости и на одинаковом расстоянии от боковой поверхность, чтобы можно было установить" +
 						" кронштейны к стене.",
-					image: instImage1,
+					image: instScaffoldingImage1,
 				},
 				{
 					text: "Рамные леса мы собираем по секциям. Одна секция строительных лесов, которые мы сдаем в" +
@@ -952,13 +1005,13 @@ export const store = {
 						" с помощью связи диагональной и связи горизонтальной с помощью флажковых замков на рамах." +
 						" Далее устанавливаем опоры простые на каждую из секций, чтобы было больше давления на" +
 						" площадку.",
-					image: instImage2,
+					image: instScaffoldingImage2,
 				},
 				{
 					text: "После того, как собрали одну секцию, начинаем собирать следующие две в той же" +
 						" последовательности. Далее устанавливаем по два ригеля на каждую секцию, как изображено на" +
 						" картинке.",
-					image: instImage3,
+					image: instScaffoldingImage3,
 				},
 				{
 					text: "На ригеля кладем 3 настила размерам 1 на 1 метр. Настилы изготавливаются по специальной" +
@@ -967,7 +1020,18 @@ export const store = {
 						" то нужно установить 3 ригеля на одну секцию. Поэтому просим учесть эту информацию, когда" +
 						" решите взять строительные леса в аренду, чтобы мы правильно рассчитали количество" +
 						" необходимых элементов.",
-					image: instImage4,
+					image: instScaffoldingImage4,
+				},
+				{
+					text: "Когда первый ярус готов, начинаем собирать второй. Одну раму вставляем в вторую, точнее" +
+						" нижнюю. И собираем до той высоты, которая нам нужна. По аналогии, все рамы фиксируем с" +
+						" помощью связи диагональной и связи горизонтальной. Начиная со второго яруса, леса" +
+						" закрепляем специальными кронштейнами, которые идут в комплекте, в шахматном порядке, как" +
+						" изображено на картинке выше. При прокате строительных лесов наши специалисты подберут" +
+						" необходимое количество кронштейнов. Если нужно увеличить высоту на одну или несколько" +
+						" ярус, то кладем ригеля, настилы и начинаем собирать в той же последовательности, как" +
+						" второй ярус.",
+					image: instScaffoldingImage5,
 				},
 				{
 					text: "По схеме установке лесов, которая изображена в инструкции по эксплуатации, связи" +
@@ -977,7 +1041,7 @@ export const store = {
 						" когда мы собираем узкий участок фасада и нам нужна большая высота, допустим 12 м. высотой" +
 						" и 6 м. шириной. Разбираем в обратной последовательности как собирали, начиняя с верхнего" +
 						" яруса.",
-					image: instImage5,
+					image: instScaffoldingImage6,
 				},
 			]
 		},

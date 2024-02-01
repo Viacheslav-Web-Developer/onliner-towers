@@ -274,7 +274,7 @@ export interface IComponentsCarouselCardProps {
 
 export interface IComponentsCarouselMarkerProps {
     id: number,
-    setPosition: Dispatch<SetStateAction<number>>,
+    setPosition: (position: number) => void,
     activeStatus: boolean,
 }
 
