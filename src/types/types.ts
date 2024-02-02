@@ -93,6 +93,7 @@ export interface IPricesCard {
     description?: string,
     image: StaticImageData,
     prices: IPricesCardPrices[],
+    addInfo?: string[]
 }
 
 export interface IPricesCardPrices {

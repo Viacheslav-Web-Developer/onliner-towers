@@ -15,10 +15,11 @@ const Footer = (props: IFooterProps) => {
 
     return (
         <div className={s.layout}>
-            <div className={'container'}>
+            <div className={s.container + ' container'}>
                 <div className={s.content}>
                     <div className={s.contacts_part + ' ' + s.part}>
                         <h2 className={s.title}>Контакты</h2>
+                        <p className={s.ps}>Предварительно ОБЯЗАТЕЛЬНО звонить!</p>
                         <div className={s.information_section}>
                             <div className={s.item}>
                                 <div className={s.item_content}>
@@ -28,16 +29,6 @@ const Footer = (props: IFooterProps) => {
                                     </div>
                                     <a href={'tel:+375339161619'} className={s.text}>+375 33 916 16 19</a>
                                 </div>
-                                <p className={s.ps}>Предварительно ОБЯЗАТЕЛЬНО звонить!</p>
-                            </div>
-                            <div className={s.item}>
-                                <div className={s.item_content}>
-                                    <div className={s.title_part}>
-                                        <Image src={map} alt={'Icon'}/>
-                                        <span className={s.item_title}>Адрес:</span>
-                                    </div>
-                                    <span className={s.text}>д. Лесковка, улица Центральная, 6а <br/> (только YANDEX карты)</span>
-                                </div>
                             </div>
                             <div className={s.item}>
                                 <div className={s.item_content}>
@@ -46,6 +37,15 @@ const Footer = (props: IFooterProps) => {
                                         <span className={s.item_title}>E-mail:</span>
                                     </div>
                                     <a href={'mailto:gradovichnicolay@gmail.com'} className={s.text}>gradovichnicolay@gmail.com</a>
+                                </div>
+                            </div>
+                            <div className={s.item}>
+                                <div className={s.item_content}>
+                                    <div className={s.title_part}>
+                                        <Image src={map} alt={'Icon'}/>
+                                        <span className={s.item_title}>Адрес:</span>
+                                    </div>
+                                    <span className={s.text}>д. Лесковка</span>
                                 </div>
                             </div>
                         </div>
@@ -58,6 +58,9 @@ const Footer = (props: IFooterProps) => {
                     <div className={s.button_part + ' ' + s.part}>
                         <button className={s.button} onClick={() => props.setModalOpen(true)}>Заказать звонок</button>
                     </div>
+                </div>
+                <div className={s.under_content}>
+                    <h3 className={s.text}>ФИЗИЧЕСКИМ ЛИЦАМ И ОРГАНИЗАЦИЯМ, У КОГО ИМЕЕТСЯ ЗАДОЛЖЕННОСТЬ ПО ИСПОЛНИТЕЛЬНЫМ ДОКУМЕНТАМ, ОБОРУДОВАНИЕ В АРЕНДУ НЕ ПРЕДОСТАВЛЯЕМ.</h3>
                 </div>
             </div>
         </div>

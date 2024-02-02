@@ -1,4 +1,7 @@
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-width: 100%;
   text-align: center;
   padding: 30px 40px;
@@ -6,125 +9,144 @@
   background: #FFF;
   box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.05);
   transition: 0.6s;
+  height: 100%;
+
 
   &:hover {
     transform: scale(1.05);
   }
 
-  .info_part {
-    height: 320px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-
-    .top_description {
+  .content {
+    .info_part {
+      height: 320px;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-
-      .title {
-        color: #000;
-        text-align: center;
-        font-family: Montserrat, sans-serif;
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-      }
-
-      .description {
-        color: #000;
-        font-family: Montserrat, sans-serif;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-      }
-    }
-
-    .card_img {
-      img {
-
-      }
-    }
-  }
-
-  .prices {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-bottom: 30px;
+      justify-content: space-between;
 
 
-    .titles_carousel {
-      overflow-x: hidden;
-      margin: 0;
-
-      .carousel_layout {
+      .top_description {
         display: flex;
-        transition: cubic-bezier(.43, -0.01, .33, 1) 0.6s;
-        margin: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
 
-        .carousel_item_title {
-          min-width: 100%;
+        .title {
+          color: #000;
           text-align: center;
-          color: #EE9A38;
           font-family: Montserrat, sans-serif;
-          font-size: 18px;
+          font-size: 22px;
           font-style: normal;
           font-weight: 600;
           line-height: normal;
-          margin: 0;
+        }
+
+        .description {
+          color: #000;
+          font-family: Montserrat, sans-serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+
+      .card_img {
+        img {
 
         }
       }
     }
 
-    .buttons {
+    .prices {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 20px;
 
-    .prices_value {
-      overflow-x: hidden;
 
-      .layout {
-        display: flex;
-        transition: cubic-bezier(.43, -0.01, .33, 1) 0.6s;
+      .titles_carousel {
+        overflow-x: hidden;
+        margin: 0;
 
-        .prices_block {
+        .carousel_layout {
           display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          min-width: 100%;
-          padding: 0 20px;
+          transition: cubic-bezier(.43, -0.01, .33, 1) 0.6s;
+          margin: 0;
 
-          .price_value {
-            p {
-              color: #282828;
-              font-family: Montserrat, sans-serif;
-              font-size: 18px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 27px;
+          .carousel_item_title {
+            min-width: 100%;
+            text-align: center;
+            color: #EE9A38;
+            font-family: Montserrat, sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin: 0;
 
-              span {
-                color: #EE9A38;
-                font-size: 20px;
-                font-weight: 600;
+          }
+        }
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .prices_value {
+        overflow-x: hidden;
+
+        .layout {
+          display: flex;
+          transition: cubic-bezier(.43, -0.01, .33, 1) 0.6s;
+
+          .prices_block {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-width: 100%;
+            padding: 0 20px;
+
+            .price_value {
+              p {
+                color: #282828;
+                font-family: Montserrat, sans-serif;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 27px;
+
+                span {
+                  color: #EE9A38;
+                  font-size: 20px;
+                  font-weight: 600;
+                }
               }
             }
           }
         }
       }
     }
+
+    .add_info {
+      margin-bottom: 20px;
+
+      .text {
+        color: #000;
+        font-family: Montserrat, sans-serif;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-align: left;
+      }
+    }
   }
 
   .order_button {
+    margin: 0 auto;
     width: 100%;
     border-radius: 50px;
     border: 1px solid #F3A242;
@@ -138,6 +160,7 @@
     line-height: normal;
     cursor: pointer;
     transition: 0.3s;
+    position: relative;
 
     &:hover {
       background-color: #F3A242;
@@ -150,22 +173,24 @@
   .card {
     padding: 20px 15px;
 
-    .info_part {
-      height: auto;
-      justify-content: flex-start;
-      gap: 20px;
-      margin-bottom: 20px;
+    .content {
+      .info_part {
+        height: auto;
+        justify-content: flex-start;
+        gap: 20px;
+        margin-bottom: 20px;
 
-      .card_img {
-        img {
-          width: 80%;
-          height: auto;
+        .card_img {
+          img {
+            width: 80%;
+            height: auto;
+          }
         }
       }
-    }
 
-    .prices {
-      gap: 10px;
+      .prices {
+        gap: 10px;
+      }
     }
   }
 }
@@ -174,14 +199,22 @@
   .card {
     padding: 20px;
 
-    .prices {
-      .prices_value {
-        .layout {
-          .prices_block {
-            justify-content: center;
-            align-items: center;
-            padding: 0;
+    .content {
+      .prices {
+        .prices_value {
+          .layout {
+            .prices_block {
+              justify-content: center;
+              align-items: center;
+              padding: 0;
+            }
           }
+        }
+      }
+
+      .add_info {
+        .text {
+          text-align: center;
         }
       }
     }
@@ -203,25 +236,27 @@
       transform: none;
     }
 
-    .info_part {
-      height: auto;
-      gap: 30px;
-      justify-content: flex-start;
+    .content {
+      .info_part {
+        height: auto;
+        gap: 30px;
+        justify-content: flex-start;
 
-      .card_img {
-        width: 100%;
+        .card_img {
+          width: 100%;
 
-        img {
-          width: 60%;
-          height: auto;
+          img {
+            width: 60%;
+            height: auto;
+          }
         }
       }
-    }
 
-    .prices {
-      .buttons {
-        margin: 0 auto;
-        width: 90%;
+      .prices {
+        .buttons {
+          margin: 0 auto;
+          width: 90%;
+        }
       }
     }
 
@@ -233,35 +268,43 @@
 
 @media (max-width: 380px) {
   .card {
-    .info_part {
-      .card_img {
-        img {
-          width: 80%;
+    .content {
+      .info_part {
+        .card_img {
+          img {
+            width: 80%;
+          }
         }
       }
-    }
 
-    .prices {
-      .buttons {
-        margin: 0 auto;
-        width: 100%;
-      }
+      .prices {
+        .buttons {
+          margin: 0 auto;
+          width: 100%;
+        }
 
-      .prices_value {
-        .layout {
-          .prices_block {
-            .price_value {
-              p {
-                font-size: 14px;
-                font-weight: 600;
-
-                span {
-                  font-size: 16px;
+        .prices_value {
+          .layout {
+            .prices_block {
+              .price_value {
+                p {
+                  font-size: 14px;
                   font-weight: 600;
+
+                  span {
+                    font-size: 16px;
+                    font-weight: 600;
+                  }
                 }
               }
             }
           }
+        }
+      }
+
+      .add_info {
+        .text {
+          font-size: 8px;
         }
       }
     }

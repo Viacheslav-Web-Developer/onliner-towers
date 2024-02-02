@@ -1,0 +1,36 @@
+.content {
+  margin-bottom: 150px;
+  border-radius: 14px;
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(134, 134, 134, 0.1) 0 4px 20px 0;
+  padding: 50px;
+
+  .title {
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 30px;
+    align-self: flex-start;
+  }
+
+  .info {
+    display: flex;
+    gap: 10%;
+
+    .image {
+      width: 50%;
+
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .table {
+      width: 100%;
+    }
+  }
+}

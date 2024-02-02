@@ -18,6 +18,7 @@ import Footer from "@/components/Footer/Footer";
 import YandexMap from "@/components/YandexMap/YandexMap";
 import Video from "@/components/Video/Video";
 import TowersTable from "@/sitePages/TowerPage/TowersTable/TowersTable";
+import Kit from "@/sitePages/TowerPage/Kit/Kit";
 
 const TowerPage = () => {
 
@@ -49,8 +50,10 @@ const TowerPage = () => {
             {/*Якорь характеристики*/}
             <div className={'anchor_link'} id={'specifications'}/>
 
-            {/*<TowersTable tableData={store.tower.firstTable.tableData} title={store.tower.firstTable.title}/>*/}
-            {/*<TowersTable tableData={store.tower.secondTable.tableData} title={store.tower.secondTable.title}/>*/}
+            <TowersTable tableData={store.tower.firstTable.tableData} title={store.tower.firstTable.title}/>
+            <TowersTable tableData={store.tower.secondTable.tableData} title={store.tower.secondTable.title}/>
+
+            <Kit/>
 
             <NavLinks navLinks={store.navLinks} page={EPages.tower} component={'main'}/>
 
