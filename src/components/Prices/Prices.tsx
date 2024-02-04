@@ -19,7 +19,7 @@ const Prices = (props: IPricesProps) => {
             <div className={s.cards}>
                 {cardsRender(props.cardsData)}
             </div>
-            <p className={s.text + ' ' + s[props.page]}>* Минимальный срок аренды - 3 дня</p>
+            <p className={s.text + ' ' + s[props.page]}>{props.ps}</p>
         </div>
     );
 };

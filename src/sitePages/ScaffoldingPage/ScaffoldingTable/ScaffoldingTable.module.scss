@@ -1,0 +1,19 @@
+.table {
+  width: 100%;
+  display: flex;
+  margin-bottom: 150px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .table_title {
+    margin: 0 auto 30px auto;
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    align-self: flex-start;
+  }
+}

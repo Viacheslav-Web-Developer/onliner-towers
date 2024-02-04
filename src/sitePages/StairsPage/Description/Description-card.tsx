@@ -5,6 +5,7 @@ import classNames from "classnames";
 import {IStairsDescriptionCard} from "@/types/types";
 
 import Table from "@/components/Table/Table";
+import Link from "next/link";
 
 const DescriptionCard = (props: IStairsDescriptionCard) => {
     const listRender = (listData: string[]) => {
@@ -19,6 +20,7 @@ const DescriptionCard = (props: IStairsDescriptionCard) => {
         <div className={s.card}>
             <div className={s.title_part}>
                 <h2 className={s.title}>{props.cardData.title}</h2><div className={s.title_line}/>
+                <a href={'#'} className={s.passport}>Паспорт</a>
             </div>
 
             <ul className={s.list}>

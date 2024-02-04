@@ -80,7 +80,8 @@ export interface INavLinks {
 export interface IPricesProps {
     page: EPages,
     cardsData: IPricesCard[],
-    setModalOpen: Dispatch<SetStateAction<boolean>>
+    setModalOpen: Dispatch<SetStateAction<boolean>>,
+    ps: string
 }
 
 export interface IPricesCardProps {
@@ -90,6 +91,7 @@ export interface IPricesCardProps {
 
 export interface IPricesCard {
     title: string,
+
     description?: string,
     image: StaticImageData,
     prices: IPricesCardPrices[],
@@ -98,6 +100,7 @@ export interface IPricesCard {
 
 export interface IPricesCardPrices {
     title: string,
+    altTitle?: string,
     pricesValue: JSX.Element[],
 }
 
@@ -219,12 +222,14 @@ export interface IStairsDescription {
     description: string[],
     table: ITable,
     image: StaticImageData,
+    passportUrl: string
 }
 
 
 export interface IStairsDescriptionCard {
     cardData: IStairsDescription,
     reverseRow: boolean
+    passportUrl: string
 }
 
 
@@ -284,6 +289,11 @@ export interface IComponentsCarouselCard {
     img: StaticImageData,
     size: string,
     weight: string,
+}
+
+
+export interface IScaffoldingTable extends ITableProps {
+    title: string,
 }
 
 

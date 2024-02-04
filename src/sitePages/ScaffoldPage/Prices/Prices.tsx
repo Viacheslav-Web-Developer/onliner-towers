@@ -20,7 +20,7 @@ const Prices = () => {
                     <Table tableData={pricesData}/>
                 </div>
                 <div className={s.ps}>
-                    <p className={s.text}>* Mинимaльный cpoк apeнды — 3 дня </p>
+                    <p className={s.text}>* Mинимaльный cpoк apeнды — 7 дней</p>
                 </div>
             </div>
         </div>

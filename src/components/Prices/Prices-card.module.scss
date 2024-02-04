@@ -18,7 +18,6 @@
 
   .content {
     .info_part {
-      height: 320px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -52,6 +51,8 @@
       }
 
       .card_img {
+        padding: 30px 0;
+
         img {
 
         }
@@ -108,6 +109,15 @@
             align-items: flex-start;
             min-width: 100%;
             padding: 0 20px;
+
+            .alt_title {
+              font-family: Montserrat, sans-serif;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: normal;
+              margin-bottom: 10px;
+            }
 
             .price_value {
               p {
@@ -181,6 +191,8 @@
         margin-bottom: 20px;
 
         .card_img {
+          padding: 0;
+
           img {
             width: 80%;
             height: auto;
@@ -286,6 +298,8 @@
         .prices_value {
           .layout {
             .prices_block {
+
+
               .price_value {
                 p {
                   font-size: 14px;

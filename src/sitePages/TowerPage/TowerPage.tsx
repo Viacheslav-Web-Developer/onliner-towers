@@ -39,9 +39,10 @@ const TowerPage = () => {
             {/*Якорь цены*/}
             <div className={'anchor_link'} id={'prices'}/>
             <Prices
-                cardsData={store.tower.prices}
+                cardsData={store.tower.prices.cards}
                 setModalOpen={setModalOpen}
                 page={EPages.tower}
+                ps={store.tower.prices.ps}
             />
 
             <Benefits cardsData={store.benefits} page={EPages.tower}/>

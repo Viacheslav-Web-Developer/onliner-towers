@@ -20,6 +20,7 @@ import Docs from "@/components/Docs/Docs";
 import Prices from "../ScaffoldingPage/Prices/Prices";
 import ComponentsCarousel from "./ComponentsCarousel/ComponentsCarousel";
 import Video from "@/components/Video/Video";
+import ScaffoldingTable from "@/sitePages/ScaffoldingPage/ScaffoldingTable/ScaffoldingTable";
 
 const ScaffoldingPage = () => {
     const [modalIsOpen, setModalOpen] = useState(false)
@@ -47,6 +48,9 @@ const ScaffoldingPage = () => {
 
             {/*Якорь характеристики*/}
             <div className={'anchor_link'} id={'specifications'}/>
+
+            <ScaffoldingTable title={store.scaffolding.table.title} tableData={store.scaffolding.table.tableData}/>
+
             <ComponentsCarousel/>
 
             <Benefits cardsData={store.benefits} page={EPages.scaffolding}/>

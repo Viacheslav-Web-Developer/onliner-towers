@@ -4,7 +4,7 @@
   .title_part {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-bottom: 60px;
     position: relative;
 
@@ -18,7 +18,7 @@
       line-height: normal;
       text-transform: capitalize;
       padding: 0 20px;
-      background-color: #fcfcfc;
+      background-color: #fdfdfd;
     }
 
     .title_line {
@@ -30,6 +30,17 @@
       height: 1px;
       background-color: #A5A5A5;
       transform: translateX(-50%);
+    }
+
+    .passport {
+      min-width: max-content;
+      font-family: Montserrat, sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      background-color: #fdfdfd;
+      padding-right: 20px;
     }
   }
 

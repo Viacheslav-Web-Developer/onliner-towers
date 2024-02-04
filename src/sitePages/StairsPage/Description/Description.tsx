@@ -7,7 +7,7 @@ import DescriptionCard from "../../StairsPage/Description/Description-card";
 
 const Description = () => {
     const descriptionDataRender = (descriptionData: IStairsDescription[]) => {
-        return descriptionData.map((el, id) => <DescriptionCard cardData={el} key={id} reverseRow={id % 2 === 0}/>)
+        return descriptionData.map((el, id) => <DescriptionCard cardData={el} key={id} reverseRow={id % 2 === 0} passportUrl={el.passportUrl}/>)
     }
 
     return (

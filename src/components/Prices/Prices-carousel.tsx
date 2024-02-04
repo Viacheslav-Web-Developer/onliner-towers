@@ -29,6 +29,7 @@ const PricesCarousel = (props: IPricesCarouselProps) => {
                 <div className={s.layout} style={{transform: `translateX(${priceState * -100}%)`}}>
                     {props.prices.map((el, id) =>
                         <div className={s.prices_block} key={id}>
+                            {el.altTitle && <h2 className={s.alt_title}>{el.altTitle}</h2>}
                             {el.pricesValue.map((price, priceId) => <div className={s.price_value} key={priceId}>{price}</div>)}
                         </div>
                     )}

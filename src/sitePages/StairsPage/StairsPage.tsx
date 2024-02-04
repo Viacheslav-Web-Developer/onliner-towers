@@ -34,8 +34,9 @@ const StairsPage = () => {
             {/*/!*Якорь цены*!/*/}
             <div className={'anchor_link'} id={'prices'}/>
             <Prices page={EPages.stairs}
-                    cardsData={store.stairs.prices}
+                    cardsData={store.stairs.prices.cards}
                     setModalOpen={setModalOpen}
+                    ps={store.stairs.prices.ps}
             />
 
             <Benefits cardsData={store.benefits} page={EPages.stairs}/>

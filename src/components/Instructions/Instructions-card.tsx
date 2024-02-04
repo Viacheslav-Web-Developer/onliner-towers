@@ -17,7 +17,6 @@ const InstructionsCard = (props: IInstructionsCardsProps) => {
                 <Image src={props.cardData.image} alt={'Фото этапа сборки'}/>
                 {props.cardData.textAfterImage && <p>{props.cardData.textAfterImage}</p>}
             </div>
-
         </div>
     );
 };
