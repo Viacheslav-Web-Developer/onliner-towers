@@ -10,7 +10,7 @@ const Benefits = (props: IBenefitsProps) => {
     }
 
     return (
-        <div className={s.layout}>
+        <div className={s.layout + ' ' + s[props.page]}>
             <div className={s.header + ' ' + s[props.page]}>
                 <h2 className={s.title}>Наши преимущества:</h2>
             </div>

@@ -11,6 +11,7 @@ const Description = (props: IScaffoldingDescription) => {
 
     return (
         <div className={s.content + ' container'}>
+            <h2 className={s.title + ' ' + s.title_mobile}>{props.title}</h2>
             <div className={s.img_part}>
                 <Image src={props.img} alt={'Изображение продукта'}/>
             </div>

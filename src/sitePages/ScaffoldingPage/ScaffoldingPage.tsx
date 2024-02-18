@@ -44,14 +44,14 @@ const ScaffoldingPage = () => {
 
             {/*Якорь цены*/}
             <div className={'anchor_link'} id={'prices'}/>
-            <Prices pricesData={store.scaffolding.prices}/>
+            {/*<Prices pricesData={store.scaffolding.prices}/>*/}
 
             {/*Якорь характеристики*/}
-            <div className={'anchor_link'} id={'specifications'}/>
+            {/*<div className={'anchor_link'} id={'specifications'}/>*/}
 
-            <ScaffoldingTable title={store.scaffolding.table.title} tableData={store.scaffolding.table.tableData}/>
+            {/*<ScaffoldingTable title={store.scaffolding.table.title} tableData={store.scaffolding.table.tableData}/>*/}
 
-            <ComponentsCarousel/>
+            {/*<ComponentsCarousel/>*/}
 
             <Benefits cardsData={store.benefits} page={EPages.scaffolding}/>
 

@@ -1,8 +1,9 @@
 .card{
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 25px;
 
   .text{
@@ -12,5 +13,33 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .card {
+    width: 75%;
+    gap: 15px;
+
+    img {
+      width: 25%;
+      height: auto;
+    }
+
+    .text {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .card {
+
+
+    .text {
+      font-size: 14px;
+    }
   }
 }

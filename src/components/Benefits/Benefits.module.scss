@@ -64,10 +64,9 @@
     padding: 50px;
     border-radius: 14px;
     background: #FFF;
-    //box-shadow: 0 4px 20px 0 rgba(134, 134, 134, 0.10);
-    -webkit-box-shadow: 0px 0px 20px -15px rgba(34, 60, 80, 0.08);
-  -moz-box-shadow: 0px 0px 20px -15px rgba(34, 60, 80, 0.08);
-  box-shadow: 0px 0px 20px -15px rgba(34, 60, 80, 0.08);
+    -webkit-box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
+    -moz-box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
+    box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
 
     .cards {
       width: 100%;
@@ -144,6 +143,22 @@
         gap: 50px;
       }
     }
+  }
+
+  .layout.tower {
+    background: #2A4B7B;
+  }
+
+  .layout.stairs {
+    background: #636872;
+  }
+
+  .layout.scaffolding {
+    background: #6C758F;
+  }
+
+  .layout.scaffold {
+    background: #293E58;
   }
 }
 

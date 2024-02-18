@@ -1032,7 +1032,7 @@ export const store = {
 		},
 		docs: [
 			{
-				docName: "Инструкция по эксплуатации (PDF)",
+				docName: "Инструкция эксплуатации (PDF)",
 				docUrl: "/assets/instruktsiia-po-ekspluatatsii-lrsp-40.pdf",
 			},
 			{
