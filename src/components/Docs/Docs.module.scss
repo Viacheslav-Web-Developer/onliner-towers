@@ -29,15 +29,20 @@
   }
 
   .docs_part {
+    padding: 0 20%;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 10%;
   }
 }
 
 @media (max-width: 1200px) {
-
+  .content {
+    .docs_part {
+      padding: 0 10%;
+    }
+  }
 }
 
 @media (max-width: 992px) {
@@ -47,11 +52,19 @@
         padding: 0 25px;
       }
     }
+
+    .docs_part {
+      padding: 0 5%;
+    }
   }
 }
 
 @media (max-width: 768px) {
-
+  .content {
+    .docs_part {
+      padding: 0;
+    }
+  }
 }
 
 @media (max-width: 576px) {

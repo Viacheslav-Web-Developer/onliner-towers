@@ -44,7 +44,7 @@ const ScaffoldingPage = () => {
 
             {/*Якорь цены*/}
             <div className={'anchor_link'} id={'prices'}/>
-            {/*<Prices pricesData={store.scaffolding.prices}/>*/}
+            <Prices pricesData={store.scaffolding.prices}/>
 
             {/*Якорь характеристики*/}
             {/*<div className={'anchor_link'} id={'specifications'}/>*/}
