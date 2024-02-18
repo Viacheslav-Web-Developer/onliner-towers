@@ -1,3 +1,7 @@
+.container {
+
+}
+
 .table {
   width: 100%;
   display: flex;
@@ -7,6 +11,7 @@
   align-items: center;
 
   .table_title {
+    width: 100%;
     color: #000;
     font-family: Montserrat, sans-serif;
     font-size: 30px;
@@ -15,5 +20,52 @@
     line-height: normal;
     margin-bottom: 30px;
     align-self: flex-start;
+  }
+
+  .table_layout {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+
+  .table {
+    .table_layout {
+      width: 100%;
+      overflow-x: auto;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .table {
+    .table_title {
+      font-size: 25px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+  .table {
+    .table_title {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .table {
+    .table_title {
+      font-size: 20px;
+    }
   }
 }

@@ -8,16 +8,17 @@ import img from '@/public/TowerKit/img.jpg';
 
 const Kit = () => {
     return (
-        <div className={'container'}>
+        <div className={s.container + ' container'}>
             <div className={s.content}>
-                <h2 className={s.title}>Характеристики комплекта для установки на лестничный марш</h2>
+                <h2 className={s.title}>{store.tower.thirdTable.title}</h2>
                 <div className={s.info}>
-                    <div className={s.image}>
-                        <Image src={img} alt={'Фото комплекта для установки на лестничный марш'}/>
-                    </div>
                     <div className={s.table}>
                         <Table tableData={store.tower.thirdTable.tableData}/>
                     </div>
+                    <div className={s.image}>
+                        <Image src={img} alt={'Фото комплекта для установки на лестничный марш'}/>
+                    </div>
+
                 </div>
             </div>
         </div>

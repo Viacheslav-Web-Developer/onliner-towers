@@ -73,3 +73,7 @@ body.none-scroll {
         width: 95%;
     }
 }
+
+@media (max-width: 380px) {
+
+}

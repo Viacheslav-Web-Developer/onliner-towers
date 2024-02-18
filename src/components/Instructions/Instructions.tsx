@@ -10,12 +10,14 @@ const Instructions = (props: IInstructionsProps) => {
     }
 
     return (
+        <div className={s.layout}>
             <div className={s.content}>
                 <h2 className={s.title}>{props.title}</h2>
                 <div className={s.cards}>
                     {cardsRender(props.cardsData)}
                 </div>
             </div>
+        </div>
     );
 };
 

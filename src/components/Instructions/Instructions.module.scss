@@ -1,6 +1,14 @@
+.layout {
+  width: 100%;
+  background-color: #fff;
+  padding: 75px 0;
+  margin-bottom: 150px;
+}
+
 .content {
   width: 60%;
-  margin: 0 auto 150px auto;
+  margin: 0 auto;
+
 
   .title {
     color: #000;
@@ -38,6 +46,12 @@
 }
 
 @media (max-width: 576px) {
+  .layout {
+    margin-bottom: 15px;
+    padding: 0;
+    background-color: transparent;
+  }
+
   .content {
     width: 95%;
 

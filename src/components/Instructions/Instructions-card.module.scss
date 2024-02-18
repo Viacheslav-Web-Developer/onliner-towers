@@ -53,8 +53,12 @@
     }
 
     img {
-      max-width: 60%;
+      -webkit-box-shadow: 0px 0px 11px -4px rgba(34, 60, 80, 0.1);
+      -moz-box-shadow: 0px 0px 11px -4px rgba(34, 60, 80, 0.1);
+      box-shadow: 0px 0px 11px -4px rgba(34, 60, 80, 0.1);
+      max-width: 50%;
       height: auto;
+      border-radius: 30px;
     }
   }
 }
@@ -76,6 +80,10 @@
 
     .text_part {
       margin-top: 40px;
+
+      p {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -83,6 +91,12 @@
 @media (max-width: 768px) {
   .card {
     gap: 30px;
+
+    .text_part {
+      img {
+        max-width: 80%;
+      }
+    }
   }
 }
 
@@ -93,7 +107,10 @@
     background-color: #fff;
     padding: 40px;
     flex-direction: column;
-    box-shadow: 0 4px 20px 0 rgba(134, 134, 134, 0.1);
+    //box-shadow: 0 4px 20px 0 rgba(134, 134, 134, 0.1);
+    -webkit-box-shadow: 0px 0px 20px -15px rgba(34, 60, 80, 0.08);
+  -moz-box-shadow: 0px 0px 20px -15px rgba(34, 60, 80, 0.08);
+  box-shadow: 0px 0px 20px -15px rgba(34, 60, 80, 0.08);
     gap: 30px;
 
     .number_part_layout {
@@ -110,8 +127,9 @@
       margin: 0;
 
       img {
-        width: 80%;
-        height: auto;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
       }
     }
   }
@@ -129,9 +147,11 @@
 
     .text_part {
       p {
-        font-size: 14px;
-        font-weight: 500;
+        font-size: 12px;
+        font-weight: 400;
       }
+
+
     }
   }
 }

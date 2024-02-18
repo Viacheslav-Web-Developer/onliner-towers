@@ -6,10 +6,10 @@ import {ITowerTable} from "@/types/types";
 
 const TowersTable = (props: ITowerTable) => {
     return (
-        <div className={'container'}>
+        <div className={s.container + ' container'}>
             <div className={s.table}>
                 <h2 className={s.table_title}>{props.title}</h2>
-                <div>
+                <div className={s.table_layout}>
                     <Table tableData={props.tableData}/>
                 </div>
             </div>

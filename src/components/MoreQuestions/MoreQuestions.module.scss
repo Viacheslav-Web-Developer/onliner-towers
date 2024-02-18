@@ -10,7 +10,9 @@
     align-items: center;
     border-radius: 10px;
     background: #FFF;
-    box-shadow: 0 0 30px 0 rgba(134, 134, 134, 0.05);
+    -webkit-box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
+    -moz-box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
+    box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
     padding: 50px 80px;
 
     .title {
@@ -93,7 +95,9 @@
         padding: 10px 0;
         border-radius: 50px;
         background: linear-gradient(90deg, #F6D365 0%, #EE9A38 100%);
-        box-shadow: 0 4px 4px 0 rgba(123, 123, 123, 0.10);
+        -webkit-box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
+        -moz-box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
+        box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
         color: #000;
         font-family: Montserrat, sans-serif;
         font-size: 14px;
@@ -135,11 +139,6 @@
       gap: 10px;
 
       &:before {
-        //content: url("~@/public/MoreQuestions/phone.svg");
-        //margin: 0;
-        //display: flex;
-        //align-items: center;
-        //justify-content: center;
         content: '';
         width: 20px;
         height: 20px;
@@ -166,6 +165,7 @@
   .layout {
     .content {
       width: 90%;
+      padding: 35px;
     }
   }
 }
@@ -174,7 +174,6 @@
   .layout {
     .content {
       width: 95%;
-      padding: 35px;
 
       .title {
         font-size: 24px;
@@ -198,6 +197,7 @@
 @media (max-width: 380px) {
   .layout {
     .content {
+      padding: 20px;
 
       .title {
         font-size: 18px;

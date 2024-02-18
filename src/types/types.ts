@@ -143,7 +143,6 @@ export interface ITableProps {
 }
 
 export interface ITable {
-
     thead?: ITableHead,
     tbody: ITableBody
 }

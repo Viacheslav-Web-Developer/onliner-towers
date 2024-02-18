@@ -1,14 +1,20 @@
+.container {
+
+}
+
 .content {
   margin-bottom: 150px;
   border-radius: 14px;
   background: rgb(255, 255, 255);
-  box-shadow: rgba(134, 134, 134, 0.1) 0 4px 20px 0;
+  -webkit-box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
+  -moz-box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
+  box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
   padding: 50px;
 
   .title {
     color: #000;
     font-family: Montserrat, sans-serif;
-    font-size: 24px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -18,19 +24,136 @@
 
   .info {
     display: flex;
-    gap: 10%;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: fit-content;
+    gap: 5%;
 
     .image {
-      width: 50%;
+      width: 35%;
 
-      img{
-        width: 100%;
+      img {
+        display: flex;
         height: auto;
+        width: 100%;
       }
     }
 
     .table {
-      width: 100%;
+      width: 65%;
+    }
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .content {
+    .title {
+      text-align: center;
+    }
+
+    .info {
+      .image {
+        height: 75%;
+      }
+
+      .table {
+        width: min-content;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 90%;
+  }
+
+  .content {
+
+    .title {
+      font-size: 25px;
+    }
+
+    .info {
+      flex-direction: column-reverse;
+      gap: 30px;
+
+      .image {
+        width: 60%;
+      }
+
+      .table {
+
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .content {
+    padding: 50px 30px;
+
+    .title {
+      text-align: center;
+    }
+
+    .info {
+      .image {
+
+      }
+
+      .table {
+        width: 100%;
+        overflow-x: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+
+  .content {
+    border-radius: 0;
+    padding: 30px 3%;
+
+    .title {
+      font-size: 20px;
+    }
+
+    .info {
+      .image {
+
+      }
+
+      .table {
+
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .content {
+    .title {
+      font-size: 20px;
+    }
+
+    .info {
+      .image {
+
+      }
+
+      .table {
+
+      }
     }
   }
 }

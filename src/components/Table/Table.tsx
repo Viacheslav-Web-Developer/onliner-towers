@@ -13,7 +13,6 @@ const Table = (props: ITableProps) => {
                 <TableBody tableBodyData={props.tableData.tbody}/>
             </table>
         </div>
-
     );
 };
 

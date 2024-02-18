@@ -7,6 +7,7 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    padding-bottom: 5px;
 
     .text {
       width: 75%;
@@ -138,14 +139,19 @@
   .card {
     .question {
       .text {
-        font-size: 14px;
+        font-size: 12px;
         padding: 0;
+        line-height: 20px;
+        letter-spacing: 0.5px;
       }
     }
 
     .answer {
       .text {
         padding: 20px;
+        line-height: 20px;
+        font-size: 12px;
+        letter-spacing: 0.5px;
       }
     }
   }

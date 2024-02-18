@@ -149,7 +149,9 @@
           border-radius: 50px;
           border: 2px solid #FFB31E;
           background: #FFB31E;
-          box-shadow: 0 4px 30px 0 rgba(61, 61, 61, 0.10);
+          -webkit-box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
+          -moz-box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
+          box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
           color: #001728;
           font-family: Montserrat, sans-serif;
           font-size: 16px;
@@ -361,6 +363,8 @@
 @media (max-width: 576px) {
   .layout {
     .container {
+      gap: 30px;
+
       .content {
         gap: 40px;
         grid-template-columns: 1fr;

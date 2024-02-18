@@ -50,7 +50,6 @@ const TowerPage = () => {
 
             {/*Якорь характеристики*/}
             <div className={'anchor_link'} id={'specifications'}/>
-
             <TowersTable tableData={store.tower.firstTable.tableData} title={store.tower.firstTable.title}/>
             <TowersTable tableData={store.tower.secondTable.tableData} title={store.tower.secondTable.title}/>
 
@@ -83,7 +82,7 @@ const TowerPage = () => {
 
             <YandexMap/>
 
-            {/*<Modal setModalOpen={setModalOpen} modalIsOpen={modalIsOpen}/>*/}
+            <Modal setModalOpen={setModalOpen} modalIsOpen={modalIsOpen}/>
             <ButtonUp/>
         </div>
     )
