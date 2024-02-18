@@ -19,6 +19,10 @@
       text-transform: capitalize;
       padding: 0 20px;
       background-color: #fdfdfd;
+
+      br {
+        display: none;
+      }
     }
 
     .title_line {
@@ -190,6 +194,10 @@
     .title_part {
       .title {
         padding: 0 10px;
+
+        br {
+          display: block;
+        }
       }
 
       .passport {
@@ -201,7 +209,7 @@
       width: 90%;
 
       .item {
-        font-size: 10px;
+        font-size: 12px;
       }
     }
 
