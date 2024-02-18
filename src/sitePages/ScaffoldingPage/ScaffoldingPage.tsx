@@ -47,9 +47,8 @@ const ScaffoldingPage = () => {
             <Prices pricesData={store.scaffolding.prices}/>
 
             {/*Якорь характеристики*/}
-            {/*<div className={'anchor_link'} id={'specifications'}/>*/}
-
-            {/*<ScaffoldingTable title={store.scaffolding.table.title} tableData={store.scaffolding.table.tableData}/>*/}
+            <div className={'anchor_link'} id={'specifications'}/>
+            <ScaffoldingTable title={store.scaffolding.table.title} tableData={store.scaffolding.table.tableData}/>
 
             {/*<ComponentsCarousel/>*/}
 

@@ -24,7 +24,7 @@ const Specifications = () => {
         <>
             <div className={s.title_part}>
                 <div/>
-                <h2 className={s.title}>Технические характеристики и стоимость</h2>
+                <h2 className={s.title}>Технические хар-ки и стоимость</h2>
                 <div/>
             </div>
             <div className={'container'}>

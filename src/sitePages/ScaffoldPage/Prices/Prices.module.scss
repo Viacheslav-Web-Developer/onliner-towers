@@ -8,7 +8,7 @@
 
   .title {
     color: #000;
-    font-family: Montserra, sans-serif;
+    font-family: Montserrat, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -28,5 +28,40 @@
       font-weight: 500;
       line-height: 130%;
     }
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .content {
+    width: 40%;
+  }
+}
+
+@media (max-width: 992px) {
+  .content {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: 60%;
+  }
+}
+
+@media (max-width: 576px) {
+  .content {
+    width: 70%;
+
+    .ps {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .content {
+    width: 90%;
   }
 }

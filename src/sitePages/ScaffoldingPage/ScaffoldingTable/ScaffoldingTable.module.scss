@@ -17,3 +17,45 @@
     align-self: flex-start;
   }
 }
+
+@media (max-width: 1200px) {
+  .table {
+    .table_title {
+
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .table {
+    .table_title {
+      font-size: 25px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .table {
+    .table_title {
+
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .table {
+    margin-bottom: 100px;
+
+    .table_title {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .table {
+    .table_title {
+      font-size: 20px;
+    }
+  }
+}
