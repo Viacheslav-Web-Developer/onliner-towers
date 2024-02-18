@@ -217,7 +217,7 @@ export interface IModalProps {
 
 
 export interface IStairsDescription {
-    title: string,
+    title: string | JSX.Element,
     description: string[],
     table: ITable,
     image: StaticImageData,
