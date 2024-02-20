@@ -53,9 +53,9 @@
     }
 
     img {
-      -webkit-box-shadow: 0px 0px 11px -4px rgba(34, 60, 80, 0.1);
-      -moz-box-shadow: 0px 0px 11px -4px rgba(34, 60, 80, 0.1);
-      box-shadow: 0px 0px 11px -4px rgba(34, 60, 80, 0.1);
+      -webkit-box-shadow: 0 0 11px -4px rgba(34, 60, 80, 0.1);
+      -moz-box-shadow: 0 0 11px -4px rgba(34, 60, 80, 0.1);
+      box-shadow: 0 0 11px -4px rgba(34, 60, 80, 0.1);
       max-width: 50%;
       height: auto;
       border-radius: 30px;
@@ -107,10 +107,9 @@
     background-color: #fff;
     padding: 40px;
     flex-direction: column;
-    //box-shadow: 0 4px 20px 0 rgba(134, 134, 134, 0.1);
-    -webkit-box-shadow: 0px 0px 20px -15px rgba(34, 60, 80, 0.08);
-  -moz-box-shadow: 0px 0px 20px -15px rgba(34, 60, 80, 0.08);
-  box-shadow: 0px 0px 20px -15px rgba(34, 60, 80, 0.08);
+    -webkit-box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
+    -moz-box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
+    box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
     gap: 30px;
 
     .number_part_layout {
@@ -127,6 +126,8 @@
       margin: 0;
 
       img {
+        max-width: 100%;
+        border-radius: 5%;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
