@@ -11,6 +11,10 @@ const FaqCard = (props: IFaqCardProps) => {
         [s.active as string]: isOpen
     })
 
+    const cardClassName = classNames([s.card as string], {
+        [s.open as string]: isOpen
+    })
+
     const answerRef = createRef<HTMLParagraphElement>();
 
     const [answerHeight, setAnswerHeight] = useState<null | number>(null)
@@ -20,7 +24,7 @@ const FaqCard = (props: IFaqCardProps) => {
     })
 
     return (
-        <div className={s.card}>
+        <div className={cardClassName}>
             <button className={s.question} onClick={() => setIsOpen(!isOpen)}>
                 <p className={s.text}>{props.cardData.question}</p>
                 <div className={buttonPlusClassName}>
@@ -28,7 +32,7 @@ const FaqCard = (props: IFaqCardProps) => {
                     <div/>
                 </div>
             </button>
-            <div className={s.answer + ' ' + s[props.page]} style={isOpen ? {height: `${answerHeight}px`} : {height: '0'}}>
+            <div className={s.answer + ' ' + s[props.page]} style={isOpen ? {height: `${answerHeight}px`, marginBottom: '30px'} : {height: '0', marginBottom: '0'}}>
                 <p className={s.text} ref={answerRef}>{props.cardData.answer}</p>
             </div>
         </div>
