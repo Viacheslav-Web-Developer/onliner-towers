@@ -20,7 +20,7 @@ const DescriptionCard = (props: IStairsDescriptionCard) => {
         <div className={s.card}>
             <div className={s.title_part}>
                 <h2 className={s.title}>{props.cardData.title}</h2><div className={s.title_line}/>
-                <a href={'#'} className={s.passport}>Паспорт</a>
+                <a href={'/assets/' + props.passportUrl} className={s.passport}>Паспорт</a>
             </div>
 
             <ul className={s.list}>

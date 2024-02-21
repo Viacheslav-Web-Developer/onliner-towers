@@ -717,7 +717,7 @@ export const store = {
 					],
 				},
 				image: stairsDescriptionImg1,
-				passportUrl: '1'
+				passportUrl: 'stairs-passport-'
 			},
 			{
 				title: <span>Лестница алюминиевая <br/>3-х секционная</span>,

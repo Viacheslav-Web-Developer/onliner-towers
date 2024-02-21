@@ -1,20 +1,13 @@
 'use client'
 import React from 'react';
 import {useParams} from "next/navigation";
+import PdfViewer from "@/components/PdfViewer/PdfViewer";
 
 const Page = () => {
-    interface IParams {
-        docs?: string
-    }
+    const params: { docs?: string } = useParams()
 
-    const params: IParams = useParams()
+    return params.docs && <PdfViewer pdfName={params.docs}/>;
 
-    return (
-        <div>
-            {params.docs}
-        </div>
-
-    );
 };
 
 export default Page;
