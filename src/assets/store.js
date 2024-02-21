@@ -717,7 +717,7 @@ export const store = {
 					],
 				},
 				image: stairsDescriptionImg1,
-				passportUrl: 'stairs-passport-'
+				passportUrl: 'alumet-passport-seria-AM.pdf'
 			},
 			{
 				title: <span>Лестница алюминиевая <br/>3-х секционная</span>,
@@ -777,7 +777,7 @@ export const store = {
 					],
 				},
 				image: stairsDescriptionImg2,
-				passportUrl: '2'
+				passportUrl: 'alumet-passport-seria-H3-HS3.pdf'
 			},
 			{
 				title: <span>Лестница алюминиевая <br/>4-х секционная</span>,
@@ -800,7 +800,7 @@ export const store = {
 					],
 				},
 				image: stairsDescriptionImg3,
-				passportUrl: '3'
+				passportUrl: 'alumet-passport-seria-T4.pdf'
 			},
 		],
 		firstVideo: {
