@@ -14,7 +14,7 @@ const Docs = () => {
         <div className={s.content}>
             <div className={s.title_part}>
                 <div/>
-                <h2 className={s.title}>Документация ЛРСП-40:</h2>
+                <h2 className={s.title}>Здесь вы можете ознакомиться с инструкцией эксплуатации <br/> и сертификатом соответствия:</h2>
                 <div/>
             </div>
 

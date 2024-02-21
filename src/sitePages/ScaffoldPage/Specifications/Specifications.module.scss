@@ -87,6 +87,7 @@
     .table_title {
       margin: 0;
       display: none;
+      text-align: center;
     }
 
     .table_title.mobile {
@@ -102,12 +103,6 @@
 @media (max-width: 576px) {
   .title_part {
     display: none;
-  }
-
-  .content {
-    .table_title {
-      text-align: center;
-    }
   }
 }
 

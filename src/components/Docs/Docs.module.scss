@@ -48,8 +48,16 @@
 @media (max-width: 992px) {
   .content {
     .title_part {
+      width: 100%;
+
       .title {
-        padding: 0 25px;
+        white-space: break-spaces;
+        font-size: 18px;
+        padding: 0 10px;
+      }
+
+      div {
+        width: 10%;
       }
     }
 
@@ -61,6 +69,20 @@
 
 @media (max-width: 768px) {
   .content {
+    .title_part {
+      text-align: center;
+      justify-content: center;
+
+      div {
+        display: none;
+      }
+
+      .title {
+
+        font-size: 16px;
+      }
+    }
+
     .docs_part {
       padding: 0;
     }
@@ -75,8 +97,9 @@
       margin-bottom: 50px;
       justify-content: center;
 
-      div {
-        display: none;
+      .title {
+        white-space: nowrap;
+        font-size: 12px;
       }
     }
 
@@ -92,7 +115,6 @@
   .content {
     .title_part {
       .title {
-        font-size: 20px;
         white-space: break-spaces;
         margin-bottom: 0;
       }

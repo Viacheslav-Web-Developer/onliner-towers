@@ -24,17 +24,17 @@ const Specifications = () => {
         <>
             <div className={s.title_part}>
                 <div/>
-                <h2 className={s.title}>Технические хар-ки и стоимость</h2>
+                <h2 className={s.title}>Технические характеристики и стоимость</h2>
                 <div/>
             </div>
             <div className={'container'}>
                 <div className={s.content}>
-                    <h3 className={s.table_title + ' ' + s.mobile}>Технические хар-ки помоста ПМ-200</h3>
+                    <h3 className={s.table_title + ' ' + s.mobile}>Технические характеристики помоста ПМ-200</h3>
                     <div className={s.image_part}>
                         <Image src={scaffoldImage} alt={'Помост ПМ-200'}/>
                     </div>
                     <div className={s.table_part}>
-                        <h3 className={s.table_title}>Технические хар-ки помоста ПМ-200</h3>
+                        <h3 className={s.table_title}>Технические характеристики помоста ПМ-200</h3>
                         <div className={s.layout}>
                             <Table tableData={tableData}/>
                         </div>
