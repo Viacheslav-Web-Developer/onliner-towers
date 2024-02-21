@@ -50,7 +50,7 @@ const ScaffoldingPage = () => {
             <div className={'anchor_link'} id={'specifications'}/>
             <ScaffoldingTable title={store.scaffolding.table.title} tableData={store.scaffolding.table.tableData}/>
 
-            {/*<ComponentsCarousel/>*/}
+            <ComponentsCarousel/>
 
             <Benefits cardsData={store.benefits} page={EPages.scaffolding}/>
 
@@ -67,8 +67,7 @@ const ScaffoldingPage = () => {
 
             {/*Якорь инструкция*/}
             <div className={'anchor_link'} id={'manual'}/>
-            <Instructions cardsData={store.scaffolding.instructions.content}
-                          title={store.scaffolding.instructions.title}/>
+            <Instructions cardsData={store.scaffolding.instructions.content} title={store.scaffolding.instructions.title}/>
 
             <div className={s.videos_section + ' '}>
                 <h2 className={s.title}>Видеоинструкции</h2>

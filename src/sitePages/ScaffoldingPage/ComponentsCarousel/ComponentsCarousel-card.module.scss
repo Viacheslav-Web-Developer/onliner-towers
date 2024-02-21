@@ -1,8 +1,13 @@
 .card {
-  padding: 0 10px;
+  padding: 0 5px;
+  min-height: 100%;
 
   .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #fff;
+    height: 100%;
     padding: 30px 15px;
     border: none;
     border-radius: 14px;
@@ -18,7 +23,7 @@
       font-family: 'Montserrat', sans-serif;
       font-style: normal;
       font-weight: 600;
-      font-size: 18px;
+      font-size: 16px;
       line-height: 24px;
       color: #000000;
       margin-bottom: 5px;
@@ -43,4 +48,48 @@
       }
     }
   }
+}
+
+@media (max-width: 1200px) {
+  .card {
+    padding: 0 5px;
+
+    .content {
+
+      .img_part {
+        img {
+          width: 75%;
+          height: auto;
+        }
+      }
+
+      .title {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+  .card {
+    .content {
+      .img_part {
+        img {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+
 }

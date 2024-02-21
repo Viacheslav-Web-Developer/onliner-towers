@@ -1,42 +1,39 @@
 .carousel {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   margin-bottom: 150px;
+
+  .title {
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 7%;
+  }
 
   .layout {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: stretch;
-    margin-bottom: 20px;
 
-    .container {
-      margin: 0;
+    .content {
+      width: 100%;
+      overflow: hidden;
 
-      .title {
-        color: #000;
-        font-family: Montserrat, sans-serif;
-        font-size: 30px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        margin-bottom: 25px;
-      }
-
-      .content {
-        width: 100%;
-        overflow: hidden;
-
-        .track {
-          display: flex;
-          align-self: center;
-          justify-content: space-between;
-          transition: 1.5s cubic-bezier(.6,0,.4,1);
-        }
+      .track {
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+        transition: 1.5s cubic-bezier(.6, 0, .4, 1);
       }
     }
 
     .button {
-      width: 5%;
+      min-width: 6%;
       background-color: transparent;
       border: none;
       cursor: pointer;
@@ -49,7 +46,7 @@
 
       img {
         height: 100%;
-        width: 40%;
+        width: 50%;
         transition: 0.4s;
         opacity: 0.5;
       }
@@ -79,6 +76,7 @@
 
     .button.next.disable {
       cursor: auto;
+
       img {
         opacity: 0.1;
       }
@@ -86,6 +84,7 @@
 
     .button.prev.disable {
       cursor: auto;
+
       img {
         opacity: 0.1;
       }
@@ -100,5 +99,60 @@
     justify-content: space-around;
     gap: 4%;
   }
+}
+
+
+@media (max-width: 1200px) {
+  .carousel {
+
+    .layout {
+
+      .content {
+
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    .layout {
+      .button {
+        img {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel {
+    width: 100%;
+    margin-bottom: 100px;
+
+    .layout {
+      .button {
+        min-width: 15%;
+
+        img {
+          width: 50%;
+        }
+      }
+    }
+
+    .markers {
+      width: 80%;
+      gap: 2%;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+
 }
 

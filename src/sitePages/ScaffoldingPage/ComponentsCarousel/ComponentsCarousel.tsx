@@ -5,7 +5,7 @@ import {IComponentsCarouselCard} from "@/types/types";
 import ComponentsCarouselCard from "../../ScaffoldingPage/ComponentsCarousel/ComponentsCarousel-card";
 import ComponentsCarouselMarker from "../../ScaffoldingPage/ComponentsCarousel/ComponentsCarousel-marker";
 
-import img from '@/public/ScaffoldingCarousel/templateImg.png'
+import templateImg from '@/public/ScaffoldingCarousel/templateImg.png'
 import arrow from '@/public/ScaffoldingCarousel/arrow.svg'
 import Image from "next/image";
 import classNames from "classnames";
@@ -72,11 +72,38 @@ const ComponentsCarousel = () => {
     ]
 
     const [cardWidth, setCardWidth] = useState<number>(100)
-    const [visibleCardsCount] = useState<number>(4)
+    const [visibleCardsCount, setVisibleCardsCount] = useState<number>(4)
 
     const [position, setPosition] = useState<number>(0)
 
     const [slideShowIsPaused, setSlideShowIsPaused] = useState<boolean>(false)
+
+    // Рассчитать колличество карточек
+    useEffect(() => {
+        let screenWidth = window.innerWidth;
+
+        switch (true) {
+            case (screenWidth < 576):
+                setVisibleCardsCount(1)
+                break;
+
+            case (screenWidth >= 576 && screenWidth < 768):
+                setVisibleCardsCount(2)
+                break;
+
+            case (screenWidth >= 768 && screenWidth < 992):
+                setVisibleCardsCount(3)
+                break;
+
+            case (screenWidth >= 992 && screenWidth < 1200):
+                setVisibleCardsCount(3)
+                break;
+
+            default:
+                setVisibleCardsCount(4)
+                break;
+        }
+    })
 
     // Рассчитать ширину карточки
     useEffect(() => {
@@ -107,7 +134,8 @@ const ComponentsCarousel = () => {
 
     // Рендеринг маркеров
     const markersRender = (cardsData: IComponentsCarouselCard[]) => {
-        return cardsData.map((el, id) => (id < cardsData.length - visibleCardsCount + 1) &&
+        return cardsData.map((el, id) =>
+            (id < cardsData.length - visibleCardsCount + 1) &&
 			<ComponentsCarouselMarker id={id} setPosition={(position: number) => {
                 setSlideShowIsPaused(true)
                 setPosition(position)
@@ -125,17 +153,14 @@ const ComponentsCarousel = () => {
     }
 
     return (
-        <div className={s.carousel} onMouseEnter={() => setSlideShowIsPaused(true)}
-             onMouseLeave={() => setSlideShowIsPaused(false)}>
+        <div className={s.carousel + ' container'} onMouseEnter={() => setSlideShowIsPaused(true)} onMouseLeave={() => setSlideShowIsPaused(false)}>
+            <h2 className={s.title}>Комплектация:</h2>
             <div className={s.layout}>
                 <button onClick={handlePrev} className={classNames([s.button as string], [s.prev as string])}><Image
                     src={arrow} alt={'Назад'}/></button>
-                <div className={'container ' + s.container}>
-                    <h2 className={s.title}>Комплектация:</h2>
-                    <div className={s.content}>
-                        <div className={s.track} style={{transform: `translateX(-${position * cardWidth}%)`}}>
-                            {cardsRender(cardsData)}
-                        </div>
+                <div className={s.content}>
+                    <div className={s.track} style={{transform: `translateX(-${position * cardWidth}%)`}}>
+                        {cardsRender(cardsData)}
                     </div>
                 </div>
                 <button onClick={handleNext} className={classNames([s.button as string], [s.next as string])}><Image
