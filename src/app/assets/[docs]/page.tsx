@@ -6,7 +6,7 @@ import PdfViewer from "@/components/PdfViewer/PdfViewer";
 const Page = () => {
     const params: { docs?: string } = useParams()
 
-    return params.docs && <div>dawdwa<PdfViewer pdfName={params.docs}/></div>;
+    return params.docs && <PdfViewer pdfName={params.docs}/>;
 
 };
 
