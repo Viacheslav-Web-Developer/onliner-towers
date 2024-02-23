@@ -21,7 +21,7 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
     const [rotate, setRotate] = useState<number>(0);
     const [sidebarIsOpen, setSidebarIsOpen] = useState<boolean>(false);
     const [pageCardWidth, setPageCardWidth] = useState<number>(200);
-    const [pageWidth, setPageWidth] = useState<number>(window.innerHeight - 100)
+    const [pageWidth, setPageWidth] = useState<number>(0);
 
     useEffect(() => {
         let screenWidth = window.innerWidth;
