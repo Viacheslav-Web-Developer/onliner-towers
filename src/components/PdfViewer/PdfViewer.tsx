@@ -20,6 +20,36 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
     const [scale, setScale] = useState<number>(100);
     const [rotate, setRotate] = useState<number>(0);
     const [sidebarIsOpen, setSidebarIsOpen] = useState<boolean>(false);
+    const [pageCardWidth, setPageCardWidth] = useState<number>(200);
+    const [pageWidth, setPageWidth] = useState<number>(window.innerHeight - 100)
+
+    useEffect(() => {
+        let screenWidth = window.innerWidth;
+
+        setPageWidth(window.innerHeight - 100)
+
+        switch (true) {
+            case (screenWidth < 576):
+                setPageCardWidth(200)
+                break;
+
+            case (screenWidth >= 576 && screenWidth < 768):
+                setPageCardWidth(200)
+                break;
+
+            case (screenWidth >= 768 && screenWidth < 992):
+                setPageCardWidth(200)
+                break;
+
+            case (screenWidth >= 992 && screenWidth < 1200):
+                setPageCardWidth(150)
+                break;
+
+            default:
+                setPageCardWidth(200)
+                break;
+        }
+    })
 
     useEffect(() => {
         setInputPageNumber(String(pageNumber))
@@ -58,7 +88,7 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
             pages.push(
                 <button className={classNames([s.sidebar_page_wrapper as string], {[s.active]: pageNumber === i})} onClick={() => setPageNumber(i)}>
                     <div className={s.hover}/>
-                    <Page pageNumber={i} className={s.sidebar_page} width={200}/>
+                    <Page pageNumber={i} className={s.sidebar_page} width={pageCardWidth}/>
                     <p className={s.page_number}>{i}</p>
                 </button>)
         }
@@ -123,13 +153,12 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
                     <Image src={arrowImg} alt={'Предыдущая страница'}/>
                 </button>
                 <Document file={'/docs/' + pdfName} onLoadSuccess={onDocumentLoadSuccess} className={s.document}>
-                    <Page pageNumber={pageNumber} className={s.page} scale={scale / 100} rotate={rotate}/>
+                    <Page pageNumber={pageNumber} className={s.page} scale={scale / 100} rotate={rotate} height={pageWidth}/>
                 </Document>
                 <button className={s.button + ' ' + s.next} onClick={() => handleOnClick(true)}>
                     <Image src={arrowImg} alt={'следующая страница'}/>
                 </button>
             </div>
-
         </div>
     );
 };
