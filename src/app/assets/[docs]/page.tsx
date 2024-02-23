@@ -8,7 +8,7 @@ const Page = () => {
 
     console.log(params);
 
-    return params.docs && <PdfViewer pdfName={params.docs}/>;
+    return params.docs ? <PdfViewer pdfName={params.docs}/> : <div>none</div>;
 
 };
 
