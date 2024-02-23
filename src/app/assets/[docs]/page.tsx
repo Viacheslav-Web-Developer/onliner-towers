@@ -4,9 +4,9 @@ import {useParams} from "next/navigation";
 // import PdfViewer from "@/components/PdfViewer/PdfViewer";
 
 const Page = () => {
-    const params: { docs?: string } = useParams()
+    // const params: { docs?: string } = useParams()
 
-    console.log(params)
+    // console.log(params)
 
     return (
         <div>
