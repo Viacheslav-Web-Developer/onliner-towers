@@ -133,6 +133,7 @@ export interface IOrderProps {
 }
 
 export interface IOrderInputsProps {
+    name: string,
     userData: string,
     setUserData: Dispatch<SetStateAction<string>>
 }

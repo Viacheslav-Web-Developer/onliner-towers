@@ -10,6 +10,7 @@
     "export": "next build && next export"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.1.0",
     "@pbe/react-yandex-maps": "^1.2.4",
     "@react-pdf/renderer": "^3.3.8",
     "@types/node": "20.4.9",

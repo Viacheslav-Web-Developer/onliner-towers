@@ -13,7 +13,7 @@ const OrderNameInput = (props: IOrderInputsProps) => {
     return (
         <label>
             <p className={s.text}>Ваше имя:</p>
-            <input type="text" name={'user_name'} className={s.input} value={props.userData} onChange={e => inputUserName(e.target.value)}/>
+            <input type="text" name={props.name} className={s.input} value={props.userData} onChange={e => inputUserName(e.target.value)}/>
         </label>
     );
 };
