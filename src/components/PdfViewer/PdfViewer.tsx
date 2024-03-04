@@ -25,28 +25,22 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
 
     useEffect(() => {
         let screenWidth = window.innerWidth;
-
         setPageWidth(window.innerHeight - 100)
 
         switch (true) {
             case (screenWidth < 576):
-                setPageCardWidth(200)
                 break;
 
             case (screenWidth >= 576 && screenWidth < 768):
-                setPageCardWidth(200)
                 break;
 
             case (screenWidth >= 768 && screenWidth < 992):
-                setPageCardWidth(200)
                 break;
 
             case (screenWidth >= 992 && screenWidth < 1200):
-                setPageCardWidth(150)
                 break;
 
             default:
-                setPageCardWidth(200)
                 break;
         }
     })
@@ -74,7 +68,6 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
 
     const handleRotate = () => {
         setRotate(rotate < 270 ? rotate + 90 : 0)
-
     }
 
     const toggleSidebar = () => {
@@ -101,7 +94,7 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
     })
 
     const headerMenuButtonClassName = classNames([s.menu_button as string], {
-        [s.active]: sidebarIsOpen
+        [s.active]: !sidebarIsOpen
     })
 
     return (
