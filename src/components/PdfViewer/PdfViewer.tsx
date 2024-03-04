@@ -19,28 +19,33 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
     const [inputPageNumber, setInputPageNumber] = useState<string>('1');
     const [scale, setScale] = useState<number>(100);
     const [rotate, setRotate] = useState<number>(0);
+
     const [sidebarIsOpen, setSidebarIsOpen] = useState<boolean>(false);
-    const [pageCardWidth, setPageCardWidth] = useState<number>(200);
     const [pageWidth, setPageWidth] = useState<number>(0);
+
+    const [sidebarWidth, setSidebarWidth] = useState<number>(0);
+    const [pageCardWidth, setPageCardWidth] = useState<number>(0);
 
     useEffect(() => {
         let screenWidth = window.innerWidth;
-        setPageWidth(window.innerHeight - 100)
 
         switch (true) {
-            case (screenWidth < 576):
-                break;
+            case (screenWidth >= 992 && screenWidth < 1200):
 
-            case (screenWidth >= 576 && screenWidth < 768):
                 break;
 
             case (screenWidth >= 768 && screenWidth < 992):
                 break;
 
-            case (screenWidth >= 992 && screenWidth < 1200):
+            case (screenWidth >= 576 && screenWidth < 768):
+                break;
+
+            case (screenWidth < 576):
                 break;
 
             default:
+                setPageCardWidth(200)
+                setSidebarWidth(pageCardWidth + 100)
                 break;
         }
     })
@@ -94,7 +99,7 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
     })
 
     const headerMenuButtonClassName = classNames([s.menu_button as string], {
-        [s.active]: !sidebarIsOpen
+        [s.active]: sidebarIsOpen
     })
 
     return (
@@ -133,7 +138,7 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
                 </div>
             </div>
             <div className={s.content}>
-                <div className={sidebarClassName}>
+                <div className={sidebarClassName} style={{width: `${sidebarWidth}px`, minWidth: `${sidebarWidth}px`, marginLeft: `-${sidebarWidth}px`}}>
                     <div className={s.sidebar_header}>
                         <h2 className={s.title}>Содержание</h2>
                         <button className={s.close_button} onClick={toggleSidebar}><Image src={plusImg} alt={'Закрыть'}/></button>
@@ -145,9 +150,11 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
                 <button className={s.button + ' ' + s.prev} onClick={() => handleOnClick(false)}>
                     <Image src={arrowImg} alt={'Предыдущая страница'}/>
                 </button>
-                <Document file={'/docs/' + pdfName} onLoadSuccess={onDocumentLoadSuccess} className={s.document}>
-                    <Page pageNumber={pageNumber} className={s.page} scale={scale / 100} rotate={rotate} height={pageWidth}/>
-                </Document>
+
+                    <Document file={'/docs/' + pdfName} onLoadSuccess={onDocumentLoadSuccess} className={s.document}>
+                        <Page pageNumber={pageNumber} className={s.page} scale={scale / 100} rotate={rotate} height={pageWidth}/>
+                    </Document>
+
                 <button className={s.button + ' ' + s.next} onClick={() => handleOnClick(true)}>
                     <Image src={arrowImg} alt={'следующая страница'}/>
                 </button>

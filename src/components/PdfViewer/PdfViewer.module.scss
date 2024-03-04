@@ -165,32 +165,9 @@
     align-items: stretch;
     overflow: auto;
 
-    /* width */
-    &::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    /* Track */
-    &::-webkit-scrollbar-track {
-      background: none;
-    }
-
-    /* Handle */
-    &::-webkit-scrollbar-thumb {
-      background: #888;
-      border-radius: 10px;
-      border: 2px solid #525659;
-    }
-
-    /* Handle on hover */
-    &::-webkit-scrollbar-thumb:hover {
-      background: #555;
-    }
-
     .sidebar {
       display: flex;
       flex-direction: column;
-      margin-left: 0;
       width: max-content;
       height: 100%;
       background-color: #4A4A4A;
@@ -240,29 +217,6 @@
         gap: 10px;
         overflow-y: auto;
         overflow-x: hidden;
-
-
-        /* width */
-        &::-webkit-scrollbar {
-          width: 8px;
-        }
-
-        /* Track */
-        &::-webkit-scrollbar-track {
-          background: none;
-        }
-
-        /* Handle */
-        &::-webkit-scrollbar-thumb {
-          background: #888;
-          border-radius: 10px;
-          border: 2px solid #525659;
-        }
-
-        /* Handle on hover */
-        &::-webkit-scrollbar-thumb:hover {
-          background: #555;
-        }
 
         .sidebar_page_wrapper {
           background-color: transparent;
@@ -318,18 +272,19 @@
             opacity: 1;
           }
         }
-
       }
     }
 
     .sidebar.open {
-      margin-left: -268px;
+      margin-left: 0 !important;
     }
 
     .document {
       margin: 0 auto;
-      width: min-content;
-      height: max-content;
+      min-width: min-content;
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
       display: flex;
       align-items: center;
       justify-content: flex-start;
