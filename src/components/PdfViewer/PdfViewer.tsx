@@ -33,18 +33,23 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
 
     // Main & sidebar pages width
     useEffect(() => {
+        let content = document.getElementById('pdf_viewer_content');
         let screenWidth = window.innerWidth;
-        let contentHeight = document.getElementById('pdf_viewer_content')?.offsetHeight;
+        let contentHeight = content?.offsetHeight;
+        let contentWidth = content?.offsetWidth;
 
         setPageHeight(contentHeight * 0.98)
         setSidebarPageWidth(200)
 
         switch (true) {
             case (screenWidth >= 992 && screenWidth < 1200):
-
+                alert(contentHeight)
+                setPageWidth(contentWidth / 2)
                 break;
 
             case (screenWidth >= 768 && screenWidth < 992):
+                setPageWidth(contentWidth / 2)
+                setSidebarPageWidth(200)
                 break;
 
             case (screenWidth >= 576 && screenWidth < 768):
@@ -54,6 +59,7 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
                 break;
 
             default:
+                alert(contentHeight)
                 setPageHeight(contentHeight * 0.98)
                 setSidebarPageWidth(200)
                 break;
