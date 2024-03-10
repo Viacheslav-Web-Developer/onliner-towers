@@ -1,3 +1,27 @@
+.layout * {
+  /* width */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+    border: 2px solid #333333;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #999;
+  }
+}
+
 .layout {
   display: flex;
   flex-direction: column;
@@ -271,6 +295,11 @@
           .sidebar_page {
             opacity: 1;
           }
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          border: 2px solid #4A4A4A;
         }
       }
     }
