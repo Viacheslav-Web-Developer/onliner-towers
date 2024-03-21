@@ -10,6 +10,8 @@ import plusImg from '@/public/PdfViewer/plus.svg'
 import arrowImg from '@/public/PdfViewer/arrow.svg'
 import rotateImg from '@/public/PdfViewer/rotate.svg'
 import classNames from "classnames";
+import PdfViewerPage from "@/components/PdfViewer/PdfViewer-page";
+import PdfViewerSidebarPage from "@/components/PdfViewer/PdfViewer-sidebar-page";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
 
@@ -25,6 +27,7 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
 
     // Sidebar params
     const [sidebarIsOpen, setSidebarIsOpen] = useState<boolean>(false);
+    const [sidebarWidth, setSidebarWidth] = useState<number>(0);
     const [sidebarPageWidth, setSidebarPageWidth] = useState<number>(0);
 
     // Main page
@@ -33,35 +36,42 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
 
     // Main & sidebar pages width
     useEffect(() => {
-        let content = document.getElementById('pdf_viewer_content');
-        let screenWidth = window.innerWidth;
-        let contentHeight = content?.offsetHeight;
-        let contentWidth = content?.offsetWidth;
+        let screenWidth = window.innerWidth!;
+        let header = document.getElementById('pdf_viewer_header')!;
+        let content = document.getElementById('pdf_viewer_content')!;
+        let contentWidth = content!.offsetWidth;
+        let contentHeight = content!.offsetHeight;
 
-        setPageHeight(contentHeight * 0.98)
-        setSidebarPageWidth(200)
+        content.style.minHeight = `calc(100vh - ${header.offsetHeight})`;
+
+        setPageWidth((contentWidth * 0.55) > (contentHeight * 0.98 * 210 / 297) ? (contentHeight * 0.98 * 210 / 297) : (contentWidth * 0.55))
+        setSidebarPageWidth(contentWidth * 0.15)
+        setSidebarWidth(sidebarPageWidth + 100)
 
         switch (true) {
-            case (screenWidth >= 992 && screenWidth < 1200):
-                alert(contentHeight)
-                setPageWidth(contentWidth / 2)
+            case (screenWidth > 992 && screenWidth <= 1200):
+
                 break;
 
-            case (screenWidth >= 768 && screenWidth < 992):
-                setPageWidth(contentWidth / 2)
-                setSidebarPageWidth(200)
+            case (screenWidth > 768 && screenWidth <= 992):
+
                 break;
 
-            case (screenWidth >= 576 && screenWidth < 768):
+            case (screenWidth > 576 && screenWidth <= 768):
+                setPageWidth((contentWidth * 0.95 - 60) > (contentHeight * 0.98 * 210 / 297) ? (contentHeight * 0.98 * 210 / 297) : (contentWidth * 0.95 - 60))
+                setSidebarPageWidth(contentWidth * 0.15)
+                setSidebarWidth(contentWidth)
                 break;
 
-            case (screenWidth < 576):
+            case (screenWidth <= 576):
+                setPageWidth((contentWidth * 0.9) > (contentHeight * 0.98 * 210 / 297) ? (contentHeight * 0.98 * 210 / 297) : (contentWidth * 0.9))
+                setSidebarPageWidth(contentWidth * 0.15)
+                setSidebarWidth(contentWidth)
                 break;
 
             default:
-                alert(contentHeight)
-                setPageHeight(contentHeight * 0.98)
-                setSidebarPageWidth(200)
+                setPageWidth((contentWidth * 0.55) > (contentHeight * 0.98 * 210 / 297) ? (contentHeight * 0.98 * 210 / 297) : (contentWidth * 0.55))
+                setSidebarPageWidth(contentWidth * 0.15)
                 break;
         }
     })
@@ -102,17 +112,11 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
     }
 
     // Sidebar render all pages
-    const sidebarPagesRender = () => {
+    const pagesRender = (type: string) => {
         const pages = []
 
         for (let i = 1; i <= pagesCount; i++) {
-            pages.push(
-                <button className={classNames([s.sidebar_page_wrapper as string], {[s.active]: pageNumber === i})}
-                        onClick={() => setPageNumber(i)}>
-                    <div className={s.hover}/>
-                    <Page pageNumber={i} className={s.sidebar_page} width={sidebarPageWidth}/>
-                    <p className={s.page_number}>{i}</p>
-                </button>)
+            pages.push(type === 'main' ? <PdfViewerPage pageNumber={i} scale={scale} rotate={rotate} pageWidth={pageWidth} pageHeight={pageHeight}/> : <PdfViewerSidebarPage pageNumber={pageNumber} sidebarPageWidth={sidebarPageWidth} sidebarPageNumber={i} setPageNumber={setPageNumber}/>)
         }
 
         return pages;
@@ -128,7 +132,7 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
 
     return (
         <div className={s.layout}>
-            <div className={s.header}>
+            <div className={s.header} id={'pdf_viewer_header'}>
                 <div className={s.left}>
                     <button className={headerMenuButtonClassName} onClick={toggleSidebar}>
                         <Image src={menuButtonImg} alt={'Menu button'}/>
@@ -141,7 +145,7 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
                                value={inputPageNumber} className={s.input} onBlur={(e) => {
                             e.currentTarget.value = String(pageNumber)
                         }}/>
-                        <span> / {pagesCount}</span>
+                        <span>/</span><span>{pagesCount}</span>
                     </div>
                     <div className={s.delimiter}/>
                     <div className={s.scale}>
@@ -163,9 +167,9 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
             </div>
             <div className={s.content} id={'pdf_viewer_content'}>
                 <div className={sidebarClassName} style={{
-                    width: `${sidebarPageWidth + 100}px`,
-                    minWidth: `${sidebarPageWidth + 100}px`,
-                    marginLeft: `-${sidebarPageWidth + 100}px`
+                    width: `${sidebarWidth}px`,
+                    minWidth: `${sidebarWidth}px`,
+                    marginLeft: `-${sidebarWidth}px`
                 }}>
                     <div className={s.sidebar_header}>
                         <h2 className={s.title}>Содержание</h2>
@@ -173,14 +177,19 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
                                                                                           alt={'Закрыть'}/></button>
                     </div>
                     <Document file={'/docs/' + pdfName} onLoadSuccess={onDocumentLoadSuccess} className={s.sidebar_document}>
-                        {sidebarPagesRender()}
+                        {pagesRender('sidebar')}
                     </Document>
                 </div>
                 <button className={s.button + ' ' + s.prev} onClick={() => handleOnClick(false)}>
                     <Image src={arrowImg} alt={'Предыдущая страница'}/>
                 </button>
                 <Document file={'/docs/' + pdfName} onLoadSuccess={onDocumentLoadSuccess} className={s.document}>
-                    <Page pageNumber={pageNumber} className={s.page} scale={scale / 100} rotate={rotate} height={pageHeight} width={pageWidth}/>
+                    <div className={s.desktop}>
+                        <Page pageNumber={pageNumber} className={s.page} scale={scale / 100} rotate={rotate} width={pageWidth} height={pageHeight}/>
+                    </div>
+                    <div className={s.mobile}>
+                        {pagesRender('main')}
+                    </div>
                 </Document>
                 <button className={s.button + ' ' + s.next} onClick={() => handleOnClick(true)}>
                     <Image src={arrowImg} alt={'следующая страница'}/>

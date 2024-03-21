@@ -1,19 +1,21 @@
 .layout * {
   /* width */
   &::-webkit-scrollbar {
-    width: 8px;
+    width: 12px;
+    height: 12px;
   }
 
   /* Track */
   &::-webkit-scrollbar-track {
     background: none;
+    border: none;
   }
 
   /* Handle */
   &::-webkit-scrollbar-thumb {
     background: #888;
-    border-radius: 10px;
-    border: 2px solid #333333;
+    border-radius: 100px;
+    border: 4px solid #888;
   }
 
   /* Handle on hover */
@@ -28,7 +30,7 @@
   width: 100%;
   height: 100vh;
   max-height: 100vh;
-  background-color: #333333;
+  background-color: #333;
   overflow: hidden;
 
   .header {
@@ -81,6 +83,13 @@
       grid-template-columns: 1fr 2px min-content 2px 1fr;
       gap: 25px;
 
+      span, .input {
+        color: #fff;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+      }
+
       .input {
         border-radius: 4px;
         width: 30px;
@@ -89,7 +98,6 @@
         background-color: #191B1C;
         outline: none;
         border: none;
-        color: #fff;
       }
 
       .pages_counter {
@@ -97,13 +105,6 @@
         align-items: center;
         justify-content: flex-end;
         gap: 8px;
-
-        .input, span {
-          color: #fff;
-          font-family: 'Inter', sans-serif;
-          font-weight: 500;
-          font-size: 14px;
-        }
 
         span {
           word-spacing: 8px;
@@ -118,7 +119,6 @@
 
         .input {
           width: 8ch;
-          font-family: 'Inter', sans-serif;
         }
 
         .button {
@@ -184,6 +184,7 @@
   }
 
   .content {
+    min-height: calc(100vh - 62px);
     height: max-content;
     display: flex;
     align-items: stretch;
@@ -296,11 +297,11 @@
             opacity: 1;
           }
         }
+      }
 
-        /* Handle */
-        &::-webkit-scrollbar-thumb {
-          border: 2px solid #4A4A4A;
-        }
+      /* Handle */
+      & *::-webkit-scrollbar-thumb {
+        border: 4px solid #4A4A4A;
       }
     }
 
@@ -339,6 +340,14 @@
         box-shadow: 4px 4px 4px -1px rgba(34, 60, 80, 0.2);
 
       }
+
+      .desktop {
+
+      }
+
+      .mobile {
+        display: none;
+      }
     }
 
     .button {
@@ -357,22 +366,12 @@
       color: #fff;
       transition: 0.4s;
 
-      div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        transition: 0.4s;
-      }
-
       &:hover {
         background-color: rgba(0, 0, 0, 0.1);
+      }
 
-        div {
-          background-color: rgba(0, 0, 0, 0.4);
-        }
+      img {
+        transition: 0.5s;
       }
     }
 
@@ -385,6 +384,11 @@
     .button.next {
 
     }
+  }
+
+  /* Handle */
+  & *::-webkit-scrollbar-thumb {
+    border: 4px solid #333;
   }
 }
 
@@ -417,6 +421,8 @@
 @media (max-width: 992px) {
   .layout {
     .header {
+      grid-template-columns: 1fr 3fr 1fr;
+
       .left {
         .file_name {
           display: none;
@@ -428,18 +434,114 @@
 
 @media (max-width: 768px) {
   .layout {
+    .header {
+      padding: 8px;
+    }
 
+    .content {
+      position: relative;
+
+      .sidebar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0 !important;
+        z-index: 20;
+        height: max-content;
+        min-height: auto;
+        width: 100%;
+        transform: translateY(-100%);
+
+        .sidebar_header {
+          display: none;
+        }
+
+        .sidebar_document {
+          width: 100% !important;
+          max-width: 100%;
+          min-width: auto;
+          flex-direction: row;
+          padding: 10px 5px 5px 5px;
+          overflow-y: hidden;
+          overflow-x: auto;
+
+          .sidebar_page_wrapper {
+            padding: 10px 10px 5px 10px;
+            gap: 5px;
+
+            .page_number {
+              margin: 0;
+              padding: 0;
+              line-height: 1;
+            }
+          }
+        }
+      }
+
+      .sidebar.open {
+        transform: translateY(-1px);
+      }
+    }
   }
 }
 
 @media (max-width: 576px) {
   .layout {
+    .header {
+      grid-template-columns: 1fr 6fr 1fr;
 
+      .middle {
+        gap: 10px;
+
+        .input {
+          width: 20px;
+          height: 20px;
+        }
+
+        span, .input {
+          font-weight: 400;
+          font-size: 10px;
+        }
+
+        .pages_counter {
+          gap: 6px;
+        }
+
+        .scale {
+          gap: 6px;
+
+          .input {
+            width: 6ch;
+          }
+        }
+      }
+    }
+
+    .content {
+      .button {
+        display: none;
+      }
+
+      .document {
+        .mobile {
+          display: block;
+        }
+
+        .desktop {
+          display: none;
+        }
+      }
+    }
   }
 }
 
 @media (max-width: 380px) {
   .layout {
+    .header {
+      .middle {
+        gap: 8px;
+      }
+    }
 
   }
 }
