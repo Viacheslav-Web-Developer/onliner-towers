@@ -109,12 +109,15 @@
   background-color: rgba(28, 42, 58, 0.5);
 }
 
+.header.not_found_page{
+  background-color: rgba(27, 46, 75, 1);
+}
+
 .header.sticky {
   background-color: rgba(27, 46, 75, 1);
-  //box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0px 0px 20px -15px rgba(34, 60, 80, 0.08);
--moz-box-shadow: 0px 0px 20px -15px rgba(34, 60, 80, 0.08);
-box-shadow: 0px 0px 20px -15px rgba(34, 60, 80, 0.08);
+  -webkit-box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
+  -moz-box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
+  box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
 
   .content {
     .logo {

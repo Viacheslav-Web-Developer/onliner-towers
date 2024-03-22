@@ -30,7 +30,7 @@ const BurgerMenu = (props: BurgerMenuProps) => {
                     <div/>
                     <div/>
                 </button>
-                <BurgerMenuLinks links={props.links} closeMenuFunc={closeMenuFunc}/>
+                {props.links && <BurgerMenuLinks links={props.links} closeMenuFunc={closeMenuFunc}/>}
                 <BurgerMenuInfo info={props.info}/>
             </div>
         </div>

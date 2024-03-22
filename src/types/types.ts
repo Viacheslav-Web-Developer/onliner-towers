@@ -6,7 +6,8 @@ export const enum EPages {
     'tower' = 'tower',
     'scaffold' = 'scaffold',
     'scaffolding' = 'scaffolding',
-    'stairs' = 'stairs'
+    'stairs' = 'stairs',
+    'not_found_page' = 'not_found_page',
 }
 
 

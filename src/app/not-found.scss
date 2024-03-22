@@ -1,0 +1,111 @@
+.not_found_page {
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+  background-color: #2A4B7B;
+
+  .not_found_page__content {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .not_found_page__title, .not_found_page__text {
+      text-align: center;
+      width: 60%;
+      font-family: Jura, sans-serif;
+      color: #FFB31E;
+      font-size: 240px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 24px;
+    }
+
+    .not_found_page__title {
+      margin-bottom: 20px;
+    }
+
+    .not_found_page__text {
+      font-size: 64px;
+      color: #fff;
+      margin-bottom: 60px;
+    }
+
+    .not_found_page__buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 20px;
+
+      .not_found_page__link {
+        padding: 15px 60px;
+        border: none;
+        border-radius: 50px;
+        background: linear-gradient(90deg, #F6D365 0%, #EE9A38 100%);
+        -webkit-box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
+        -moz-box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
+        box-shadow: 0 0 20px -15px rgba(34, 60, 80, 0.08);
+        cursor: pointer;
+        transition: 0.3s;
+
+        // text style
+        color: #000;
+        font-family: Montserrat, sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-decoration: none;
+
+        &:hover {
+          transform: scale(1.05);
+          -webkit-box-shadow: 0 0 15px 1px #EE9A38;
+          -moz-box-shadow: 0 0 15px 1px #EE9A38;
+          box-shadow: 0 0 15px 1px #EE9A38;
+        }
+
+        &:focus {
+          transform: scale(1);
+          box-shadow: none;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+        }
+      }
+
+      .not_found_page__button {
+        border: none;
+        border-radius: 50px;
+        background: linear-gradient(90deg, #243949 0%, #517FA4 100%);
+        padding: 15px 30px;
+        transition: cubic-bezier(.4, 0, .3, 1) 0.4s;
+        cursor: pointer;
+
+        // text style
+        color: #FFF;
+        font-family: Montserrat, sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-decoration: none;
+
+        &:hover {
+          transform: scale(1.05);
+          -webkit-box-shadow: 0 0 15px 1px #517FA4;
+          -moz-box-shadow: 0 0 15px 1px #517FA4;
+          box-shadow: 0 0 15px 1px #517FA4;
+        }
+
+        &:focus {
+          transform: scale(1);
+          box-shadow: none;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+        }
+      }
+    }
+  }
+}

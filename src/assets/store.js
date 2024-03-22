@@ -1184,5 +1184,25 @@ export const store = {
 		],
 
 
+	},
+	'not_found_page': {
+		headerLinks: [
+			{
+				url: "/towers",
+				text: "Аренда вышек",
+			},
+			{
+				url: "/stairs",
+				text: "Аренда стремянок",
+			},
+			{
+				url: "/scaffoldings",
+				text: "Аренда лесов",
+			},
+			{
+				url: "/scaffolds",
+				text: "Аренда помостов",
+			},
+		],
 	}
 }

@@ -1,3 +1,4 @@
+'use client'
 import React, {useEffect, useState} from 'react';
 import s from './Header.module.scss';
 import Image from "next/image";
@@ -17,6 +18,7 @@ const Header = (props: IHeaderProps) => {
     }
 
     let header = React.createRef<HTMLElement>();
+
     useEffect(() => {
         document.documentElement.scrollTop > 100 && (header.current!.style.height = '50px') && (header.current!.classList.add(s.sticky));
         window.addEventListener('scroll', () => {
@@ -49,7 +51,7 @@ const Header = (props: IHeaderProps) => {
                     <h1 className={s.title}><a href="#">ArendaTur</a></h1>
                 </div>
                 <ul className={s.links}>
-                    {linksRender(props.links)}
+                    {props.links && linksRender(props.links)}
                 </ul>
                 <button onClick={() => setMobileMenuIsOpen(true)} className={s.burger_menu}>
                     <div/>

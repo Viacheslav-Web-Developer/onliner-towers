@@ -179,7 +179,26 @@
     }
 
     .right {
+      display: flex;
+      justify-content: right;
+      align-items: center;
 
+      .exit_button {
+        background-color: transparent;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+        transition: 0.4s;
+
+        img {
+          display: flex;
+          margin: 0;
+        }
+
+        &:hover {
+          opacity: 0.4;
+        }
+      }
     }
   }
 

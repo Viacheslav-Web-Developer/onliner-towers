@@ -1,21 +1,27 @@
 "use client"
+import {useRouter} from "next/navigation";
 import React, {useEffect, useState} from 'react';
 import {Page, Document, pdfjs} from 'react-pdf';
 import s from './PdfViewer.module.scss';
 import Image from "next/image";
+import classNames from "classnames";
+
+import PdfViewerPage from "@/components/PdfViewer/PdfViewer-page";
+import PdfViewerSidebarPage from "@/components/PdfViewer/PdfViewer-sidebar-page";
 
 import menuButtonImg from '@/public/PdfViewer/menuButton.svg'
+import exitButtonImg from '@/public/PdfViewer/exit.svg'
 import minusImg from '@/public/PdfViewer/minus.svg'
 import plusImg from '@/public/PdfViewer/plus.svg'
 import arrowImg from '@/public/PdfViewer/arrow.svg'
 import rotateImg from '@/public/PdfViewer/rotate.svg'
-import classNames from "classnames";
-import PdfViewerPage from "@/components/PdfViewer/PdfViewer-page";
-import PdfViewerSidebarPage from "@/components/PdfViewer/PdfViewer-sidebar-page";
+
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
 
 const PdfViewer = ({pdfName}: { pdfName: string }) => {
+    const router = useRouter();
+
     // Document params
     const [pagesCount, setPagesCount] = useState<number>(1);
     const [pageNumber, setPageNumber] = useState<number>(1);
@@ -162,7 +168,9 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
                     </div>
                 </div>
                 <div className={s.right}>
-
+                    <button className={s.exit_button} onClick={() => router.back()}>
+                        <Image src={exitButtonImg} alt={'Exit'}/>
+                    </button>
                 </div>
             </div>
             <div className={s.content} id={'pdf_viewer_content'}>
