@@ -1,5 +1,5 @@
 "use client"
-import {useRouter} from "next/navigation";
+import { useRouter } from "next/navigation";
 import React, {useEffect, useState} from 'react';
 import {Page, Document, pdfjs} from 'react-pdf';
 import s from './PdfViewer.module.scss';
@@ -15,7 +15,6 @@ import minusImg from '@/public/PdfViewer/minus.svg'
 import plusImg from '@/public/PdfViewer/plus.svg'
 import arrowImg from '@/public/PdfViewer/arrow.svg'
 import rotateImg from '@/public/PdfViewer/rotate.svg'
-
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
 
@@ -147,28 +146,22 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
                 </div>
                 <div className={s.middle}>
                     <div className={s.pages_counter}>
-                        <input type="text" onChange={(e) => handleChangePageNumber(e.target.value)}
-                               value={inputPageNumber} className={s.input} onBlur={(e) => {
-                            e.currentTarget.value = String(pageNumber)
-                        }}/>
+                        <input type="text" onChange={(e) => handleChangePageNumber(e.target.value)} value={inputPageNumber} className={s.input} onBlur={(e) => {e.currentTarget.value = String(pageNumber)}}/>
                         <span>/</span><span>{pagesCount}</span>
                     </div>
                     <div className={s.delimiter}/>
                     <div className={s.scale}>
-                        <button className={s.button}><Image src={minusImg} alt={'Minus'}
-                                                            onClick={() => setScale(scale - 10)}/></button>
+                        <button className={s.button}><Image src={minusImg} alt={'Minus'} onClick={() => setScale(scale - 10)}/></button>
                         <input type="text" className={s.input} value={scale + '%'} disabled={true}/>
-                        <button className={s.button}><Image src={plusImg} alt={'Plus'}
-                                                            onClick={() => setScale(scale + 10)}/></button>
+                        <button className={s.button}><Image src={plusImg} alt={'Plus'} onClick={() => setScale(scale + 10)}/></button>
                     </div>
                     <div className={s.delimiter}/>
                     <div className={s.add_options}>
-                        <button className={s.rotate_button} onClick={handleRotate}><Image src={rotateImg}
-                                                                                          alt={'Повернуть'}/></button>
+                        <button className={s.rotate_button} onClick={handleRotate}><Image src={rotateImg} alt={'Повернуть'}/></button>
                     </div>
                 </div>
                 <div className={s.right}>
-                    <button className={s.exit_button} onClick={() => router.back()}>
+                    <button className={s.exit_button} onClick={() => window.history.go(-2)}>
                         <Image src={exitButtonImg} alt={'Exit'}/>
                     </button>
                 </div>

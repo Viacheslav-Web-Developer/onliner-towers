@@ -247,7 +247,8 @@ export interface IDocsCardProps {
 
 export interface IDocsCards {
     docName: string,
-    docUrl: string
+    docUrl: string,
+    docPage: EPages
 }
 
 
