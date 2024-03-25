@@ -18,7 +18,7 @@ import rotateImg from '@/public/PdfViewer/rotate.svg'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
 
-const PdfViewer = ({pdfName}: { pdfName: string }) => {
+const PdfViewer = (props: { pdfName: string, source: string }) => {
     const router = useRouter();
 
     // Document params
@@ -41,6 +41,8 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
 
     // Main & sidebar pages width
     useEffect(() => {
+        console.log(props.source)
+
         let screenWidth = window.innerWidth!;
         let header = document.getElementById('pdf_viewer_header')!;
         let content = document.getElementById('pdf_viewer_content')!;
@@ -142,7 +144,7 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
                     <button className={headerMenuButtonClassName} onClick={toggleSidebar}>
                         <Image src={menuButtonImg} alt={'Menu button'}/>
                     </button>
-                    <h1 className={s.file_name}>{pdfName}</h1>
+                    <h1 className={s.file_name}>{props.pdfName}</h1>
                 </div>
                 <div className={s.middle}>
                     <div className={s.pages_counter}>
@@ -161,7 +163,7 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
                     </div>
                 </div>
                 <div className={s.right}>
-                    <button className={s.exit_button} onClick={() => window.history.go(-2)}>
+                    <button className={s.exit_button} onClick={() => router.push('/' + props.source)}>
                         <Image src={exitButtonImg} alt={'Exit'}/>
                     </button>
                 </div>
@@ -177,14 +179,14 @@ const PdfViewer = ({pdfName}: { pdfName: string }) => {
                         <button className={s.close_button} onClick={toggleSidebar}><Image src={plusImg}
                                                                                           alt={'Закрыть'}/></button>
                     </div>
-                    <Document file={'/docs/' + pdfName} onLoadSuccess={onDocumentLoadSuccess} className={s.sidebar_document}>
+                    <Document file={'/docs/' + props.pdfName} onLoadSuccess={onDocumentLoadSuccess} className={s.sidebar_document}>
                         {pagesRender('sidebar')}
                     </Document>
                 </div>
                 <button className={s.button + ' ' + s.prev} onClick={() => handleOnClick(false)}>
                     <Image src={arrowImg} alt={'Предыдущая страница'}/>
                 </button>
-                <Document file={'/docs/' + pdfName} onLoadSuccess={onDocumentLoadSuccess} className={s.document}>
+                <Document file={'/docs/' + props.pdfName} onLoadSuccess={onDocumentLoadSuccess} className={s.document}>
                     <div className={s.desktop}>
                         <Page pageNumber={pageNumber} className={s.page} scale={scale / 100} rotate={rotate} width={pageWidth} height={pageHeight}/>
                     </div>
