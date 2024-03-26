@@ -5,9 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "export": "next build && next export"
+    "start": "next start"
   },
   "dependencies": {
     "@emailjs/browser": "^4.1.0",
@@ -23,6 +21,7 @@
     "react-dom": "18.2.0",
     "react-pdf": "^7.7.1",
     "sass": "^1.64.2",
+    "sharp": "^0.33.3",
     "typescript": "5.1.6"
   },
   "devDependencies": {

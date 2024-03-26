@@ -1,9 +1,11 @@
 const nextConfig = {
-    webpack: (config) => {
-        config.resolve.alias.canvas = false;
+	output: 'export',
 
-        return config;
-    }
+	webpack: (config) => {
+		config.resolve.alias.canvas = false;
+
+		return config;
+	},
 };
 
 module.exports = nextConfig;
