@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         'аренда стремянки',
         'аренда стремянки минск'
 
-    ]
+    ],
 }
 
 const Page = () => {

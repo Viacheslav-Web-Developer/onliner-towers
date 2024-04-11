@@ -176,8 +176,7 @@ const PdfViewer = (props: { pdfName: string, source: string }) => {
                 }}>
                     <div className={s.sidebar_header}>
                         <h2 className={s.title}>Содержание</h2>
-                        <button className={s.close_button} onClick={toggleSidebar}><Image src={plusImg}
-                                                                                          alt={'Закрыть'}/></button>
+                        <button className={s.close_button} onClick={toggleSidebar}><Image src={plusImg} alt={'Закрыть'}/></button>
                     </div>
                     <Document file={'/docs/' + props.pdfName} onLoadSuccess={onDocumentLoadSuccess} className={s.sidebar_document}>
                         {pagesRender('sidebar')}

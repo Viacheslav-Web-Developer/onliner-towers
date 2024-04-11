@@ -717,7 +717,7 @@ export const store = {
 					],
 				},
 				image: stairsDescriptionImg1,
-				passportUrl: '/assets/stairs/alumet-passport-seria-AM.pdf',
+				passportUrl: '/assets/stairs-one-section',
 			},
 			{
 				title: <span>Лестница алюминиевая <br/>3-х секционная</span>,
@@ -777,7 +777,7 @@ export const store = {
 					],
 				},
 				image: stairsDescriptionImg2,
-				passportUrl: '/assets/stairs/alumet-passport-seria-H3-HS3.pdf',
+				passportUrl: '/assets/stairs-three-section',
 			},
 			{
 				title: <span>Лестница алюминиевая <br/>4-х секционная</span>,
@@ -800,7 +800,7 @@ export const store = {
 					],
 				},
 				image: stairsDescriptionImg3,
-				passportUrl: '/assets/stairs/alumet-passport-seria-T4.pdf',
+				passportUrl: '/assets/stairs-four-section',
 			},
 		],
 		firstVideo: {
@@ -997,11 +997,11 @@ export const store = {
 		docs: [
 			{
 				docName: "Инструкция эксплуатации (PDF)",
-				docUrl: "/assets/scaffoldings/instruktsiia-po-ekspluatatsii-lrsp-40.pdf",
+				docUrl: "/assets/scaffolding-manual",
 			},
 			{
 				docName: "Сертификат (PDF)",
-				docUrl: "/assets/scaffoldings/lesa-ramnye-stroitelnye2.pdf",
+				docUrl: "/assets/scaffolding-certificate",
 			},
 		],
 		prices: [

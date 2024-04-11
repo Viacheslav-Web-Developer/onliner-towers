@@ -43,7 +43,7 @@ const Order = (props: IOrderProps) => {
         setUserName('')
         setUserOrderDescription('')
 
-        emailJs.sendForm('service_uqbbxzs', 'template_i683h0n', form.current!, {publicKey: '2MO8k-LlB9WezUuHW'}).then(
+        emailJs.sendForm('service_3h9i74t', 'template_2raobfu', form.current!, {publicKey: 'iRtzOZ-9E05qG4kZV'}).then(
             () => {
                 console.log('SUCCESS!');
                 setSubmitButtonLoad(false);
